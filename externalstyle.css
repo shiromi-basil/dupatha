@@ -1,0 +1,495 @@
+/* Setting up general styling such 
+as font family and a background image 
+for all the html pages in the website*/
+html {
+    font-family: "proxima",sans-serif;
+    color: #000;
+    line-height: 1.8;
+    font-size: 16px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+	background-image: url(images/allbackground.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+body{
+	margin:0;
+	padding:0;
+}
+
+/*Importing the four font families used in this website*/
+@font-face {
+	font-family: "ForefarmersDEMO";
+	src: url("fonts/ForefarmersDEMO.ttf");
+}
+@font-face {
+	font-family: "proxima";
+	src: url("fonts/proxima.ttf");
+}
+@font-face {
+	font-family: "SummitBold-Display";
+	src: url("fonts/SummitBold-Display.ttf");
+}
+
+@font-face {
+	font-family: "Opificio";
+	src: url("fonts/Opificio-Serif-regular.ttf");
+}
+
+/*This is the main heading of the page on top of the image*/
+.mainheading{
+    margin-bottom: 0;
+    font-family: "ForefarmersDEMO",sans-serif;
+    text-transform: lowercase;
+	text-align:center;
+	text-shadow: 3px 3px black;
+    line-height: 1;
+    color: white;
+    font-size: 9rem;
+	letter-spacing: 0.06em;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -40%);
+	width:100%;
+}
+
+/*Logo at the top left of all the pages*/
+.logo{
+	position: absolute;
+	top: 18px;
+	left: 60px;
+	width:100px;
+	height:auto;
+}
+
+/*Brand name picture at the top left of all the pages*/
+.brand{
+	position:absolute;
+	top: 130px;
+	left:20px;
+	width:auto;
+	height:25px;
+}
+
+/*The header that containes the main heading
+the main image*/
+.header{
+	position: relative;
+	text-align: center;
+}
+
+/*Main image on all the pages spanning
+to the length of one browser window*/
+.headerimage{
+	width: 100%;
+	height: 600px;
+    background-repeat: no-repeat;
+	background-size: cover;
+    background-position: top;
+	opacity:0.9;
+}
+
+/*The styling in class readmore is used 
+for all the buttons of this website.*/
+.readmore{
+	margin-left:45%;
+    font-size: .83rem;
+    border-radius: 3px;
+    padding: .8333333333rem;
+	border: 1px solid #005d8f;
+	background-color:inherit;
+	color:#000 ;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+	transition:1s;
+	font-family:"SummitBold-Display";
+	
+}
+
+/*When you hover over any button
+it will do the following changes*/
+.readmore:hover {
+  background-color: #0eb3d6;
+  color: white;
+  border: 1px solid #005d8f;
+  
+}
+
+/*When read more button is not clicked,
+it will not display the extra text*/
+#textmore {
+	display: none;
+}
+
+/*This is main navigation bar that pops out
+from the right side*/
+.mainNavBar {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	z-index: 500;
+	background-color: #fff;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	
+}
+
+/*The styling for the main naviagtion bar links*/
+.mainNavBar a {
+	padding: 8px 8px 8px 32px;
+	padding: .833333rem 0;
+	text-decoration: none;
+	font-size: 12px;
+	font-family:"SummitBold-Display";
+	font-weight: 900;
+	color: #000; 
+	text-transform: uppercase;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+	display: block;
+    overflow: hidden;
+    letter-spacing: 1px; 
+    transform: translateZ(0);
+    will-change: transform,opacity;
+    transition: transform .3s,opacity .3s;
+	border-bottom: 1px solid #ccc;
+	margin-left:40px;
+	margin-right:40px;
+}
+
+/*When you hover over the main navigation menu links
+the following changes will occur*/
+.mainNavBar a:hover {
+	text-decoration: none;
+	color: #005d8f;
+	cursor: pointer;
+}
+
+/*Placing the cross in the correct position*/
+.mainNavBar .closebtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 36px;
+}
+
+#cross{
+	border-bottom:none;
+}
+
+/*Styling for MENU button*/
+#main-1 {
+	z-index: 450;
+	position: fixed;
+	top: 20px;
+	right: 35px;
+	float:right;
+	transition: margin-right 0.5s;
+	padding: 0px 5px 0px 5px;
+	font-size:18px;
+	cursor:pointer;
+	color:#FFFFFF;
+	border:solid;
+	border-color:#FFFFFF;
+	border-width:2px;
+	font-family:"SummitBold-Display";
+	font-weight:normal;
+}
+
+/*Styling for CONTACT button*/
+#main-2 {
+	z-index: 450;
+	position: fixed;
+	top: 20px;
+	right: 115px;
+	float:right;
+	transition: margin-right 0.5s;
+	padding: 0px 5px 0px 5px;
+	font-size:18px;
+	cursor:pointer;
+	color:#FFFFFF;
+	border:solid;
+	border-color:#FFFFFF;
+	border-width:2px;
+	font-family:"SummitBold-Display";
+	font-weight:normal;
+}
+
+/*Styling for BOUTIQUE button*/
+#main-3 {
+	z-index: 450;
+	position: fixed;
+	top: 20px;
+	right: 225px;
+	float:right;
+	transition: margin-right 0.5s;
+	padding: 0px 5px 0px 5px;
+	font-size:18px;
+	cursor:pointer;
+	color:#FFFFFF;
+	border:solid;
+	border-color:#FFFFFF;
+	border-width:2px;
+	font-family:"SummitBold-Display";
+	font-weight:normal;
+}
+
+
+@media screen and (max-height: 450px) {
+  .mainNavBar {padding-top: 15px;}
+  .mainNavBar a {font-size: 18px;}
+}
+
+/* The naviagtion bar that pops up when you scroll
+down the page*/
+#scrollingNav{
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 77px;
+	z-index: 300;
+	padding-right: 150px;
+}
+
+#scrollingNav a {
+	display: block;
+	text-decoration: none;
+	color: #FFF;
+}
+
+/*The pictures in the scrolling navigation bar*/
+#navlogo {
+	width:53px;
+	height:53px;
+	display: none;
+}
+#navlogotext{
+	width:160px;
+	height:24px;
+	margin-left:10px;
+	margin-bottom:13px;
+	display: none;
+}
+
+/*The menu after the main image that allows 
+you to naviagte through the webpage easily*/
+.topMenu {
+	overflow: hidden;
+	background-color:inherit;
+	border-bottom: solid 2px #000;
+	border-top: solid 2px #000;
+}
+
+/*The link styling of the sub navigation*/
+.topMenu a {
+	font-size: 12px;
+	font-family:"SummitBold-Display";
+	color: #000;
+	text-align: center;
+	padding: 12px 14px;
+	text-decoration: none;
+	text-transform:uppercase;
+	font-weight:800;
+}
+.subNavigation {
+	float: left;
+	overflow: hidden;
+}
+.subNavigation .subnavbtn {
+	font-size: 19px; 
+	text-transform:uppercase;
+	font-weight:800;
+	border: none;
+	outline: none;
+	color: black;
+	padding: 12px 14px;
+	background-color: inherit;
+	font-family:"SummitBold-Display";
+	margin: 0;
+}
+
+/*hover effects for the sub naviagtion bar*/
+.navbar a:hover, .subNavigation:hover .subnavbtn {
+	background-image:url(images/navbar.jpg);
+	color: white;
+}
+.subNavigation-content {
+	display: none;
+	position: absolute;
+	background-image:url(images/subnav.jpg);
+	z-index: 1;
+}
+.subNavigation-content a {
+	float: left;
+	color: black;
+	font-weight:800;
+	text-decoration: none;
+}
+.subNavigation-content a:hover {
+	background-color: #eee;
+	color: black;
+}
+.subNavigation:hover .subNavigation-content {
+	display: block;
+}
+#active{
+	background-color:white;
+}
+/*All h2 headings of this website will have the 
+following styling*/
+ h2 {
+    color: #076091;
+	text-transform: uppercase;
+	font-family:"Opificio";
+	font-weight: 700;
+    line-height: 1.1;
+	text-align:center;
+	font-size:38px;
+	text-shadow: 1px 1px #000;
+	
+}
+
+/*The information in the body of the webpage
+will be formatted below*/
+.content {
+    max-width: 60rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+	text-align:justify;
+	margin-top:50px;
+	margin-bottom:30px;
+}
+
+/*The font size changer button*/
+.fontButtons{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.fontSizeButtonIn{
+	margin-left: 5px;
+    font-size: 20px;
+    border-radius: 3px;
+	border: 1px solid #005d8f;
+	background-color:inherit;
+	color:#000 ;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	transition:1s;
+	font-family:"SummitBold-Display";
+	float: left;
+}
+/*When you hover over any button
+it will do the following changes*/
+.fontSizeButtonIn:hover {
+	background-color: #0eb3d6;
+	color: white;
+	border: 1px solid #005d8f;
+	
+  }
+/*When you hover over any button
+it will do the following changes*/
+.fontSizeButtonDec:hover {
+	background-color: #0eb3d6;
+	color: white;
+	border: 1px solid #005d8f;
+	
+}
+.fontSizeButtonDec{
+	margin-right: 5px;
+	font-size: 20px;
+    border-radius: 3px;
+	border: 1px solid #005d8f;
+	background-color:inherit;
+	color:#000 ;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	transition:1s;
+	font-family:"SummitBold-Display";
+	float: left;
+}
+#fontSizeChanger{
+	overflow: hidden;
+	font-size: 18px;
+	width:20%;
+	float:right;
+	opacity:0.8;
+	padding: 0% 1% 0% 1%;
+	margin: 0% 2%;
+}
+#changeFont{
+	font-size: 16px;
+	line-height: 1.8;
+	
+}
+
+/*Styling of the footer begins here*/
+.footer {
+	left: 0;
+	bottom: 0;
+	color: black;
+	text-align: center;
+    width: 100%;
+    height: 400px;
+    background-image: url(images/footer.jpg);
+    background-size: 100% 100%;
+	position:relative;
+}
+.footerinner{
+	width:100%;
+	font-size:15px;
+    line-height: 1.1;
+	text-align:center;
+	
+}
+.footerinner a{
+	text-decoration:none;
+	color:black;
+	font-family:"SummitBold-Display";
+
+}
+.footerinner a:hover{
+	text-decoration:none;
+	color: #005d8f;
+	cursor: pointer;
+}
+
+.footerlinks{
+	position:absolute;
+	top: 85%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*These are the images used in the footer*/
+.footerlogo{
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width:150px;
+	height:auto;
+}
+.footerbrand{
+	position:absolute;
+	top: 67%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width:auto;
+	height:30px;
+}
+
+
