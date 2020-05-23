@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hikkaduwa| DUPATHA </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../images/logo.png" sizes="16x16">
+    <link rel="stylesheet" href="../popularPlacesGrids.css" type="text/css">
+    <link rel="stylesheet" href="hikkaStyleSheet.css" type="text/css">
+    <link rel="stylesheet" href="../../externalstyle.css" type="text/css">
+    <script>
+        window.onscroll = function () { scrollFunction() };
+        //the arrays which have the ids of the show More/ show less button, and the span which has more information about the restaurant
+        function showHideFunction(number) {
+            var moreArray = [
+                "jewelMore",
+                "differMore",
+                "mangroviaMore",
+                "helloMore",
+                "thambiliMore",
+                "sushiMore",
+                "saltyMore",
+                "seashellsMore"
+            ];
+            var buttonArray = [
+                "jewelBtn",
+                "differBtn",
+                "mangroviaBtn",
+                "helloBtn",
+                "thambiliBtn",
+                "sushiBtn",
+                "saltyBtn",
+                "seashellsBtn"
+            ];
+            //function used to open the span when show more button is clicked and to close it when the show less button is clicked
+            var moreInfo = document.getElementById(moreArray[number]);
+            var btn = document.getElementById(buttonArray[number])
+            //condition used to check it
+            if (moreInfo.style.display === "inline") {
+                moreInfo.style.display = "none";
+                btn.innerHTML = "SHOW MORE";
+            } else {
+                moreInfo.style.display = "inline";
+                btn.innerHTML = "SHOW LESS";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!--main grid begins here-->
+    <div class="mainGrid">
+        <!--header picture-->
+        <div class="header1" role="banner">
+            <img class="headerimage" src="images/hikkaduwabg.png" alt="header image">
+            <div class="headerinner">
+                <h1 class="mainheading">hikkaduwa</h1>
+                <a href="../../home.html">
+                    <img class="logo" src="../../images/logo.png" alt="logo" />
+                    <img class="brand" src="../../images/brand1.png" alt="brandname" />
+                </a>
+            </div>
+        </div>
+        <!--end of header picture-->
+        <!--menu after clicking on it-->
+        <!--The mainNav div that contains the menu that pops up from the right side of the page-->
+        <div id="mainNav" class="mainNavBar">
+            <a href="javascript:void(0)" id="cross" class="closebtn" onclick="closeMenu()">&times;</a>
+            <a href="../../home.html">Home</a>
+            <a href="../../advice/advice.html">Things to know</a>
+            <a href="../../destination/destinations.html">Destinations</a>
+            <a href="../../colombo/colombo.html">Colombo</a>
+            <a href="../../tours/tours.html">Tours</a>
+            <a href="../../hotels/hotelmain.html">Accommodation</a>
+            <a href="../../gallery/gallery.html">Gallery</a>
+            <a href="../../boutique/product.html">Boutique</a>
+            <a href="../../comment-form/contact.html">Contact</a>
+            <a href="../../sitemap/sitemap.html">Sitemap</a>
+        </div>
+        <!--The div for the menu that pops when you scroll down the page-->
+        <div id="scrollingNav">
+            <a href="#"></a>
+            <img id="navlogo" src="../../images/logo.png" style="margin-top:8px; margin-left:40px;" />
+            <img id="navlogotext" src="../../images/brand1.png" />
+
+            <div id="main-1" class="readmore">
+                <span onclick="openMenu()"><b> MENU</b></span>
+            </div>
+
+            <div id="main-2" class="readmore">
+                <a href="../../comment-form/contact.html"><span><b> CONTACT</b></span></a>
+            </div>
+
+            <div id="main-3" class="readmore">
+                <a href="../boutique/product.html"><span><b> BOUTIQUE</b></span></a>
+            </div>
+        </div>
+        <!--anchors and destination navigation bar -->
+        <div class="topMenu">
+            <!--link to pages and direct link to some parts of the particular page (Sub-Navigation bar)-->
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(0);">Anuradhapura <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Anuradhapura/anuradhapura.html#attractMainTitle">Attractions</a>
+                    <a href="../Anuradhapura/anuradhapura.html#hotelID">Hotels</a>
+                    <a href="../Anuradhapura/anuradhapura.html#restaurant">Restaurants</a>
+                    <a href="../Anuradhapura/anuradhapura.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(1);">Galle <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Galle/galle1.html#attractMainTitle">Attractions</a>
+                    <a href="../Galle/galle1.html#hotelID">Hotels</a>
+                    <a href="../Galle/galle1.html#restaurant">Restaurants</a>
+                    <a href="../Galle/galle1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(2);">Hambantota <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Hambantota/hambantota1.html#attractMainTitle">Attractions</a>
+                    <a href="../Hambantota/hambantota1.html#hotelID">Hotels</a>
+                    <a href="../Hambantota/hambantota1.html#restaurant">Restaurants</a>
+                    <a href="../Hambantota/hambantota1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+            <!--this page's anchors-->
+            <div class="subNavigation">
+                <button class="subnavbtnactive">Hikkaduwa <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="#attractMainTitle">Attractions</a>
+                    <a href="#hotelID">Hotels</a>
+                    <a href="#restaurant">Restaurants</a>
+                    <a href="#mapOfPlace">Map</a>
+                </div>
+            </div>
+            <!--end of anchors-->
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(4);">Jaffna <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Jaffna/jaffna1.html#attractMainTitle">Attractions</a>
+                    <a href="../Jaffna/jaffna1.html#hotelID">Hotels</a>
+                    <a href="../Jaffna/jaffna1.html#restaurant">Restaurants</a>
+                    <a href="../Jaffna/jaffna1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(5);">Kandy <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Kandy/kandy1.html#attractMainTitle">Attractions</a>
+                    <a href="../Kandy/kandy1.html#hotelID">Hotels</a>
+                    <a href="../Kandy/kandy1.html#restaurant">Restaurants</a>
+                    <a href="../Kandy/kandy1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(6);">Nuwara Eliya <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Nuwara Eliya/nuwareEliya.html#attractMainTitle">Attractions</a>
+                    <a href="../Nuwara Eliya/nuwareEliya.html#hotelID">Hotels</a>
+                    <a href="../Nuwara Eliya/nuwareEliya.html#restaurant">Restaurants</a>
+                    <a href="../Nuwara Eliya/nuwareEliya.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(7);">Polonnaruwa <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Polonnaruwa/polon1.html#attractMainTitle">Attractions</a>
+                    <a href="../Polonnaruwa/polon1.html#hotelID">Hotels</a>
+                    <a href="../Polonnaruwa/polon1.html#restaurant">Restaurants</a>
+                    <a href="../Polonnaruwa/polon1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(8);">SIGIRIYA <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Sigiriya/sigiriya1.html#attractMainTitle">Attractions</a>
+                    <a href="../Sigiriya/sigiriya1.html#hotelID">Hotels</a>
+                    <a href="../Sigiriya/sigiriya1.html#restaurant">Restaurants</a>
+                    <a href="../Sigiriya/sigiriya1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(9);">Trincomalee <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Trincomalee/trinco1.html#attractMainTitle">Attractions</a>
+                    <a href="../Trincomalee/trinco1.html#hotelID">Hotels</a>
+                    <a href="../Trincomalee/trinco1.html#restaurant">Restaurants</a>
+                    <a href="../Trincomalee/trinco1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+            <!--end of sub navigation bar-->
+        </div>
+        <!--end of destination navigation bar-->
+        <!--introduction paragraph of the page-->
+        <div class="content">
+            <!--this paragraph's font size can be changed using fontSizeChanger-->
+            <div id="changeFont" style="font-size: 20px;">There are plenty of charming places to stay, a
+                string
+                of mellow beach bars and restaurants, good diving and surf schools and plenty of interesting excursions
+                accessible by three-wheeler or rental scooter. For years there has been talk about a possible bypass
+                road around
+                Hikkaduwa, which if it were to materialise would do wonders for this paradise lost.
+            </div>
+            <!--used to change the font size of the introduction paragraph-->
+            <div id="fontSizeChanger">
+                <!--button used to decrease and increase the font size-->
+                <div class="fontButtons">
+                    <button class="fontSizeButtonDec" onclick="fontDecrease()">-</button>
+                    <p id="textFontSize1">20</p>
+                    <button class="fontSizeButtonIn" onclick="fontIncrease()">+</button>
+                </div>
+            </div>
+            <!--end of font Size changer-->
+        </div>
+        <!--end of introduction paragraph-->
+        <!--attractions in this destination-->
+        <div class="subHeading" id="attractMainTitle">
+            <h2>Major Attractions</h2>
+        </div>
+        <!--attractions-->
+        <div class="popularAttraction1" id="popularAttraction">
+            <img src="images\hikkaBeach.jpg" alt="Hikkaduwa Beach" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Hikkaduwa Beach</p>
+                <p> Turquoise blue ocean holds ample sealife including sea turtles and a variety of fish and it is
+                    the
+                    best surfing spots in Sri Lanka.</p>
+            </div>
+        </div>
+        <div class="popularAttraction2" id="popularAttraction">
+            <img src="images\seenigamaVihara.jpg" alt="SeeniGama Vihara" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Seenigama Vihara</p>
+                <p>The Seenigama Temple is located on a very small island just off the coast at Hikkaduwa. This is
+                    the temple
+                    of
+                    God 'Dewol'.</p>
+            </div>
+        </div>
+        <div class="popularAttraction3" id="popularAttraction">
+            <img src="images\tsunamiHoganjiVihara.jpg" alt="Tsunami Hoganji Vihara" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Tsunami Hoganji Vihara</p>
+                <p>Donated by the Japanese Government following the 2004 Tsunami it represents the height of the
+                    wave that
+                    killed the passengers on the train.</p>
+            </div>
+        </div>
+        <div class="popularAttraction4" id="popularAttraction">
+            <img src="images\narigamaBeach.jpg" alt="Narigama Beach" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Narigama Beach</p>
+                <p>Narigama beach is long and wide with glorious soft yellow sand and clear waters. It is located
+                    just south
+                    of
+                    Hikkaduwa Beach.</p>
+            </div>
+        </div>
+        <div class="popularAttraction5" id="popularAttraction">
+            <img src="images\turtleHatchery.jpg" alt="Turtle Hatchery Hikkaduwa" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Turtle Hatchery Hikkaduwa</p>
+                <p> It's a place where a small variety of turtles are reared and taken care of. If you are an animal
+                    lover do
+                    check the place out.</p>
+            </div>
+        </div>
+        <div class="popularAttraction6" id="popularAttraction">
+            <img src="images\maduGanga.jpg" alt="Madu Ganga " class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Madu Ganga</p>
+                <p>This is a popular place to take a boat safari, where one can see beautiful mangroves,and
+                    colourful
+                    birds including herons and kingfishers</p>
+            </div>
+        </div>
+        <div class="popularAttraction7" id="popularAttraction">
+            <img src="images\gangaramTemple.jpg" alt="Gangarama Temple" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Gangarama Temple</p>
+                <p>This interesting Buddhist temple has lots of popular educational paintings that are the work of
+                    one man
+                    over
+                    nearly a decade.</p>
+            </div>
+        </div>
+        <div class="popularAttraction8" id="popularAttraction">
+            <img src="images\hikkaCoralGarden.jpg" alt="Hikkaduwa Coral Gardens" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Hikkaduwa Coral Gardens</p>
+                <p>Go snorkelling to witness the beautiful variety of colourful fish and corals.An
+                    amazing experience you don't want to miss!</p>
+            </div>
+        </div>
+        <!--end of attractions-->
+        <!--links to hotel page of destination-->
+        <div class="hotel1" id="hotelID" role="banner">
+            <div class="layerOver">
+                <h2 class="hotelHeading">Amazing hotels and B & B</h2>
+                <h3 class="nextHotel">We've pre-picked the best hotels and bed and breakfasts to make your stay as
+                    enjoyable as
+                    possible.</h3>
+                <div class="readmore1" id="linkToHotelPage"><a
+                        href="../../hotels/hotels-hikkaduwa/hotel3_hikkaduwa.html">View All Hotels</a></div>
+            </div>
+        </div>
+        <!--end of hotel linking-->
+        <!--popular restaurants in this destination-->
+        <div class="subHeading1" id="restaurant">
+            <h2>Popular Restaurants</h2>
+        </div>
+        <!--restaurants-->
+        <div class="popularRest1" id="popularRest">
+            <img class="popularImages" src="images\jewel.jpg" alt="Asian Jewel Boutique Hotel" />
+            <div class="restInfo">
+                <p class="restTitle">Asian Jewel Boutique Hotel</p>
+                <p class="cuisine">Sri Lankan</p>
+                <!--span used to hide the timings and address-->
+                <span id="jewelMore">
+                    <p>Address: Lane 3, Baddegama Road, Hikkaduwa<br />Telephone Number: 0914 931 388<br />Open
+                        Timings: 8.00AM -9.30PM</p>
+
+                </span>
+                <!--end of span-->
+                <!--function called when user clicks button to show the address and timing-->
+                <button onclick="showHideFunction(0);" id="jewelBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest2" id="popularRest">
+            <img class="popularImages" src="images\differRest.jpg" alt="Differente Italian" />
+            <div class="restInfo">
+                <p class="restTitle">Differente Italian Restaurant</p>
+                <p class="cuisine">Italian</p>
+
+                <span id="differMore">
+                    <p>Address: Galle Road, Hikkaduwa<br>Telephone Number: +94 77 397 9825 <br>Open
+                        Timings: 6.00PM -11.00PM</p>
+                </span>
+                <button onclick="showHideFunction(1);" id="differBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest3" id="popularRest">
+            <img class="popularImages" src="images\mangrovia.jpg" alt="mangroviaRest" />
+            <div class="restInfo">
+                <p class="restTitle">Mangrovia Restaurant</p>
+                <p class="cuisine">Sri Lankan</p>
+
+                <span id="mangroviaMore">
+                    <p>Address: Beretuduwa Road, Hikkaduwa<br>Telephone Number:779492271<br>Open
+                        Timings:
+                        5.00PM -10.00PM</p>
+                </span>
+                <button onclick="showHideFunction(2);" id="mangroviaBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest4" id="popularRest">
+            <img class="popularImages" src="images\helloBurger.jpg" alt="Hello Burger" />
+            <div class="restInfo">
+                <p class="restTitle">Hello Burger</p>
+                <p class="cuisine">American</p>
+
+                <span id="helloMore">
+                    <p>Address: 533 Galle Road, Hikkaduwa<br>Telephone Number: +94 77 192 7667<br>Open
+                        Timings: 11.00AM -11.00PM</p>
+                </span>
+                <button onclick="showHideFunction(3);" id="helloBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest5" id="popularRest">
+            <img class="popularImages" src="images\thambili.jpg" alt="Thambili" />
+            <div class="restInfo">
+                <p class="restTitle">Thambili Cafe</p>
+                <p class="cuisine">Sri Lankan</p>
+
+                <span id="thambiliMore">
+                    <p>Address: 920/1 Galle Road, Hikkaduwa<br>Telephone Number: +94 77 675 0864<br>Open
+                        Timings: 8.00AM -4.00PM</p>
+                </span>
+                <button onclick="showHideFunction(4);" id="thambiliBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest6" id="popularRest">
+            <img class="popularImages" src="images\sushi.jpg" alt="sushi bar" />
+            <div class="restInfo">
+                <p class="restTitle">Sushi Bar @ Surf Villa</p>
+                <p class="cuisine">Japanese</p>
+
+                <span id="sushiMore">
+                    <p> Address: Surf Villa, Hikkaduwa<br>Telephone Number: +94 77 760 4620<br>Open Timings:
+                        5.30PM-10.30PM</p>
+                </span>
+                <button onclick="showHideFunction(5);" id="sushiBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest7" id="popularRest">
+            <img class="popularImages" src="images\salty.jpg" alt="Salty Swamis" />
+            <div class="restInfo">
+                <p class="restTitle">Salty Swamis</p>
+                <p class="cuisine">Sri Lankan</p>
+
+                <span id="saltyMore">
+                    <p> Address: 542 Galle Rd, Hikkaduwa<br>Telephone Number: 077 832 6302<br>Open Timings:
+                        8.00AM -4.00PM</p>
+                </span>
+                <button onclick="showHideFunction(6);" id="saltyBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest8" id="popularRest">
+            <img class="popularImages" src="images\seashells.jpg" alt="Seashells Restaurant" />
+            <div class="restInfo">
+                <p class="restTitle">Seashells Restaurant</p>
+                <p class="cuisine">Seafood</p>
+
+                <span id="seashellsMore">
+                    <p>Address: 373/1 Galle Road, Hikkaduwa <br>Telephone Number: +94 71 716 9526<br>Open
+                        Timings:
+                        5.00PM-10.00PM</p>
+                </span>
+                <button onclick="showHideFunction(7);" id="seashellsBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <!--end of restaurants-->
+        <!--google maps embedded into the html using iframe-->
+        <div class="mapOfPlace">
+            <div class="googleMap"><iframe width="1348" height="600" id="googleMap"
+                    src="https://maps.google.com/maps?q=anuradhapura&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+            </div>
+        </div>
+        <!--end of the map-->
+        <!--footer-->
+        <div class="footer">
+            <div class="footerinner">
+                <img class="footerlogo" src="../../images/logo.png" alt="logo" />
+                <img class="footerbrand" src="../../images/brand1.png" alt="brandname" />
+                <div class="footerlinks">
+                    <a href="../../home.html"> Home | </a>
+                    <a href="../../comment-form/contact.html"> Contact | </a>
+                    <a href="../../sitemap/sitemap.html"> Sitemap | </a>
+                    <a href="../../cv/safiyyah/safiyyah-cv.html"> Safiyyah Thur Rahman </a>
+                </div>
+            </div>
+        </div>
+        <!--end of footer-->
+    </div>
+    <!--end of the grid-->
+    <!--link the function file because it has the function decrease and increase the font size and also the function to make the header and back to the top button sticky-->
+    <script src="../../function.js"></script>
+
+</body>
+
+</html>

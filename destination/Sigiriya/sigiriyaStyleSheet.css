@@ -1,0 +1,12 @@
+/*the address and the timing are not displayed initially*/
+#dewataMore,
+#pradeepMore,
+#mangoRestMore,
+#kingRestMore,
+#rockCafeMore,
+#wijesiriMore,
+#gamagedaraMore,
+#shenadiMore{
+  display: none;
+}
+  

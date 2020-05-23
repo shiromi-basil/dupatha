@@ -1,0 +1,262 @@
+.topMenu {/*resizing the anchors of the page*/
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3%;
+	margin-bottom: 6%;
+}
+
+.subnavigation {
+	width: 10%;
+}
+
+.description {/*styling the description*/
+	height: auto;
+	margin: 20px 13% 80px 13%;
+	text-align: justify;
+}
+
+#places, #shopping {
+	margin-bottom: 50px;
+}
+
+.places {/*styling and positioning the places div*/
+	width: 60%;
+	margin: 50px auto;
+	text-align: justify;
+	height: 2650px;
+}
+
+.places img {/*setting height ang width of the images in the places div*/
+	width: 50%;
+	height: 320px;
+}
+
+.places-right {/*positioning certain of the images to the right*/
+	width: 45%;
+	float : right;
+	margin: 0 15px 0 15px;
+	height: 320px;
+}
+
+.places-left {/*positioning certain of the images to the left*/
+	width: 45%;
+	float : left;
+	margin: 0 15px 0 15px;
+	height: 320px;
+}
+
+.shopping {/*styling and positioning the shopping div*/
+	display: grid;
+	grid-template-columns: 5% 22.5% 22.5% 22.5% 22.5% 5%;
+	grid-template-rows: 300px 300px 300px 300px 330px;
+	margin-bottom: 50px;
+}
+
+/*styling the image overlay on hovering over the images*/
+.content .content-overlay {
+	background: rgba(0,0,0,0.7);
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	opacity: 0;
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	-moz-transition: all 0.4s ease-in-out 0s;
+	transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay {
+	opacity: 1;
+}
+
+.text {
+	position: absolute;
+	text-align: center;
+	padding-left: 1em;
+	padding-right: 1em;
+	top: 50%;
+	left: 50%;
+	opacity: 0;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .text{
+	top: 50%;
+	left: 50%;
+	opacity: 1;
+}
+
+
+.text {
+	color: #fff;
+	font-size: 1.5em;
+}
+
+.fadeIn-top{/*image overlay fade in through top*/
+	top: 20%;
+}
+
+/*styling the images and with a color layer of the shopping div*/
+#image-1 {
+	grid-column: 2/3;
+	grid-row: 1/3;
+	background-image: url(images/5.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 5px;
+	position: relative;
+}
+
+#image-2 {
+	grid-column: 3/4;
+	grid-row: 1/2;
+	background-image: url(images/floatingmarket3.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 5px;
+	position: relative;
+}
+
+#image-3 {
+	grid-column: 3/4;
+	grid-row: 2/3;
+	background-image: url(images/barefoot.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 5px;
+	position: relative;
+}
+
+#image-4 {
+	grid-column: 4/6;
+	grid-row: 2/3;
+	background-image: url(images/crescat.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 5px;
+	position: relative;
+}
+
+#image-5 {
+	grid-column: 4/5;
+	grid-row: 1/2;
+	background-image: url(images/liberty.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 5px;
+	position: relative;
+}
+
+#image-6 {
+	grid-column: 5/6;
+	grid-row: 1/2;
+	background-image: url(images/avirate.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 5px;
+	position: relative;
+}
+
+#image-7 {
+	grid-column: 2/4;
+	grid-row: 3/4;
+	background-image: url(images/uptown.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 5px;
+	position: relative;
+}
+
+#image-8 {
+	grid-column: 4/5;
+	grid-row: 3/4;
+	background-image: url(images/laksala1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 5px;
+	position: relative;
+}
+
+#image-9 {
+	grid-column: 2/3;
+	grid-row: 4/5;
+	background-image: url(images/paradise-road.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 5px;
+	position: relative;
+}
+
+#image-10 {
+	grid-column: 5/6;
+	grid-row: 3/5;
+	background-image: url(images/ccc.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 5px;
+	position: relative;
+}
+
+#image-11 {
+	grid-column: 3/4;
+	grid-row: 4/5;
+	background-image: url(images/embark.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 5px;
+	position: relative;
+}
+
+#image-12 {
+	grid-column: 4/5;
+	grid-row: 4/5;
+	background-image: url(images/Majestic-City.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 5px;
+	position: relative;
+}
+
+#image-13 {
+	grid-column: 3/5;
+	grid-row: 5/6;
+	background-image: url(images/pepe-jeans.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 5px;
+	position: relative;
+}
+
+
+#image-14 {
+	grid-column: 5/6;
+	grid-row: 5/6;
+	background-image: url(images/marinomall1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 5px;
+	position: relative;
+}
+
+
+#image-15 {
+	grid-column: 2/3;
+	grid-row: 5/6;
+	background-image: url(images/kamsins.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 5px;
+	position: relative;
+}
+
+#more {/*hiding the readmore div on page load until the read more 
+button is clicked*/
+	display: none;
+}

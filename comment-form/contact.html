@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<title> Contact | DUPATHA  </title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="../images/logo.png" sizes="16x16">
+		<link rel="stylesheet" type="text/css" href="../externalstyle.css">
+		<link rel="stylesheet" type="text/css" href="contact.css">
+		
+		<script>
+			window.onscroll = function () { scrollFunction() };
+		</script>
+		
+	</head>
+	
+	<body>
+		<div class="the-grid"> 
+		
+			<!--The header div that contains the main image, main heading and the two logos-->
+			<div class="header" role="banner">
+			<img class="headerimage" src="images/contact.png" alt="header image">		
+				<div class="headerinner">
+					<h1 class="mainheading">contact</h1>
+					<a href="../home.html">
+						<img class="logo" src="../images/logo.png" alt="logo"/>
+						<img class="brand" src="../images/brand1.png" alt ="brandname"/>
+					</a>
+				</div>							
+			</div>
+			
+			<!--The mainNavBar div that contains the menu that pops up from the right side of the page-->
+		<div id="mainNav" class="mainNavBar">
+			  <a href="javascript:void(0)" id="cross" class="closebtn" onclick="closeMenu()">&times;</a>
+			  <a href="../home.html">Home</a>
+			  <a href="../advice/advice.html">Things to know</a>
+			  <a href="../destination/destinations.html">Destinations</a>
+			  <a href="../colombo/colombo.html">Colombo</a>
+			  <a href="../tours/tours.html">Tours</a>
+			  <a href="../hotels/hotelmain.html">Accommodation</a>
+			  <a href="../gallery/gallery.html">Gallery</a>
+			  <a href="../boutique/product.html">Boutique</a>
+			  <a href="../comment-form/contact.html">Contact</a>
+			  <a href="../sitemap/sitemap.html">Sitemap</a>
+		</div>
+		
+		<!--The div for the menu that pops when you scroll down the page-->
+		<div id="scrollingNav">
+			<img id="navlogo" src="../images/logo.png" style="margin-top:8px; margin-left:40px;"/>
+			<img id="navlogotext" src="../images/brand1.png"/>
+			
+			<div id="main-1"class="readmore">
+				<span onclick="openMenu()"><b> MENU</b></span>
+			</div>
+				
+			<div id="main-2"class="readmore">
+				<a href="../comment-form/contact.html"><span><b> CONTACT</b></span></a>
+			</div>
+				
+			<div id="main-3"class="readmore">
+				<a href="../boutique/product.html"><span><b> BOUTIQUE</b></span></a>
+			</div>
+		</div>
+			
+			
+			
+			<div class="contactinfo">
+				<h2 style="text-align:left;"> Dupatha </h2>
+				<h3 id="contacttitle">Address</h3>
+				<p>221B, Baker Street,<br/>
+				Sri Lanka.</p>
+				
+				<h3 id="contacttitle">Social Media</h3>
+				<a href="mailto:info.dupatha@gmail.com"><img src="images/gmailicon.png"></img>info.dupatha@gmail.com</a><br/>
+				<a href="https://www.instagram.com/dupatha/?hl=en"><img src="images/igicon.png"></img>@dupatha</a><br/>
+				<a href="https://www.facebook.com/dupatha.lanka.7"><img src="images/fbicon.png"></img>Dupatha</a><br/>
+				<a href="https://twitter.com/dupatha"><img src="images/twicon.png"></img>@dupatha</a>
+				
+				<h3 id="contacttitle">Destinations</h3>
+				<p>Saffiyah: +94 777 123456<br/>
+				Shiromi: +94 777 123456</p>
+				
+				<h3 id="contacttitle">Hotels</h3>
+				<p>Samyuktha: +94 777 123456</p>
+				
+				<h3 id="contacttitle">Tours</h3>
+				<p>Sajani: +94 777 123456</p>
+			</div>
+			
+			
+			<form id="contact-us-form">
+			
+				<h2 style="text-align:center;"> Send Us A Message </h2>
+					
+				<label for="name">Name</label>
+				<input type="text" id="name" name="name" placeholder="Name">
+				
+				<label for="name">E-mail</label>
+				<input type="text" id="email" name="email" placeholder="E-mail">
+				
+				<label for="rate">Rate our website</label>
+				<select id="rate" name="rate">
+					<option value="excellent">Excellent</option>
+					<option value="very good">Very Good</option>
+					<option value="average">Average</option>
+					<option value="poor">Poor</option>
+				</select>
+			
+				<label for="comment">Comment<br/></label>
+				<textarea id="comment" name="comment" placeholder="Comment "></textarea>
+				
+				<input class="readmore" type="submit" value="Submit" onclick="validateForm();"/>
+				
+			</form>
+			
+			<script>
+			//this function is used to validate the input received by the form
+			function validateForm(){
+				var userInput = true;
+				
+				//declaring the variables for each input
+				var userName = document.getElementById("name").value;
+				var userEmail = document.getElementById("email").value;
+				var userRate = document.getElementById("rate").value;
+				var userComment = document.getElementById("comment").value;
+				
+				//validation for the email
+				var atSymbol = userEmail.indexOf("@");
+				var dotSymbol = userEmail.lastIndexOf(".");
+				
+				//validation for name, email and comment
+				if (userName.length <= 0){
+				alert("Please enter your name.");
+				userInput = false;
+				}
+				else if (atSymbol == 0 || dotSymbol < +atSymbol + 2 || dotSymbol + 2 >= userEmail.length){
+				alert("Please enter the email address.")
+				userInput = false;
+				}
+				
+				//once the validation is over, the following message will be printed
+				if(userInput){
+				var text = "Dear ";
+				text += userName;
+				text += ", thank you very much for your feedback. You have rated our site as ";
+				text += userRate;
+				text += ".";
+				
+				if (userComment.length > 0){
+					text += " And your comment was ";
+					text += userComment;
+					text += ".";
+				}
+				alert(text);
+				}
+			}	
+			</script>
+			<!--The div for the footer that contains the two logos and links-->
+		<div class="footer">
+			<div class="footerinner">
+				<img class="footerlogo" src="../images/logo.png" alt="logo"/>
+				<img class="footerbrand" src="../images/brand1.png" alt ="brandname"/>
+				<div class="footerlinks">
+					<a href="../home.html" > Home | </a>
+					<a href="../comment-form/contact.html" > Contact | </a>
+					<a href="../sitemap/sitemap.html" > Sitemap | </a>
+					<a href="../cv/sajani/sajani-cv.html" > Sajani Sihara</a>
+				</div>
+			</div>
+		</div>
+		
+		<script src="../function.js"></script>
+	</body>
+</html>

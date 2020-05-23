@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title> Gallery | DUPATHA </title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="../images/logo.png" sizes="16x16">
+		<link rel="stylesheet" type="text/css" href="../externalstyle.css">
+		<link rel="stylesheet" type="text/css" href="gallery.css">
+		
+		<script>
+			window.onscroll = function () { scrollFunction() };
+		</script>
+		
+	</head>
+	
+	<body>
+		<!--The header div that contains the main image, main heading and the two logos-->
+		<div class="header" role="banner">
+		<img class="headerimage" src="images/gallerybg.png" alt="header image">		
+				<div class="headerinner">
+					<h1 class="mainheading"> gallery </h1>
+					<a href="../home.html">
+					<img class="logo" src="../images/logo.png" alt="logo"/>
+					<img class="brand" src="../images/brand1.png" alt ="brandname"/>
+					</a>
+				</div>							
+		</div>
+		
+		<!--The mainNavBar div that contains the menu that pops up from the right side of the page-->
+		<div id="mainNav" class="mainNavBar">
+			  <a href="javascript:void(0)" id="cross" class="closebtn" onclick="closeMenu()">&times;</a>
+			  <a href="../home.html">Home</a>
+			  <a href="../advice/advice.html">Things to know</a>
+			  <a href="../destination/destinations.html">Destinations</a>
+			  <a href="../colombo/colombo.html">Colombo</a>
+			  <a href="../tours/tours.html">Tours</a>
+			  <a href="../hotels/hotelmain.html">Accommodation</a>
+			  <a href="../gallery/gallery.html">Gallery</a>
+			  <a href="../boutique/product.html">Boutique</a>
+			  <a href="../comment-form/contact.html">Contact</a>
+			  <a href="../sitemap/sitemap.html">Sitemap</a>
+		</div>
+		
+		<!--The div for the menu that pops when you scroll down the page-->
+		<div id="scrollingNav">
+			<img id="navlogo" src="../images/logo.png" style="margin-top:8px; margin-left:40px;"/>
+			<img id="navlogotext" src="../images/brand1.png"/>
+			
+			<div id="main-1"class="readmore">
+				<span onclick="openMenu()"><b> MENU</b></span>
+			</div>
+				
+			<div id="main-2"class="readmore">
+				<a href="../comment-form/contact.html"><span><b> CONTACT</b></span></a>
+			</div>
+				
+			<div id="main-3"class="readmore">
+				<a href="../boutique/product.html"><span><b> BOUTIQUE</b></span></a>
+			</div>
+		</div>
+		
+		<!--The topMenu div that contains all the anchors and navigation within the page-->
+		<div class="topMenu">
+			<div class="subNavigation">
+				<button class="subnavbtn" onmouseover="arrowUp('arrow', 'menu');" onmouseout="arrowDown('arrow', 'menu');"> Background Color&nbsp; 
+				<i id="arrow" class="arrowdown"></i></button>
+				<div id="menu" class="subnav-content" onmouseover="arrowUp('arrow', 'menu');" onmouseout="arrowDown('arrow', 'menu');">
+					<a onclick="backgroundBlue();"> Blue </a>
+					<a onclick="backgroundPurple();"> Purple </a>
+				</div>
+			</div>
+
+			<div class="subNavigation">
+				<button class="subnavbtn" onmouseover="arrowUp('arrow-1', 'menu-1');" onmouseout="arrowDown('arrow-1', 'menu-1');"> Font Color&nbsp; 
+				<i id="arrow-1" class="arrowdown"></i></button>
+				<div id="menu-1" class="subnav-content" onmouseover="arrowUp('arrow-1', 'menu-1');" onmouseout="arrowDown('arrow-1', 'menu-1');">
+					<a onclick="fontBlue();"> Blue </a>
+					<a onclick="fontPurple();"> Purple </a>
+				</div>
+			</div> 
+				   
+			<div class="subNavigation">
+				<button class="subnavbtn" onclick="resetPage()"> Reset</button>
+			</div>
+		</div>
+		
+		<script>
+			/*This function changes the the arrow upwards once the mouse is hovered over the subnavbtn*/
+			function arrowUp(id, menuid) {
+				document.getElementById(id).className='arrowup';
+				document.getElementById(id).style.borderColor="#FFF";
+				document.getElementById(menuid).style.display = "inline";
+			}
+			
+			/*This function changes the the arrow hownwards once the mouse is not hovered over the subnavbtn*/
+			function arrowDown(id, menuid) {
+				document.getElementById(id).className='arrowdown';
+				document.getElementById(id).style.borderColor="#000";
+				document.getElementById(menuid).style.display = "none";
+			}
+			
+			/*This function chnages the backgound colour of the body and footer to blue while removing the existing 
+			backgound image*/
+			function backgroundBlue() {
+				document.getElementById('menu').style.display = "none" ;
+				document.body.style.backgroundImage = "none";
+				document.body.style.backgroundColor = "#b3cce6" ;
+				document.getElementById('footer').style.backgroundImage = "none" ;
+				document.getElementById('footer').style.backgroundColor = "#b3cce6" ;
+			}
+			
+			/*This function chnages the backgound colour of the body and footer to purple while removing the existing 
+			backgound image*/
+			function backgroundPurple() {
+				document.getElementById('menu').style.display = "none" ;
+				document.body.style.backgroundImage = "none";
+				document.body.style.backgroundColor = "#ccb3ff" ;
+				document.getElementById('footer').style.backgroundImage = "none" ;
+				document.getElementById('footer').style.backgroundColor = "#ccb3ff" ;
+			}
+			
+			/*This function resets the background image and font colour to the previous settings and 
+			reverts the background colour of the body and footer to none*/
+			function resetPage() {
+				document.body.style.backgroundColor = "none";
+				document.body.style.backgroundImage = "url(../images/allbackground.jpg)";
+				document.body.style.backgroundSize = "cover";
+				document.body.style.backgroundRepeat = "no-repeat";
+				document.getElementById('footer').style.backgroundImage = "url(../images/footer.jpg)";
+				document.getElementById('footer').style.backgroundSize = "cover";
+				document.getElementById('footer').style.backgroundRepeat = "no-repeat";
+				document.getElementById('text-content').style.color='#000';
+				document.getElementById('text-header').style.color='#000';
+			}
+			
+		</script>
+
+		<!--The gallery div that contains the div to hold the larger image and description iwth the thumbnail slider-->
+		<div class="gallery">
+			<div class="gallery-container">
+				<!--The larger image and description is of, the very first image in the thumbnail slider by default-->
+				<div class="image">
+					<img src="images/sigiriya.jpg" id="image-content"></img>
+				</div>
+				<div class="text">
+					<h3 id="text-header">Sigiriya</h3>
+					<p id="text-content">Also known as Lion's Rock, Sigiriya is a rock fortress and palace situated
+					in the Matale district. Visitors can climb up to the ancient ruins, which are surrounded
+					by gardens, ponds, and magnificent frescoes. The UNESCO World Heritage Site is one of
+					the best ancient sites in the country. Head to the top of Sigiriya to see wonderful,
+					dramatic views of the rolling hills in the jungle below.</p>
+				</div>
+			</div>
+			
+			<!--The tooltip div that contains the small triangle pointing the currently clicked image 
+			from the gallery-container div to the main-slider div-->
+			<div class="tooltip" id="tooltip-triangle"></div>
+			<div id="main-slider">
+				<div id="inner-slider">
+					<!--Image 01 and description-->
+					<img src="images/sigiriya.jpg" id="sigiriya" 
+					onclick="resizeImage('sigiriya', 'sigiriya-1', 'sigiriya-2');" 
+					onmouseover="imageBorder('sigiriya');" onmouseout="removeBorder('sigiriya');" alt="sigiriya">
+					
+					<p id="sigiriya-1">Sigiriya</p>
+					<p id="sigiriya-2">Also known as Lion's Rock, Sigiriya is a rock fortress and palace situated
+					in the Matale district. Visitors can climb up to the ancient ruins, which are surrounded
+					by gardens, ponds, and magnificent frescoes. The UNESCO World Heritage Site is one of
+					the best ancient sites in the country. Head to the top of Sigiriya to see wonderful,
+					dramatic views of the rolling hills in the jungle below.</p>
+					
+					<!--Image 02 and description-->
+					<img src="images/adamspeak.jpg" id="adamspeak" 
+					onclick="resizeImage('adamspeak', 'adamspeak-1', 'adamspeak-2');" 
+					onmouseover="imageBorder('adamspeak');" onmouseout="removeBorder('adamspeak');" alt="adams peak">
+					
+					<p id="adamspeak-1">Adam's Peak</p>
+					<p id="adamspeak-2">Located in a diverse biological site, Adam's Peak is a tall,
+					pointed mountain in central Sri Lanka. The 2,243-meter ascent is a common pilgrimage
+					route in the Buddhist religion, as it is said there is an impression of Buddha's own
+					footprint near the summit. Aim to arrive at the top of the mountain around dawn to see
+					an unforgettable sunrise.</p>
+					
+					<!--Image 03 and description-->
+					<img src="images/yala.jpg" id="yala" 
+					onclick="resizeImage('yala', 'yala-1', 'yala-2');" 
+					onmouseover="imageBorder('yala');" onmouseout="removeBorder('yala');" alt="yala national park">
+					
+					<p id="yala-1">Yala National Park</p>
+					<p id="yala-2">Yala National Park is the place to go to see big cats in Sri Lanka.
+					The park is home to the highest concentration of leopards in the world, and it is
+					also an important sanctuary for Sri Lankan elephants and aquatic birds. Monkeys,
+					crocodiles, and other critters run around the park's grassy plains and forest areas.
+					The park is located on the southeast coast of the island.</p>
+					
+					<!--Image 04 and description-->
+					<img src="images/bentota.jpg" id="bentota" 
+					onclick="resizeImage('bentota', 'bentota-1', 'bentota-2');" 
+					onmouseover="imageBorder('bentota');" onmouseout="removeBorder('bentota');" alt="bentota">
+					
+					<p id="bentota-1">Bentota</p>
+					<p id="bentota-2">This coastal town has magnificent beaches, luxury hotels, and untouched
+					beauty. Spend a day soaking in the sun at Bentota Beach, visit the nearby Kosgoda
+					Turtle Hatchery, or find peace in the Galapatha Raja Maha Vihara Buddhist temple.
+					Bentota is a tourist hot spot, so you'll also be able to partake in activities like
+					helicopter rides and water sports, too.</p>
+					
+					<!--Image 05 and description-->
+					<img src="images/pinnawala.jpg" id="pinnawala" 
+					onclick="resizeImage('pinnawala', 'pinnawala-1', 'pinnawala-2');" 
+					onmouseover="imageBorder('pinnawala');" onmouseout="removeBorder('pinnawala');" alt="pinnawala elephant orphanage">
+					
+					<p id="pinnawala-1">Pinnawala Elephant Orphanage</p>
+					<p id="pinnawala-2">Gaze at the adorable faces of baby elephants bathing in the river at Pinnawala
+					Elephant Orphanage. The orphanage was founded in 1975 to feed and nurse wild orphaned elephants
+					found abandoned in the forests of Sri Lanka. An elephant breeding program was launched at 
+					the facility in 1982, and as of 2012, there were 78 elephants living at the site. The 
+					graceful, intelligent creatures are a beautiful sight to see.</p>
+					
+					<!--Image 06 and description-->
+					<img src="images/kandy.jpg" id="kandy" 
+					onclick="resizeImage('kandy', 'kandy-1', 'kandy-2');" 
+					onmouseover="imageBorder('kandy');" onmouseout="removeBorder('kandy');" alt="kandy">
+					
+					<p id="kandy-1">Kandy</p>
+					<p id="kandy-2">This large city is located on a plateau that is surrounded by the central
+					highland mountains. Kandy, a World Heritage Site, is the place to go to get a taste
+					of Sinhalese culture, especially if you can visit during the Esala Perahera festival
+					in the summer. Visit the Temple of the Tooth, which was built in the 4th century and
+					holds a very sacred relic—Buddha's tooth.</p>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			/*This function chnages the font colour of the description to blue while hiding the dropdown-content 
+			on-click*/
+			function fontBlue() {
+				document.getElementById('menu-1').style.display = "none" ;
+				document.getElementById('text-content').style.color='#0000e6';
+				document.getElementById('text-header').style.color='#0000e6';
+			}
+			
+			/*This function chnages the font colour of the description to purple while hiding the dropdown-content 
+			on-click*/
+			function fontPurple() {
+				document.getElementById('menu-1').style.display = "none" ;
+				document.getElementById('text-content').style.color='#6600cc';
+				document.getElementById('text-header').style.color='#6600cc';
+			}
+			
+			/*This function changes the larger image and the description according to the image selected*/
+			function resizeImage(image, header, content) {
+				document.getElementById('image-content').src = document.getElementById(image).src;
+				document.getElementById('text-header').innerHTML = document.getElementById(header).innerHTML;
+				document.getElementById('text-content').innerHTML = document.getElementById(content).innerHTML;
+				if (image == 'sigiriya') { /*changing the position of the tooltip-triangle accroding to the image selected*/
+					document.getElementById('tooltip-triangle').style.marginTop = '52px';
+				} else if (image == 'adamspeak') {
+					document.getElementById('tooltip-triangle').style.marginTop = '145px';
+				} else if (image == 'yala') {
+					document.getElementById('tooltip-triangle').style.marginTop = '235px';
+				} else if (image == 'bentota') {
+					document.getElementById('tooltip-triangle').style.marginTop = '325px';
+				} else if (image == 'pinnawala') {
+					document.getElementById('tooltip-triangle').style.marginTop = '420px';
+				} else if (image == 'kandy') {
+					document.getElementById('tooltip-triangle').style.marginTop = '510px';
+				}
+			}
+			
+			/*This function gives inner border to the image on mouse over*/
+			function imageBorder(image) {
+				document.getElementById(image).style.outline = '2px solid #000';
+				document.getElementById(image).style.outlineOffset = '-6px';
+			}
+			
+			/*This function removes inner border to the image on mouse out*/
+			function removeBorder(image) {
+				document.getElementById(image).style.outline = 'none';
+			}
+			
+		</script>
+
+		<!--The div for the footer that contains the two logos and links-->
+		<div class="footer" id="footer">
+			<div class="footerinner">
+				<img class="footerlogo" src="../images/logo.png" alt="logo"/>
+				<img class="footerbrand" src="../images/brand1.png" alt ="brandname"/>
+				<div class="footerlinks">
+					<a href="../home.html" > Home | </a>
+					<a href="../comment-form/contact.html" > Contact | </a>
+					<a href="../sitemap/sitemap.html" > Sitemap | </a>
+					<a href="../cv/shiromi/shiromi-cv.html" > Shiromi Thevarajan </a>
+				</div>
+			</div>
+		</div>
+		
+		<!--the external java script file is linked to the html-->
+		<script src="../function.js"></script>
+	</body>
+</html>

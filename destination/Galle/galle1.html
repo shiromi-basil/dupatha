@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Galle | DUPATHA </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../images/logo.png" sizes="16x16">
+    <link rel="stylesheet" href="../popularPlacesGrids.css" type="text/css">
+    <link rel="stylesheet" href="galleStyleSheet.css" type="text/css">
+    <link rel="stylesheet" href="../../externalstyle.css" type="text/css">
+    <script>
+        window.onscroll = function () { scrollFunction() };
+        //the arrays which have the ids of the show More/ show less button, and the span which has more information about the restaurant
+        function showHideFunction(number) {
+            var moreArray = [
+                "hoppaMore",
+                "cocoMore",
+                "imalMore",
+                "decoMore",
+                "isleMore",
+                "amangallaMore",
+                "pedlarMore",
+                "bombayMore"
+            ];
+
+            var buttonArray = [
+                "hoppaBtn",
+                "cocoBtn",
+                "imalBtn",
+                "decoBtn",
+                "isleBtn",
+                "amangallaBtn",
+                "pedlarBtn",
+                "bombayBtn"
+            ];
+            //function used to open the span when show more button is clicked and to close it when the show less button is clicked
+            var moreInfo = document.getElementById(moreArray[number]);
+            var btn = document.getElementById(buttonArray[number])
+            //condition used to check it
+            if (moreInfo.style.display === "inline") {
+                moreInfo.style.display = "none";
+                btn.innerHTML = "SHOW MORE";
+            } else {
+                moreInfo.style.display = "inline";
+                btn.innerHTML = "SHOW LESS";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!--main grid begins here-->
+    <div class="mainGrid">
+        <!--header picture-->
+        <div class="header1" role="banner">
+            <img class="headerimage" src="galleImages/Layer 0.png" alt="header image">
+            <div class="headerinner">
+                <h1 class="mainheading">galle</h1>
+                <a href="../../home.html">
+                    <img class="logo" src="../../images/logo.png" alt="logo" />
+                    <img class="brand" src="../../images/brand1.png" alt="brandname" />
+                </a>
+            </div>
+        </div>
+        <!--end of header picture-->
+        <!--The mainNavBar div that contains the menu that pops up from the right side of the page-->
+        <div id="mainNav" class="mainNavBar">
+            <a href="javascript:void(0)" id="cross" class="closebtn" onclick="closeMenu()">&times;</a>
+            <a href="../../home.html">Home</a>
+            <a href="../../advice/advice.html">Things to know</a>
+            <a href="../../destination/destinations.html">Destinations</a>
+            <a href="../../colombo/colombo.html">Colombo</a>
+            <a href="../../tours/tours.html">Tours</a>
+            <a href="../../hotels/hotelmain.html">Accommodation</a>
+            <a href="../../gallery/gallery.html">Gallery</a>
+            <a href="../../boutique/product.html">Boutique</a>
+            <a href="../../comment-form/contact.html">Contact</a>
+            <a href="../../sitemap/sitemap.html">Sitemap</a>
+        </div>
+
+        <!--The div for the menu that pops when you scroll down the page-->
+        <div id="scrollingNav">
+            <img id="navlogo" src="../../images/logo.png" style="margin-top:8px; margin-left:40px;" />
+            <img id="navlogotext" src="../../images/brand1.png" />
+
+            <div id="main-1" class="readmore">
+                <span onclick="openMenu()"><b> MENU</b></span>
+            </div>
+
+            <div id="main-2" class="readmore">
+                <a href="../../comment-form/contact.html"><span><b> CONTACT</b></span></a>
+            </div>
+
+            <div id="main-3" class="readmore">
+                <a href="../../boutique/product.html"><span><b> BOUTIQUE</b></span></a>
+            </div>
+        </div>
+        <!--anchors and destination navigation bar -->
+        <div class="topMenu">
+            <!--link to pages and direct link to some parts of the particular page (Sub-Navigation bar)-->
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(0);">Anuradhapura <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Anuradhapura/anuradhapura.html#attractMainTitle">Attractions</a>
+                    <a href="../Anuradhapura/anuradhapura.html#hotelID">Hotels</a>
+                    <a href="../Anuradhapura/anuradhapura.html#restaurant">Restaurants</a>
+                    <a href="../Anuradhapura/anuradhapura.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+            <!--this page's anchors-->
+            <div class="subNavigation">
+                <button class="subnavbtnactive">Galle <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="#attractMainTitle">Attractions</a>
+                    <a href="#hotelID">Hotels</a>
+                    <a href="#restaurant">Restaurants</a>
+                    <a href="#mapOfPlace">Map</a>
+                </div>
+            </div>
+            <!--end of page's anchors-->
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(2);">Hambantota <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Hambantota/hambantota1.html#attractMainTitle">Attractions</a>
+                    <a href="../Hambantota/hambantota1.html#hotelID">Hotels</a>
+                    <a href="../Hambantota/hambantota1.html#restaurant">Restaurants</a>
+                    <a href="../Hambantota/hambantota1.html#mapOfPlace">Map</a>
+
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(3);">Hikkaduwa <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Hikkaduwa/hikkaduwa1.html#attractMainTitle">Attractions</a>
+                    <a href="../Hikkaduwa/hikkaduwa1.html#hotelID">Hotels</a>
+                    <a href="../Hikkaduwa/hikkaduwa1.html#restaurant">Restaurants</a>
+                    <a href="../Hikkaduwa/hikkaduwa1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(4);">Jaffna <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Jaffna/jaffna1.html#attractMainTitle">Attractions</a>
+                    <a href="../Jaffna/jaffna1.html#hotelID">Hotels</a>
+                    <a href="../Jaffna/jaffna1.html#restaurant">Restaurants</a>
+                    <a href="../Jaffna/jaffna1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(5);">Kandy <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Kandy/kandy1.html#attractMainTitle">Attractions</a>
+                    <a href="../Kandy/kandy1.html#hotelID">Hotels</a>
+                    <a href="../Kandy/kandy1.html#restaurant">Restaurants</a>
+                    <a href="../Kandy/kandy1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(6);">Nuwara Eliya <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Nuwara Eliya/nuwareEliya.html#attractMainTitle">Attractions</a>
+                    <a href="../Nuwara Eliya/nuwareEliya.html#hotelID">Hotels</a>
+                    <a href="../Nuwara Eliya/nuwareEliya.html#restaurant">Restaurants</a>
+                    <a href="../Nuwara Eliya/nuwareEliya.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(7);">Polonnaruwa <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Polonnaruwa/polon1.html#attractMainTitle">Attractions</a>
+                    <a href="../Polonnaruwa/polon1.html#hotelID">Hotels</a>
+                    <a href="../Polonnaruwa/polon1.html#restaurant">Restaurants</a>
+                    <a href="../Polonnaruwa/polon1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(8);">SIGIRIYA <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Sigiriya/sigiriya1.html#attractMainTitle">Attractions</a>
+                    <a href="../Sigiriya/sigiriya1.html#hotelID">Hotels</a>
+                    <a href="../Sigiriya/sigiriya1.html#restaurant">Restaurants</a>
+                    <a href="../Sigiriya/sigiriya1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(9);">Trincomalee <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Trincomalee/trinco1.html#attractMainTitle">Attractions</a>
+                    <a href="../Trincomalee/trinco1.html#hotelID">Hotels</a>
+                    <a href="../Trincomalee/trinco1.html#restaurant">Restaurants</a>
+                    <a href="../Trincomalee/trinco1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+            <!--end of sub navigation bar-->
+        </div>
+        <!--end of destination navigation bar-->
+        <!--introduction paragraph of the page-->
+        <div class="content">
+            <!--this paragraph's font size can be changed using fontSizeChanger-->
+            <div id="changeFont" style="font-size: 20px;">Galle is a jewel. A Unesco World Heritage Site
+                this
+                historic city is a delight to explore on foot,
+                an endlessly exotic old trading port blessed with imposing Dutch-colonial buildings, ancient mosques and
+                churches,
+                grand mansions and museums. Wandering its rambling lanes you'll pass stylish cafes, quirky boutiques and
+                impeccably
+                restored hotels owned by local and foreign artists, writers, photographers and designers.
+            </div>
+            <!--used to change the font size of the introduction paragraph-->
+            <div id="fontSizeChanger">
+                <!--button used to decrease and increase the font size-->
+                <div class="fontButtons">
+                    <button class="fontSizeButtonDec" onclick="fontDecrease()">-</button>
+                    <p id="textFontSize1">20</p>
+                    <button class="fontSizeButtonIn" onclick="fontIncrease()">+</button>
+                </div>
+            </div>
+            <!--end of font Size changer-->
+        </div>
+        <!--end of introduction paragraph-->
+        <!--attractions in this destination-->
+        <div class="subHeading" id="attractMainTitle">
+            <h2>Major Attractions</h2>
+        </div>
+        <!--attraction 1-->
+        <div class="popularAttraction1" id="popularAttraction">
+            <img src="galleImages/galleDutchChurch.jpg" alt="Dutch Church" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Dutch Reformed Church</p>
+                <p>
+                    The Dutch Reformed Church, is also known as Groote Kerk, is one of
+                    the oldest Protestant churches in Sri Lanka. It was built in 1755.
+                </p>
+            </div>
+        </div>
+        <!--end of attraction 1-->
+        <!--attraction 2-->
+        <div class="popularAttraction2" id="popularAttraction">
+            <img src="galleImages/galleLighthouse.jpg" alt="Galle lighthouse" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Galle Lighthouse</p>
+                <p>
+                    The Galle Lighthouse was built in 1939. The light station is within the walls of the
+                    ancient Galle Fort, a UNESCO world heritage site.
+                </p>
+            </div>
+        </div>
+        <!--end of attraction 2-->
+        <!--attraction 3-->
+        <div class="popularAttraction3" id="popularAttraction">
+            <img src="galleImages/galleSilk (1).jpg" height="220px" width="293px" alt="Gingota Silk Factory"
+                class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Gingota Silk Factory</p>
+                <p>
+                    Only place in Sri Lanka to witness an informative walk tour for the
+                    making of silk from the mulberry plantation to the final weaving.
+                </p>
+            </div>
+        </div>
+        <!--end of attraction 3-->
+        <!--attraction 4-->
+        <div class="popularAttraction4" id="popularAttraction">
+            <img src="galleImages/meeranMosque (1).jpg" alt="Fort Meeran Mosque" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Fort Meeran Mosque</p>
+                <p>
+                    This mosque is around 300 years old although it was refurbished 120
+                    years ago, is the biggest and best known mosque in Galle
+                </p>
+            </div>
+        </div>
+        <!--end of attraction 4-->
+        <!--attraction 5-->
+        <div class="popularAttraction5" id="popularAttraction">
+            <img src="galleImages/galleFort (1).jpeg" alt="Dutch fort" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Dutch Fort</p>
+                <p>
+                    It is one of the most important historic monuments to illustrate the
+                    European influence in South East Asia during their rule.
+                </p>
+            </div>
+        </div>
+        <!--end of attraction 5-->
+        <!--attraction 6-->
+        <div class="popularAttraction6" id="popularAttraction">
+            <img src="galleImages/galleMaritimeMuseum (1).jpg" alt="National Maritime Museum" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">National Maritime Museum</p>
+                <p>
+                    This museum showcases a collection of boat models, maps and things
+                    found from ship-wrecks, some almost a century old.
+                </p>
+            </div>
+        </div>
+        <!--end of attraction 6-->
+        <!--attraction 7-->
+        <div class="popularAttraction7" id="popularAttraction">
+            <img src="galleImages/galleWhale (1).jpg" alt="Whale watching" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Whale Watching</p>
+                <p>
+                    In Mirissa, you can spot whales, dolphins and sea turtles. The best
+                    time to whale watch is during November-April.
+                </p>
+            </div>
+        </div>
+        <!--end of attraction 7-->
+        <!--attraction 8-->
+        <div class="popularAttraction8" id="popularAttraction">
+            <img src="galleImages/galleUnawatunaBay.jpg" alt="Unawatuna Bay" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Unwatuna Bay</p>
+                <p>
+                    It is one of the cleanest beaches and it is in the Top 100 list of
+                    beaches.It is popular for spear fishing, snorkeling and surfing.
+                </p>
+            </div>
+        </div>
+        <!--end of attraction 8-->
+        <!--attraction 9-->
+        <div class="popularAttraction9" id="popularAttraction">
+            <img src="galleImages/galleFlagRock (1).jpg" alt="Flag Rock" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Flag Rock</p>
+                <p>
+                    Flag Rock, at the southernmost end of the Fort, was once a
+                    Portuguese bastion.It is the most popular place to
+                    catch a sunset.
+                </p>
+            </div>
+        </div>
+        <!--end of attraction 8-->
+        <!--links to hotel page of destination-->
+        <div class="hotel1" id="hotelID" role="banner">
+            <div class="layerOver">
+                <h2 class="hotelHeading">Amazing hotels and B & B</h2>
+                <h3 class="nextHotel">We've pre-picked the best hotels and bed and breakfasts to make your stay as
+                    enjoyable as
+                    possible.</h3>
+                <div class="readmore1" id="linkToHotelPage"><a
+                        href="../../hotels/hotels-galle/hotel2_galle.html">View All Hotels</a></div>
+            </div>
+        </div>
+        <!--end of hotel linking-->
+        <!--popular restaurants in this destination-->
+        <div class="subHeading1" id="restaurant">
+            <h2>Popular Restaurants</h2>
+        </div>
+        <!--restaurant 1-->
+        <div class="popularRest1" id="popularRest">
+            <img class="popularImages" src="galleImages/hoppa (1).jpg" alt="hoppaRest" />
+            <div class="restInfo">
+                <p class="restTitle">Hoppa Galle Fort</p>
+                <p class="cuisine">Sri Lankan</p>
+                <!--span used to hide the timings and address-->
+                <span id="hoppaMore">
+                    <p>
+                        Address: 20, Pedlar Street, Galle<br />Telephone Number:
+                        0914552214<br />Open Timings: 11.30AM-9.30PM
+                    </p>
+                </span>
+                <!--end of span-->
+                <!--function called when user clicks button to show the address and timing-->
+                <button onclick="showHideFunction(0);" id="hoppaBtn" class="readmore1">
+                    Show More
+                </button>
+            </div>
+        </div>
+        <!--end of restaurant 1-->
+        <!--restaurant 2-->
+        <div class="popularRest2" id="popularRest">
+            <img class="popularImages" src="galleImages/cocoSam (1).jpg" alt="cocoSam" />
+            <div class="restInfo">
+                <p class="restTitle">Coconut Sambol</p>
+                <p class="cuisine">Sri Lankan</p>
+                <!--span used to hide the timings and address-->
+                <span id="cocoMore">
+                    <p>
+                        Address: Lighthouse street, Galle<br />Telephone
+                        Number: 077 912 2361<br />Open Timings: 1100AM -9.30PM
+                    </p>
+                </span>
+                <!--end of span-->
+                <!--function called when user clicks button to show the address and timing-->
+                <button onclick="showHideFunction(1);" id="cocoBtn" class="readmore1">
+                    Show More
+                </button>
+            </div>
+        </div>
+        <!--end of restaurant 2-->
+        <!--restaurant 3-->
+        <div class="popularRest3" id="popularRest">
+            <img class="popularImages" src="galleImages/isle (1).jpg" alt="isle of gelato" />
+            <div class="restInfo">
+                <p class="restTitle">Isle of Gelato</p>
+                <p class="cuisine">Desert</p>
+                <!--span used to hide the timings and address-->
+                <span id="isleMore">
+                    <p>
+                        Address:44 Light House St, Galle<br />Telephone Number:
+                        91 2 225773<br />Open Timings: 6.00AM -11.00PM
+                    </p>
+                </span>
+                <!--end of span-->
+                <!--function called when user clicks button to show the address and timing-->
+                <button onclick="showHideFunction(4);" id="isleBtn" class="readmore1">
+                    Show More
+                </button>
+            </div>
+        </div>
+        <!--end of restaurant 3-->
+        <!--restaurant 4-->
+        <div class="popularRest4" id="popularRest">
+            <img class="popularImages" src="galleImages/deco44 (1).jpg" alt="deco on 44" />
+            <div class="restInfo">
+                <p class="restTitle">Deco on 44</p>
+                <p class="cuisine">Sri Lankan</p>
+                <!--span used to hide the timings and address-->
+                <span id="decoMore">
+                    <p>
+                        Address:44 Light House St, Galle<br />Telephone Number:
+                        91 2 225773<br />Open Timings: 6.00AM -11.00PM
+                    </p>
+                </span>
+                <!--end of span-->
+                <!--function called when user clicks button to show the address and timing-->
+                <button onclick="showHideFunction(3);" id="decoBtn" class="readmore1">
+                    Show More
+                </button>
+            </div>
+        </div>
+        <!--end of restaurant 4-->
+        <!--restaurant 5-->
+        <div class="popularRest5" id="popularRest">
+            <img class="popularImages" src="galleImages/imal (1).jpg" alt="imalRest" />
+            <div class="restInfo">
+                <p class="restTitle">Imal's Restaurant</p>
+                <p class="cuisine">Sri Lankan</p>
+                <!--span used to hide the timings and address-->
+                <span id="imalMore">
+                    <p>
+                        Address: 68, church street, Fort,Galle<br />Telephone
+                        Number: 077 797 1199<br />Open Timings: 10.00AM -10.00PM
+                    </p>
+                </span>
+                <!--end of span-->
+                <!--function called when user clicks button to show the address and timing-->
+                <button onclick="showHideFunction(2);" id="imalBtn" class="readmore1">
+                    Show More
+                </button>
+            </div>
+        </div>
+        <!--end of restaurant 5-->
+        <!--restaurant 6-->
+        <div class="popularRest6" id="popularRest">
+            <img class="popularImages" src="galleImages/amangalla (1).jpg" alt="amangalla" />
+            <div class="restInfo">
+                <p class="restTitle">Amangalla</p>
+                <p class="cuisine">Sri Lankan</p>
+                <!--span used to hide the timings and address-->
+                <span id="amangallaMore">
+                    <p>
+                        Address:10 Church St, Galle <br />Telephone Number: 0912 233 388<br />Open
+                        Timings: 6.00AM -11.00PM
+                    </p>
+                </span>
+                <!--end of span-->
+                <!--function called when user clicks button to show the address and timing-->
+                <button onclick="showHideFunction(5);" id="amangallaBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <!--end of restaurant 6-->
+        <!--restaurant 7-->
+        <div class="popularRest7" id="popularRest">
+            <img class="popularImages" src="galleImages/pedlar (1).jpg" alt="pedlar cafe" />
+            <div class="restInfo">
+                <p class="restTitle">Pedlar's Inn Cafe</p>
+                <p class="cuisine">Continental</p>
+                <!--span used to hide the timings and address-->
+                <span id="pedlarMore">
+                    <p>
+                        Address:44 Light House St, Galle 8<br />Telephone Number:
+                        91 2 225773<br />Open Timings: 6.00AM -11.00PM
+                    </p>
+                </span>
+                <!--end of span-->
+                <!--function called when user clicks button to show the address and timing-->
+                <button onclick="showHideFunction(6);" id="pedlarBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <!--end of restaurant 7-->
+        <!--restaurant 8-->
+        <div class="popularRest8" id="popularRest">
+            <img class="popularImages" src="galleImages/bombay (1).jpg" alt="bombay brasserie" />
+            <div class="restInfo">
+                <p class="restTitle">Bombay Brasserie</p>
+                <p class="cuisine">Indian</p>
+                <!--span used to hide the timings and address-->
+                <span id="bombayMore">
+                    <p>
+                        Address:No 14 Leyn Baan, cross street, Galle<br />Telephone Number:
+                        076 242 8464<br />Open Timings: 11.30AM-3PM......5.30-10PM
+                    </p>
+                </span>
+                <!--end of span-->
+                <!--function called when user clicks button to show the address and timing-->
+                <button onclick="showHideFunction(7);" id="bombayBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <!--end of restaurant 8-->
+        <!--google maps embedded into the html using iframe-->
+        <div class="mapOfPlace">
+            <div class="googleMap"><iframe width="1348" height="600" id="googleMap"
+                    src="https://maps.google.com/maps?q=anuradhapura&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+            </div>
+        </div>
+        <!--end of the map-->
+        <!--footer-->
+        <div class="footer">
+            <div class="footerinner">
+                <img class="footerlogo" src="../../images/logo.png" alt="logo" />
+                <img class="footerbrand" src="../../images/brand1.png" alt="brandname" />
+                <div class="footerlinks">
+                    <a href="../../home.html"> Home | </a>
+                    <a href="../../comment-form/contact.html"> Contact | </a>
+                    <a href="../../sitemap/sitemap.html"> Sitemap | </a>
+                    <a href="../../cv/safiyyah/safiyyah-cv.html"> Safiyyah Thur Rahman </a>
+                </div>
+            </div>
+        </div>
+        <!--end of footer-->
+    </div>
+    <!--end of the grid-->
+    <!--link the function file because it has the function decrease and increase the font size and also the function to make the header and back to the top button sticky-->
+    <script src="../../function.js"></script>
+
+</body>
+
+</html>

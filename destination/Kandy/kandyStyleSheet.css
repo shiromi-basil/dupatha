@@ -1,0 +1,12 @@
+/*the address and the timing are not displayed initially*/
+#sharonMore,
+#kandyCafeMore,
+#salaThaiMore,
+#grillRestMore,
+#balajiMore,
+#divineMore,
+#coolParMore,
+#vitoMore{
+    display: none;
+}
+  

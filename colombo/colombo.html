@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title> Colombo | DUPATHA </title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="../images/logo.png" sizes="16x16">
+		<link rel="stylesheet" type="text/css" href="../externalstyle.css">
+		<link rel="stylesheet" type="text/css" href="colombo.css">
+		
+		<script>
+			window.onscroll = function () { scrollFunction() };
+		</script>
+		
+	</head>
+	
+	<body>
+		<!--The header div that contains the main image, main heading and the two logos-->
+		<div class="header" role="banner">
+		<img class="headerimage" src="images/colombo4.png" alt="header image">		
+				<div class="headerinner">
+					<h1 class="mainheading"> colombo </h1>
+					<a href="../home.html">
+					<img class="logo" src="../images/logo.png" alt="logo"/>
+					<img class="brand" src="../images/brand1.png" alt ="brandname"/>
+					</a>
+				</div>							
+		</div>
+		
+		<!--The mainNavBar div that contains the menu that pops up from the right side of the page-->
+		<div id="mainNav" class="mainNavBar">
+			  <a href="javascript:void(0)" id="cross" class="closebtn" onclick="closeMenu()">&times;</a>
+			  <a href="../home.html">Home</a>
+			  <a href="../advice/advice.html">Things to know</a>
+			  <a href="../destination/destinations.html">Destinations</a>
+			  <a href="../colombo/colombo.html">Colombo</a>
+			  <a href="../tours/tours.html">Tours</a>
+			  <a href="../hotels/hotelmain.html">Accommodation</a>
+			  <a href="../gallery/gallery.html">Gallery</a>
+			  <a href="../boutique/product.html">Boutique</a>
+			  <a href="../comment-form/contact.html">Contact</a>
+			  <a href="../sitemap/sitemap.html">Sitemap</a>
+		</div>
+		
+		<!--The div for the menu that pops when you scroll down the page-->
+		<div id="scrollingNav">
+			<img id="navlogo" src="../images/logo.png" style="margin-top:8px; margin-left:40px;"/>
+			<img id="navlogotext" src="../images/brand1.png"/>
+			
+			<div id="main-1"class="readmore">
+				<span onclick="openMenu()"><b> MENU</b></span>
+			</div>
+				
+			<div id="main-2"class="readmore">
+				<a href="../comment-form/contact.html"><span><b> CONTACT</b></span></a>
+			</div>
+				
+			<div id="main-3"class="readmore">
+				<a href="../boutique/product.html"><span><b> BOUTIQUE</b></span></a>
+			</div>
+		</div>
+		
+		<!--The topMenu div that contains all the anchors and navigation within the page-->
+		<div class="topMenu">
+			<div class="subNavigation">
+				<a href="#colombo"><button class="subnavbtn"> colombo <i class=""></i></button></a>	
+			</div> 
+			
+			<div class="subNavigation">
+				<a href="#places"><button class="subnavbtn"> places <i class=""></i></button></a>	
+			</div> 
+			
+			<div class="subNavigation">
+				<a href="colombo-1/colombo-1.html#activities"><button  class="subnavbtn"> activities <i class=""></i></button></a>	
+			</div> 
+			
+			<div class="subNavigation">
+				<a href="#hotels"><button class="subnavbtn"> hotels <i class=""></i></button></a>
+			</div>
+			  
+			<div class="subNavigation">
+				<a href="#shopping"><button class="subnavbtn"> shopping <i class=""></i></button></a>
+			</div> 
+			  
+			<div class="subNavigation">
+				<a href="colombo-1/colombo-1.html#restaurants"><button class="subnavbtn"> restaurants <i class=""></i></button></a>	
+			</div> 
+			
+			<div class="subNavigation">
+				<a href="#travelling"><button class="subnavbtn"> travelling <i class=""></i></button></a>
+			</div>
+			  
+			<div class="subNavigation">
+				<a href="#map"><button class="subnavbtn"> map <i class=""></i></button></a>
+			</div>
+		</div>
+		
+		<!--The colombo div contains the description about colombo-->
+		<div id="colombo"></div>
+		<div class="description">
+			 <!--this paragraph's font size can be changed using fontSizeChanger-->
+            <div id="changeFont" style="font-size: 20px;">
+				<p>Although it's unlikely it will reclaim its 19th-century moniker "the garden city of the East", 
+				 Colombo has nevertheless emerged as a must-see stop in Sri Lanka. No longer just the sprawling city you have to endure on your way to the beaches, 
+				 it has become a worthy destination in its own right and makes an excellent start - or finish - to your Sri Lankan adventures.</p>
+
+				<p>The legacies of colonial Colombo's garden roots are still very much intact along its often-shady boulevards. 
+				 Fort is a compelling place thanks to ongoing restoration of its landmark colonial architecture, 
+				 while Pettah brims with markets and rampant commerce. Even traffic-clogged Galle Road is getting spiffier with glossy new hotel complexes.</p>
+
+				<p>Colombo's cosmopolitan side supports ever-more stylish eateries, galleries and shops. 
+				 Surprises abound: with a little exploration you'll find great local food, characterful shops and tiny, 
+				 convivial cafes. Meanwhile, a building boom like no other is transforming the city's skyline. </p>
+			</div>
+			 
+            <!--used to change the font size of the introduction paragraph-->
+            <div id="fontSizeChanger">
+                <div class="fontButtons">
+                    <button class="fontSizeButtonDec" onclick="fontDecrease()">-</button>
+                    <p id="textFontSize1">20</p>
+                    <button class="fontSizeButtonIn" onclick="fontIncrease()">+</button>
+                </div>
+            </div>
+            <!--end of font Size changer-->
+		</div>
+		
+		<!--The places div contains the image tiles about places-->
+		<h2 class="break" id="places">Places to visit</h2>
+		<div class="places">
+			<div class="content" id="image-1">
+				<a href="http://www.arcadeindependencesquare.com/">
+				<div class="content-overlay"></div>
+				<div class="text fadeIn-top">
+					<p>Arcade Independence Square</p>
+				</div>
+				</a>
+			</div>
+			<div class="content" id="image-2">
+				<a href="https://www.tripadvisor.com/Attraction_Review-g293962-d2459884-Reviews-Dutch_Hospital_Shopping_Precinct-Colombo_Western_Province.html">
+				<div class="content-overlay"></div>
+				<div class="text fadeIn-bottom">
+					<p>Dutch Hospital</p>
+				</div>
+				</a>
+			</div>
+			<div class="content" id="image-3">
+				<a href="https://lanka.com/about/attractions/galle-face-green/">
+				<div class="content-overlay"></div>
+				<div class="text fadeIn-top">
+					<p>Galle Face Green</p>
+				</div>
+				</a>
+			</div>
+			<div class="content" id="image-4">
+				<a href="https://lanka.com/about/attractions/independence-memorial-hall/">
+				<div class="content-overlay"></div>
+				<div class="text fadeIn-bottom">
+					<p>Independence Square</p>
+				</div>
+				</a>
+			</div>
+		</div>
+		
+		<!--linking to the main places page of colombo-->
+		<br/><a href="colombo-2/colombo-2.html#places" class="readmore" id="readmorebutton">VIEW MORE</a><br>
+		
+		<!--links to hotel page of destination-->
+        <div class="hotel" id="hotels" role="banner">
+            <div class="layerOver">
+                <h2 class="hotelHeading">Amazing hotels and B & B</h2>
+                <h3 class="nextHotel">We've pre-picked the best hotels and bed and breakfasts to make your stay as
+                    enjoyable as possible.</h3>
+                <div class="readmore" id="linkToHotelPage">
+					<a href="../hotels/hotels-colombo/hotel1_colombo.html">View All Hotels</a>
+				</div>
+            </div>
+        </div>
+        <!--end of hotel linking-->
+		
+		<!--The shopping div contains the image tiles and description about places-->
+		<h2 class="break" id="shopping">Shopping in Colombo</h2>
+		<div class="shopping">
+			<div class="content" id="image-5">
+				<a href="http://www.arcadeindependencesquare.com/">
+				<div class="content-overlay"></div>
+				<div class="text fadeIn-top">
+					<p>Arcade Independence Square</p>
+				</div>
+				</a>
+			</div>
+			<div class="content" id="image-6">
+				<a href="https://www.barefootceylon.com/">
+				<div class="content-overlay"></div>
+				<div class="text fadeIn-top">
+					<p>Barefoot</p>
+				</div>
+				</a>
+			</div>
+			<div class="content" id="image-7">
+				<a href="https://www.tripadvisor.com/Attraction_Review-g293962-d447445-Reviews-Pettah-Colombo_Western_Province.html">
+				<div class="content-overlay"></div>
+				<div class="text fadeIn-bottom">
+					<p>Pettah</p>
+				</div>
+				</a>
+			</div>
+			
+			<!--The image-8 div contains the description about shopping-->
+			<div id="image-8">
+				<p>Shopping in Colombo can be unwieldy for the uninitiated. There are few grand pedestrian 
+				walkways to meander down and no readily identifiable "shopping district" to lose yourself in. And, 
+				if it's your first time in Colombo, you've probably also got a list of monuments to tick off - few of which 
+				are near any decent shops where you can find interesting, contemporary Sri Lankan products (the best kind of souvenirs).</p>
+				<p>The hallmarks of this Sri Lankan productivity are goods which are ethically made, environmentally sustainable, 
+				chic and uniquely Sri Lankan in style, aesthetic or provenance. Colombo may not be Paris, but its products are par excellence.</p>
+				<p>To help you navigate this, here is our essential Colombo shopping guide.</p>
+				
+				<!--linking to the main shopping page of colombo-->
+				<br/><a href="colombo-2/colombo-2.html#shopping" class="readmore" id="readmorebutton">READ MORE</a><br>
+			</div>
+		</div>
+		
+		<!--The places div contains the image and description about travelling in colombo-->
+		<h2 class="break" id="travelling">Travelling</h2>
+		<div class="travel">
+			<div id="image-9">
+			</div>
+			<div id="image-10">
+			</div>
+			<div id="image-11">
+			</div>
+			<div id="image-12">
+				<h3>Train</h3>
+				<p>Travelling by train comparatively cheap. Trains can be crowded, but it's nothing compared with the huge number of 
+				passengers that squash into ordinary buses.</p>
+			</div>
+			<div id="image-13">
+				<h3>Three Wheeler</h3>
+				<p>Three-wheelers, known in other parts of Asia as tuk-tuks, bajajs or autorickshaws, are waiting on nearly every 
+				corner. Use your best bargaining skills and agree on the fare before you get in. </p>
+			</div>
+			<div id="image-14">
+				<h3>Bus</h3>
+				<p>Local buses go to most places, including villages outside main towns, for fares from Rupees 30 to 70.</p>
+			</div>
+		</div>
+		
+		<!--The map div contains the colombo map-->
+		<div id="map">
+			<iframe width="100%" height="600px" id="gmap_canvas" src="https://maps.google.com/maps?q=colombo&t=&z=13&ie=UTF8&iwloc=&output=embed"
+			frameborder="0" marginheight="0" marginwidth="0" hspace="0" vspace="0"></iframe>
+		</div>
+		
+		<!--The div for the footer that contains the two logos and links-->
+		<div class="footer">
+			<div class="footerinner">
+				<img class="footerlogo" src="../images/logo.png" alt="logo"/>
+				<img class="footerbrand" src="../images/brand1.png" alt ="brandname"/>
+				<div class="footerlinks">
+					<a href="../home.html" > Home | </a>
+					<a href="../comment-form/contact.html" > Contact | </a>
+					<a href="../sitemap/sitemap.html" > Sitemap | </a>
+					<a href="../cv/shiromi/shiromi-cv.html" > Shiromi Thevarajan </a>
+				</div>
+			</div>
+		</div>
+		
+		<!--the external java script file is linked to the html-->
+		<script src="../function.js"></script>
+	</body>
+</html>

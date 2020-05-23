@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Nuwara Eliya | DUPATHA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../images/logo.png" sizes="16x16">
+    <link rel="stylesheet" href="../popularPlacesGrids.css" type="text/css">
+    <link rel="stylesheet" href="nuwaraEliyaStyleSheet.css" type="text/css">
+    <link rel="stylesheet" href="../../externalstyle.css" type="text/css">
+    <script>
+        window.onscroll = function () { scrollFunction() };
+        //the arrays which have the ids of the show More/ show less button, and the span which has more information about the restaurant
+        function showHideFunction(number) {
+            var moreArray = [
+                "ambaalMore",
+                "silvaMore",
+                "grandThaiMore",
+                "indianMore",
+                "grandIndianMore",
+                "salmiyaMore",
+                "themparaduMore",
+                "teaTrainMore",
+                "thajMore"
+            ];
+
+            var buttonArray = [
+                "ambaalBtn",
+                "silvaBtn",
+                "grandThaiBtn",
+                "indianBtn",
+                "grandIndianBtn",
+                "salmiyaBtn",
+                "themparaduBtn",
+                "teaTrainBtn",
+                "thajBtn"
+            ];
+            //function used to open the span when show more button is clicked and to close it when the show less button is clicked
+            var moreInfo = document.getElementById(moreArray[number]);
+            var btn = document.getElementById(buttonArray[number])
+            //condition used to check it
+            if (moreInfo.style.display === "inline") {
+                moreInfo.style.display = "none";
+                btn.innerHTML = "SHOW MORE";
+            } else {
+                moreInfo.style.display = "inline";
+                btn.innerHTML = "SHOW LESS";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!--main grid begins here-->
+    <div class="mainGrid">
+        <!--header picture-->
+        <div class="header1" role="banner">
+            <img class="headerimage" src="images/nuwaraeliyabg.png" alt="header image">
+            <div class="headerinner">
+                <h1 class="mainheading">nuwara eliya</h1>
+                <a href="../../home.html">
+                    <img class="logo" src="../../images/logo.png" alt="logo" />
+                    <img class="brand" src="../../images/brand1.png" alt="brandname" />
+                </a>
+            </div>
+        </div>
+        <!--end of header picture-->
+        <!--The mainNavBar div that contains the menu that pops up from the right side of the page-->
+        <div id="mainNav" class="mainNavBar">
+            <a href="javascript:void(0)" id="cross" class="closebtn" onclick="closeMenu()">&times;</a>
+            <a href="../../home.html">Home</a>
+            <a href="../../advice/advice.html">Things to know</a>
+            <a href="../../destination/destinations.html">Destinations</a>
+            <a href="../../colombo/colombo.html">Colombo</a>
+            <a href="../../tours/tours.html">Tours</a>
+            <a href="../../hotels/hotelmain.html">Accommodation</a>
+            <a href="../../gallery/gallery.html">Gallery</a>
+            <a href="../../boutique/product.html">Boutique</a>
+            <a href="../../comment-form/contact.html">Contact</a>
+            <a href="../../sitemap/sitemap.html">Sitemap</a>
+        </div>
+
+        <!--The div for the menu that pops when you scroll down the page-->
+        <div id="scrollingNav">
+            <img id="navlogo" src="../../images/logo.png" style="margin-top:8px; margin-left:40px;" />
+            <img id="navlogotext" src="../../images/brand1.png" />
+
+            <div id="main-1" class="readmore">
+                <span onclick="openMenu()"><b> MENU</b></span>
+            </div>
+
+            <div id="main-2" class="readmore">
+                <a href="../../comment-form/contact.html"><span><b> CONTACT</b></span></a>
+            </div>
+
+            <div id="main-3" class="readmore">
+                <a href="../../boutique/product.html"><span><b> BOUTIQUE</b></span></a>
+            </div>
+        </div>
+        <!--end of menu-->
+        <!--anchors and destination navigation bar -->
+        <div class="topMenu">
+            <!--link to pages and direct link to some parts of the particular page (Sub-Navigation bar)-->
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(0);">Anuradhapura <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Anuradhapura/anuradhapura.html#attractMainTitle">Attractions</a>
+                    <a href="../Anuradhapura/anuradhapura.html#hotelID">Hotels</a>
+                    <a href="../Anuradhapura/anuradhapura.html#restaurant">Restaurants</a>
+                    <a href="../Anuradhapura/anuradhapura.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <!--end of page's anchors-->
+            <!--link to pages and direct link to some parts of the particular page (Sub-Navigation bar)-->
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(1);">Galle <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Galle/galle1.html#attractMainTitle">Attractions</a>
+                    <a href="../Galle/galle1.html#hotelID">Hotels</a>
+                    <a href="../Galle/galle1.html#restaurant">Restaurants</a>
+                    <a href="../Galle/galle1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(2);">Hambantota <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Hambantota/hambantota1.html#attractMainTitle">Attractions</a>
+                    <a href="../Hambantota/hambantota1.html#hotelID">Hotels</a>
+                    <a href="../Hambantota/hambantota1.html#restaurant">Restaurants</a>
+                    <a href="../Hambantota/hambantota1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(3);">Hikkaduwa <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Hikkaduwa/hikkaduwa1.html#attractMainTitle">Attractions</a>
+                    <a href="../Hikkaduwa/hikkaduwa1.html#hotelID">Hotels</a>
+                    <a href="../Hikkaduwa/hikkaduwa1.html#restaurant">Restaurants</a>
+                    <a href="../Hikkaduwa/hikkaduwa1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(4);">Jaffna <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Jaffna/jaffna1.html#attractMainTitle">Attractions</a>
+                    <a href="../Jaffna/jaffna1.html#hotelID">Hotels</a>
+                    <a href="../Jaffna/jaffna1.html#restaurant">Restaurants</a>
+                    <a href="../Jaffna/jaffna1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(5);">Kandy <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Kandy/kandy1.html#attractMainTitle">Attractions</a>
+                    <a href="../Kandy/kandy1.html#hotelID">Hotels</a>
+                    <a href="../Kandy/kandy1.html#restaurant">Restaurants</a>
+                    <a href="../Kandy/kandy1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtnactive" onclick="loadPage(6);">Nuwara Eliya <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Nuwara Eliya/nuwareEliya.html#attractMainTitle">Attractions</a>
+                    <a href="../Nuwara Eliya/nuwareEliya.html#hotelID">Hotels</a>
+                    <a href="../Nuwara Eliya/nuwareEliya.html#restaurant">Restaurants</a>
+                    <a href="../Nuwara Eliya/nuwareEliya.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(7);">Polonnaruwa <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Polonnaruwa/polon1.html#attractMainTitle">Attractions</a>
+                    <a href="../Polonnaruwa/polon1.html#hotelID">Hotels</a>
+                    <a href="../Polonnaruwa/polon1.html#restaurant">Restaurants</a>
+                    <a href="../Polonnaruwa/polon1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(8);">SIGIRIYA <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Sigiriya/sigiriya1.html#attractMainTitle">Attractions</a>
+                    <a href="../Sigiriya/sigiriya1.html#hotelID">Hotels</a>
+                    <a href="../Sigiriya/sigiriya1.html#restaurant">Restaurants</a>
+                    <a href="../Sigiriya/sigiriya1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(9);">Trincomalee <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Trincomalee/trinco1.html#attractMainTitle">Attractions</a>
+                    <a href="../Trincomalee/trinco1.html#hotelID">Hotels</a>
+                    <a href="../Trincomalee/trinco1.html#restaurant">Restaurants</a>
+                    <a href="../Trincomalee/trinco1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+            <!--end of sub navigation bar-->
+        </div>
+        <!--end of destination navigation bar-->
+
+        <!--introduction paragraph of the page-->
+        <div class="content">
+            <!--this paragraph's font size can be changed using fontSizeChanger-->
+            <div id="changeFont" style="font-size: 20px;">Often referred to as ‘Little England’, this
+                genteel
+                highland community does have a rose-tinted, vaguely British-country-village feel to it.<br>
+                Visit everyone’s favourite hill-country village. The views through Ella Gap
+                are stunning, and on a clear night you can even spy the subtle glow of the Great Basses lighthouse on
+                Sri
+                Lanka’s south coast. Don’t be too laid-back though; definitely make time for easygoing walks through tea
+                plantations to temples, waterfalls and viewpoints.
+            </div>
+            <!--used to change the font size of the introduction paragraph-->
+            <div id="fontSizeChanger">
+                <!--button used to decrease and increase the font size-->
+                <div class="fontButtons">
+                    <button class="fontSizeButtonDec" onclick="fontDecrease()">-</button>
+                    <p id="textFontSize1">20</p>
+                    <button class="fontSizeButtonIn" onclick="fontIncrease()">+</button>
+                </div>
+            </div>
+            <!--end of font Size changer-->
+        </div>
+        <!--end of introduction paragraph-->
+        <!--attractions in this destination-->
+        <div class="subHeading" id="attractMainTitle">
+            <h2>Major Attractions</h2>
+        </div>
+        <!--attractions-->
+        <div class="popularAttraction1" id="popularAttraction">
+            <img src="images\gregory.jpg" alt="Lake Gregory" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Lake Gregory</p>
+                <p>
+                    Gregory Lake was created in 1873 by the Governor at the time, Sir William Gregory, for
+                    the purpose of providing electricity but it was used for recreational activities.
+                </p>
+            </div>
+        </div>
+        <div class="popularAttraction2" id="popularAttraction">
+            <img src="images/lover.jpg" alt="Lover's leap Waterfall" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Lover's leap Waterfall</p>
+                <p>Lover’s leap fall, located at Hawaeliya is the closest water fall from the city of Nuwara Eliya.
+                    There is a beautiful legend behind this beautiful small cascade. </p>
+            </div>
+        </div>
+        <div class="popularAttraction3" id="popularAttraction">
+            <img src="images/victoria.jpg" alt="Victoria Park" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Victoria Park</p>
+                <p>This is one of the country's most attractive, and best-maintained, town parks. A stroll around
+                    its
+                    paths, past manicured lawns, is a pleasure. </p>
+            </div>
+        </div>
+        <div class="popularAttraction4" id="popularAttraction">
+            <img src="images/piduru.jpg" alt="Pidurutalagala" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Pidurutalagala</p>
+                <p>It is the tallest mountain in Sri Lanka and has a height of 2524m. The surrounding forest has
+                    many
+                    rare trees. The mountain top gives a beautiful view.
+                </p>
+            </div>
+        </div>
+        <div class="popularAttraction5" id="popularAttraction">
+            <img src="images/hakgala.JPG" alt="Hakgala Botanical Garden" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Hakgala Botanical Garden</p>
+                <p>It was established for cultivation of the medicinal crop Cinchona then, for Tea cultivation and
+                    in
+                    1884 it was changed into a garden with tropical plants.</p>
+            </div>
+        </div>
+        <div class="popularAttraction6" id="popularAttraction">
+            <img src="images/adam.jpg" alt="Sri Pada / Adam's Peak" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Sri Pada/Adam's Peak</p>
+                <p>Adam’s Peak the place where Adam first set foot on earth after being cast out of
+                    heaven) or Sri Pada Sacred Footprint, left by the Buddha as he headed towards paradise.</p>
+            </div>
+        </div>
+        <div class="popularAttraction7" id="popularAttraction">
+            <img src="images/nineArches.jpg" alt="Nine Arches Bridge" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Nine Arches Bridge</p>
+                <p>The Nine Arch Bridge in Ella is on the Demodara loop. The beautiful nine arches make it a very
+                    picturesque spot especially as it is located in a dense jungle.</p>
+            </div>
+        </div>
+        <div class="popularAttraction8" id="popularAttraction">
+            <img src="images/bambara.jpg" alt="Bambarakanda Falls" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Bambarakanda Falls</p>
+                <p>It is the tallest waterfall of Sri Lanka with of height 263m. There is a natural pool complex at
+                    the
+                    base of
+                    the falls and it is a great spot to take pictures. </p>
+            </div>
+        </div>
+        <div class="popularAttraction9" id="popularAttraction">
+            <img src="images/world.jpg" alt="World's End" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">World's End</p>
+                <p>It is a sheer cliff, with a drop of about 4,000 feet (1,200 m). It is one of the most visited
+                    parts
+                    of the Park and it gets really misty by 10am.</p>
+            </div>
+        </div>
+        <!--end of attractions-->
+        <!--links to hotel page of destination-->
+        <div class="hotel1" id="hotelID" role="banner">
+            <div class="layerOver">
+                <h2 class="hotelHeading">Amazing hotels and B & B</h2>
+                <h3 class="nextHotel">We've pre-picked the best hotels and bed and breakfasts to make your stay as
+                    enjoyable as
+                    possible.</h3>
+                <div class="readmore1" id="linkToHotelPage"><a
+                        href="../../hotels/hotels-nuwaraeliya/hotel9_nuwaraeliya.html">View All Hotels</a></div>
+            </div>
+        </div>
+        <!--end of hotel linking-->
+        <!--popular restaurants in this destination-->
+        <div class="subHeading1" id="restaurant">
+            <h2>Popular Restaurants</h2>
+        </div>
+        <!--restaurants-->
+        <div class="popularRest1" id="popularRest">
+            <img class="popularImages" src="images\ambaal.jpeg" alt="Sri Ambaal" />
+            <div class="restInfo">
+                <p class="restTitle">Sri Ambaal</p>
+                <p class="cuisine">South Indian</p>
+                <!--span used to hide the timings and address-->
+                <span id="ambaalMore">
+                    <p>
+                        Address: New Bazaar St, Nuwara Eliya <br />Telephone Number:
+                        0524907572<br />Open Timings:7.00AM - 10.45PM
+                    </p>
+                </span>
+                <!--end of span-->
+                <!--function called when user clicks button to show the address and timing-->
+                <button onclick="showHideFunction(0);" id="ambaalBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest2" id="popularRest">
+            <img class="popularImages" src="images\silva.jpg" alt="De Silva Food Centre" />
+            <div class="restInfo">
+                <p class="restTitle">De Silva Food Centre</p>
+                <p class="cuisine">Bakery</p>
+
+                <span id="silvaMore">
+                    <p>
+                        Address:90 New Bazaar St, Nuwara Eliya
+                        <br />Telephone Number:
+                        522223833<br />Open Timings:8.00AM - 9.00PM
+                    </p>
+                </span>
+                <button onclick="showHideFunction(1);" id="silvaBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest3" id="popularRest">
+            <img class="popularImages" src="images\grandThai.jpg" alt="Grand Thai" />
+            <div class="restInfo">
+                <p class="restTitle">Grand Thai</p>
+                <p class="cuisine">Thai</p>
+
+                <span id="grandThaiMore">
+                    <p>
+                        Address: Grand Hotel Road, Nuwara Eliya<br />Telephone Number:
+                        522222881<br />Open Timings:12.00PM - 10.00PM
+                    </p>
+                </span>
+                <button onclick="showHideFunction(2);" id="grandThaiBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest4" id="popularRest">
+            <img class="popularImages" src="images\indian.jpg" alt="Indian Summer" />
+            <div class="restInfo">
+                <p class="restTitle">Indian Summer</p>
+                <p class="cuisine">Indian</p>
+
+                <span id="indianMore">
+                    <p>
+                        Address: 96 Badulla Road, Nuwara Eliya<br />Telephone Number:
+                        522224411<br />Open Timings:10.00AM - 10.00PM
+                    </p>
+                </span>
+                <button onclick="showHideFunction(3);" id="indianBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest5" id="popularRest">
+            <img class="popularImages" src="images\grandIndian.jpg" alt="Grand Indian" />
+            <div class="restInfo">
+                <p class="restTitle">Grand Indian</p>
+                <p class="cuisine">Indian</p>
+
+                <span id="grandIndianMore">
+                    <p>
+                        Address: Grand Hotel Rd, Nuwara Eliya
+                        <br />Telephone Number:
+                        522222881<br />Open Timings:12.00PM - 10.00PM
+                    </p>
+                </span>
+                <button onclick="showHideFunction(4);" id="grandIndianBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest6" id="popularRest">
+            <img class="popularImages" src="images\salmiya.jpg" alt="Salmiya" />
+            <div class="restInfo">
+                <p class="restTitle">Salmiya</p>
+                <p class="cuisine">Fast Food</p>
+
+                <span id="salmiyaMore">
+                    <p>
+                        Address: 122 Badulla Rd, Nuwara Eliya
+                        <br />Telephone Number:
+                        779135263<br />Open Timings:11.30AM - 9.15PM
+                    </p>
+                </span>
+                <button onclick="showHideFunction(5);" id="salmiyaBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest7" id="popularRest">
+            <img class="popularImages" src="images\themparadu.jpg" alt="Themparadu" />
+            <div class="restInfo">
+                <p class="restTitle">Themparadu</p>
+                <p class="cuisine">Sri Lankan</p>
+
+                <span id="themparaduMore">
+                    <p>
+                        Address: Victoria Park, Nuwara Eliya
+                        <br />Telephone Number:
+                        762015455<br />Open Timings:9.00AM - 9.00PM
+                    </p>
+                </span>
+                <button onclick="showHideFunction(6);" id="themparaduBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest8" id="popularRest">
+            <img class="popularImages" src="images\teatrain.jpg" alt="Edinburgh TEA TRAIN" />
+            <div class="restInfo">
+                <p class="restTitle">Edinburgh TEA TRAIN</p>
+                <p class="cuisine">Cafe</p>
+
+                <span id="teaTrainMore">
+                    <p>
+                        Address: Edinburgh Estate, Nanu Oya, Nuwara Eliya
+                        <br />Telephone Number:
+                        522223925<br />Open Timings:8.00AM - 5.30PM
+                    </p>
+                </span>
+                <button onclick="showHideFunction(7);" id="teaTrainBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest9" id="popularRest">
+            <img class="popularImages" src="images\thaj.jpg" alt="Thaj Hotel & Bakers" />
+            <div class="restInfo">
+                <p class="restTitle">Thaj Hotel & Bakers</p>
+                <p class="cuisine">Bakery</p>
+
+                <span id="thajMore">
+                    <p>
+                        Address: 12 New Bazaar, Nuwara Eliya <br />Telephone Number:
+                        522222736<br />Open Timings:7.00AM - 9.00PM
+                    </p>
+                </span>
+                <button onclick="showHideFunction(8);" id="thajBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <!--end of restaurants-->
+        <!--google maps embedded into the html using iframe-->
+        <div class="mapOfPlace">
+            <div class="googleMap"><iframe width="1348" height="600" id="googleMap"
+                    src="https://maps.google.com/maps?q=anuradhapura&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+            </div>
+        </div>
+        <!--end of the map-->
+        <div class="footer">
+            <div class="footerinner">
+                <img class="footerlogo" src="../../images/logo.png" alt="logo" />
+                <img class="footerbrand" src="../../images/brand1.png" alt="brandname" />
+                <div class="footerlinks">
+                    <a href="../../home.html"> Home | </a>
+                    <a href="../../comment-form/contact.html"> Contact | </a>
+                    <a href="../../sitemap/sitemap.html"> Sitemap | </a>
+                    <a href="../../cv/safiyyah/safiyyah-cv.html"> Safiyyah Thur Rahman </a>
+                </div>
+            </div>
+        </div>
+        <!--end of footer-->
+    </div>
+    <!--end of the grid-->
+    <!--link the function file because it has the function decrease and increase the font size and also the function to make the header and back to the top button sticky-->
+    <script src="../../function.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+/*the address and the timing are not displayed initially*/
+#jewelMore,
+#differMore,
+#mangroviaMore,
+#helloMore,
+#thambiliMore,
+#saltyMore,
+#sushiMore,
+#seashellsMore {
+  display: none;
+}
+

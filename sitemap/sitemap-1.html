@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title> Sitemap | DUPATHA </title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="../images/logo.png" sizes="16x16">
+		<link rel="stylesheet" type="text/css" href="../externalstyle.css">
+		<link rel="stylesheet" type="text/css" href="sitemap-1.css">
+		
+		<script>
+			window.onscroll = function () { scrollFunction() };
+		</script>
+		
+	</head>
+	
+	<body>
+		<!--The header div that contains the main image, main heading and the two logos-->
+		<div class="header" role="banner">
+		<img class="headerimage" src="images/sitemap.png" alt="header image">		
+				<div class="headerinner">
+					<h1 class="mainheading"> sitemap </h1>
+					<a href="../home.html">
+					<img class="logo" src="../images/logo.png" alt="logo"/>
+					<img class="brand" src="../images/brand1.png" alt ="brandname"/>
+					</a>
+				</div>							
+		</div>
+		
+		<!--The mainNavBar div that contains the menu that pops up from the right side of the page-->
+		<div id="mainNav" class="mainNavBar">
+			  <a href="javascript:void(0)" id="cross" class="closebtn" onclick="closeMenu()">&times;</a>
+			  <a href="../home.html">Home</a>
+			  <a href="../advice/advice.html">Things to know</a>
+			  <a href="../destination/destinations.html">Destinations</a>
+			  <a href="../colombo/colombo.html">Colombo</a>
+			  <a href="../tours/tours.html">Tours</a>
+			  <a href="../hotels/hotelmain.html">Accommodation</a>
+			  <a href="../gallery/gallery.html">Gallery</a>
+			  <a href="../boutique/product.html">Boutique</a>
+			  <a href="../comment-form/contact.html">Contact</a>
+			  <a href="../sitemap/sitemap.html">Sitemap</a>
+		</div>
+		
+		<!--The div for the menu that pops when you scroll down the page-->
+		<div id="scrollingNav">
+			<img id="navlogo" src="../images/logo.png" style="margin-top:8px; margin-left:40px;"/>
+			<img id="navlogotext" src="../images/brand1.png"/>
+			
+			<div id="main-1"class="readmore">
+				<span onclick="openMenu()"><b> MENU</b></span>
+			</div>
+				
+			<div id="main-2"class="readmore">
+				<a href="../comment-form/contact.html"><span><b> CONTACT</b></span></a>
+			</div>
+				
+			<div id="main-3"class="readmore">
+				<a href="../boutique/product.html"><span><b> BOUTIQUE</b></span></a>
+			</div>
+		</div>
+		
+		<!--The topMenu div that contains all the anchors and navigation within the page-->
+		<div class="topMenu">
+			<div class="subNavigation">
+				<a href="sitemap.html"><button class="subnavbtn" onclick="listFunction();"> list sitemap <i class=""></i></button></a>	
+			</div> 
+			
+			<div class="subNavigation">
+				<a href="sitemap-1.html"><button class="subnavbtn" onclick="treeFunction();"> tree sitemap <i class=""></i></button></a>	
+			</div> 
+		</div>
+		
+		<!--The the-tree div that contains the tree structure of the sitemap-->
+		<div class="the-tree">
+			<div class="home"><a href="../home.html"><img src="svg/home.svg" alt="home">Home</img></a></div>
+			
+			<div class="main-arrow"><img src="svg/main-line.svg" alt="main arrow"></img></div>
+			
+			<div class="things"><a href="../advice/advice.html"><img src="svg/things.svg" alt="advice">Things to know</img></a></div>
+			
+			<div class="destinations"><a href="../destination/destinations.html"><img src="svg/destinations.svg" alt="destinations">Destinations</img></a></div>
+			
+				<div class="sub-arrow3">
+					<a href="../destination/Anuradhapura/anuradhapura.html""><p class="three">Anuradhapura</p></a>
+					<a href="../destination/Galle/galle1.html"><p class="three">Galle</p></a>
+					<a href="../destination/Hambantota/hambantota1.html"><p class="three">Hambantota</p></a>
+					<a href="../destination/Hikkaduwa/hikkaduwa1.html"><p class="three">Hikkaduwa</p></a>
+					<a href="../destination/Jaffna/jaffna1.html"><p class="three">Jaffna</p></a>
+					<a href="../destination/Kandy/kandy1.html"><p class="three">Kandy</p></a>
+					<a href="../destination/Nuwara Eliya/nuwaraEliya.html"><p class="three">Nuwara Eliya</p></a>
+					<a href="../destination/Polonnaruwa/polon1.html"><p class="three">Polonnaruwa</p></a>
+					<a href="../destination/Sigiriya/sigiriya1.html"><p class="three">Sigiriya</p></a>
+					<a href="../destination/Trincomalee/trinco1.html"><p class="three">Trincomalee</p></a>
+				</div>
+				
+			<div class="colombo"><a href="../colombo/colombo.html"><img src="svg/colombo.svg" alt="colombo">Colombo</img></a></div>
+			
+				<div class="sub-arrow1">
+					<a href="../colombo/colombo-1/colombo-1.html#activities"><p class="one">Activities</p></a>
+					<a href="../colombo/colombo-2/colombo-2.html#places"><p class="one">Places</p></a>
+					<a href="../colombo/colombo-1/colombo-1.html#restaurants"><p class="one">Restaurants</p></a>
+					<a href="../colombo/colombo-2/colombo-2.html#shopping"><p class="one">Shopping</p></a>
+				</div>
+				
+			<div class="tours"><a href="../tours/tours.html"><img src="svg/tours.svg" alt="tours">Tours</img></a></div>
+			
+				<div class="sub-arrow4">
+					<a href="../tours/beach/beachtour.html"><p class="four">Beach</p></a>
+					<a href="../tours/cultural/culturaltour.html"><p class="four">Cultural</p></a>
+					<a href="../tours/hill-country/hillcountrytour.html"><p class="four">Hill Country</p></a>
+					<a href="../tours/luxury/luxurytour.html"><p class="four">Luxury</p></a>
+					<a href="../tours/safari/safaritour.html"><p class="four">Safari</p></a>
+				</div>
+				
+			<div class="accomodations"><a href="../hotels/hotelmain.html"><img src="svg/accomodations.svg" alt="accommodation">Accommodation</img></a></div>
+			
+				<div class="sub-arrow2">
+					<a href="../hotels/hotels-anuradhapura/hotel5_anuradhapura.html"><p class="two">Anuradhapura</p></a>
+					<a href="../hotels/hotels-colombo/hotel1_colombo.html"><p class="two">Colombo</p></a>
+					<a href="../hotels/hotels-galle/hotel2_galle.html"><p class="two">Galle</p></a>
+					<a href="../hotels/hotels-hambantota/hotel11_hambantota.html"><p class="two">Hambantota</p></a>
+					<a href="../hotels/hotels-hikkaduwa/hotel3_hikkaduwa.html"><p class="two">Hikkaduwa</p></a>
+					<a href="../hotels/hotels-jaffna/hotel7_jaffna.html"><p class="two">Jaffna</p></a>
+					<a href="../hotels/hotels-kandy/hotel4_kandy.html"><p class="two">Kandy</p></a>
+					<a href="../hotels/hotels-nuwaraeliya/hotel9_nuwaraeliya.html"><p class="two">Nuwara Eliya</p></a>
+					<a href="../hotels/hotels-polannaruwa/hotel10_polonnaruwa.html"><p class="two">Polonnaruwa</p></a>
+					<a href="../hotels/hotels-sigiriya/hotel8_sigiriya.html"><p class="two">Sigiriya</p></a>
+					<a href="../hotels/hotels-trinco/hotel6_trinco.html"><p class="two">Trincomalee</p></a>
+				</div>
+				
+			<div class="gallery"><a href="../gallery/gallery.html"><img src="svg/gallery.svg" alt="gallery">Gallery</img></a></div>
+			
+			<div class="boutique"><a href="../boutique/product.html"><img src="svg/boutique.svg"  alt="boutique">Boutique</img></a></div>
+			
+			<div class="contact"><a href="../comment-form/contact.html"><img src="svg/contact.svg" alt="contact">Contact</img></a></div>
+			
+			<div class="sitemap"><a href="../sitemap/sitemap.html"><img src="svg/site-map.svg" alt="sitemap">Sitemap</img></a></div>
+				
+				<div class="sub-arrow5">
+					<a href="../sitemap/sitemap.html"><p class="five">List Sitemap</p></a>
+					<a href="../sitemap/sitemap-1.html"><p class="five">Tree Sitemap</p></a>
+				</div>
+		</div>
+		
+		<!--The the-gallery1 div that contains the tile gallery of the of the tree sitemap-->
+		<div class="the-gallery1">
+			<div class="image-1" role="img" aria-label="sigiriya"></div>
+			<div class="image-2" role="img" aria-label="colombo city"></div>
+			<div class="image-3" role="img" aria-label="galle"></div>
+			<div class="image-4" role="img" aria-label="mirisaa"></div>
+			<div class="image-5" role="img" aria-label="train travelling in hill country"></div>
+			<div class="image-6" role="img" aria-label="kandy"></div>
+		</div>
+		
+		<!--The div for the footer that contains the two logos and links-->
+		<div class="footer">
+			<div class="footerinner">
+				<img class="footerlogo" src="../images/logo.png" alt="logo"/>
+				<img class="footerbrand" src="../images/brand1.png" alt ="brandname"/>
+				<div class="footerlinks">
+					<a href="../home.html" > Home | </a>
+					<a href="../comment-form/contact.html" > Contact | </a>
+					<a href="../sitemap/sitemap.html" > Sitemap | </a>
+					<a href="../cv/shiromi/shiromi-cv.html" > Shiromi Thevarajan </a>
+				</div>
+			</div>
+		</div>
+		
+		<!--the external java script file is linked to the html-->
+		<script src="../function.js"></script>
+	</body>
+</html>

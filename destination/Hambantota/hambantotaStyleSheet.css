@@ -1,0 +1,10 @@
+/*the address and the timing are not displayed initially*/
+#ruhunuRestMore,
+#bojunhalaMore,
+#ulpathaMore,
+#ladyRestMore,
+#nonagamaMore,
+#yalaCotMore,
+#chillMore{
+  display: none;
+}

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> DUPATHA | HOTELS  </title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="../images/logo.png" sizes="16x16">
+		<link rel="stylesheet" type="text/css" href="../externalstyle.css">
+		<link rel="stylesheet" type="text/css" href="hotelmain.css">
+		
+		<script>
+			<!-- javascript for div which opens on scrolling-->
+			window.onscroll = function () { scrollFunction() };
+		</script>
+		
+	</head>
+	
+	<body>
+		<!--grid div for placement of elements-->
+		<div class="hotel-grid">
+			<!--div for banner which acts as header for the page-->
+			<div class="header" role="banner">
+			<img class="headerimage" src="images/hotel_main_banner.png" alt="header image">		
+					<div class="headerinner">
+					<h1 class="mainheading"> Accommodation </h1>
+					<a href="../home.html">
+					<img class="logo" src="../images/logo.png" alt="logo"/>
+					<img class="brand" src="../images/brand1.png" alt ="brandname"/>
+					</a>
+				</div>							
+			</div>
+			<!--div for navigation bar to access the menu-->
+			<div id="mainNav" class="mainNavBar">
+				<a href="javascript:void(0)" id="cross" class="closebtn" onclick="closeMenu()">&times;</a>
+				<a href="../home.html">Home</a>
+				<a href="../advice/advice.html">Things to know</a>
+				<a href="../destination/destinations.html">Destinations</a>
+				<a href="../colombo/colombo.html">Colombo</a>
+				<a href="../tours/tours.html">Tours</a>
+				<a href="../hotels/hotelmain.html">Accommodation</a>
+				<a href="../gallery/gallery.html">Gallery</a>
+				<a href="../boutique/product.html">Boutique</a>
+				<a href="../comment-form/contact.html">Contact</a>
+				<a href="../sitemap/sitemap.html">Sitemap</a>
+			</div>
+			
+			<!--links to visit different parts of the website on opaque div -->
+			<div id="scrollingNav">
+				<a href="#"></a>
+					<img id="navlogo" src="../images/logo.png" style="margin-top:8px; margin-left:40px;"/>
+				<img id="navlogotext" src="../images/brand1.png"/>
+				
+				<div id="main-1"class="readmore">
+					<span onclick="openMenu()"><b> MENU</b></span>
+				</div>
+					
+				<div id="main-2"class="readmore">
+					<a href="../comment-form/contact.html"><span><b> CONTACT</b></span></a>
+				</div>
+					
+				<div id="main-3"class="readmore">
+					<a href="../boutique/product.html"><span><b> BOUTIQUE</b></span></a>
+				</div>
+			</div>
+
+			<!--bookmarks to visit different parts of the page-->
+			<div class="topMenu" >
+				<div class="subNavigation" >
+					<button  class="subnavbtn" id="topMenuhotel" onclick="location.href='hotels-colombo/hotel1_colombo.html'">Colombo <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a class="active" href="hotels-colombo/hotel1_colombo.html#description">Description</a>
+							<a href="hotels-colombo/hotel1_colombo.html#main_search_div">Recommendations</a>
+						</div>
+				</div> 
+				<div class="subNavigation">
+					<button  class="subnavbtn" id="topMenuhotel"  onclick="location.href='hotels-galle/hotel2_galle.html'">Galle <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a class="active" href="hotels-galle/hotel2_galle.html#description">Description</a>
+							<a href="hotels-galle/hotel2_galle.html#main_search_div">Recommendations</a>
+						</div>
+				</div> 
+				<div class="subNavigation">
+					<button  class="subnavbtn" id="topMenuhotel" onclick="location.href='hotels-hikkaduwa/hotel3_hikkaduwa.html'">Hikkaduwa <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a class="active" href="hotels-hikkaduwa/hotel3_hikkaduwa.html#description">Description</a>
+							<a href="hotels-hikkaduwa/hotel3_hikkaduwa.html#main_search_div">Recommendations</a>
+						</div>
+				</div> 
+				<div class="subNavigation">
+				</div> 
+				<div class="subNavigation">
+					<button  class="subnavbtn" id="topMenuhotel" onclick="location.href='hotels-kandy/hotel4_kandy.html'">Kandy <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a class="active" href="hotels-kandy/hotel3_kandy.html#description">Description</a>
+							<a href="hotels-kandy/hotel3_kandy.html.html#main_search_div">Recommendations</a>
+						</div>
+				</div> 
+				<div class="subNavigation">
+					<button  class="subnavbtn" id="topMenuhotel" onclick="location.href='hotels-anuradhapura/hotel5_anuradhapura.html'">Anuradhapura <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a class="active" href="hotels-anuradhapura/hotel5_anuradhapura.html#description">Description</a>
+							<a href="hotels-anuradhapura/hotel5_anuradhapura.html.html#main_search_div">Recommendations</a>
+						</div>
+				</div> 
+				<div class="subNavigation">
+					<button  class="subnavbtn" id="topMenuhotel" onclick="location.href='hotels-trinco/hotel6_trinco.html'">Trinco <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a class="active" href="hotels-trinco/hotel6_trinco.html#description">Description</a>
+							<a href="hotels-trinco/hotel6_trinco.html#main_search_div">Recommendations</a>
+						</div>
+				</div> 
+				<div class="subNavigation">
+					<button  class="subnavbtn" id="topMenuhotel" onclick="location.href='hotels-jaffna/hotel7_jaffna.html'">Jaffna <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a class="active" href="hotels-jaffna/hotel7_jaffna.html#description">Description</a>
+							<a href="hotels-jaffna/hotel7_jaffna#main_search_div">Recommendations</a>
+						</div>
+				</div> 
+				<div class="subNavigation">
+					<button  class="subnavbtn" id="topMenuhotel" onclick="location.href='hotels-sigiriya/hotel8_sigiriya.html'">Sigiriya <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a class="active" href="hotels-sigiriya/hotel8_sigiriya.html#description">Description</a>
+							<a href="hotels-sigiriya/hotel8_sigiriya.html#main_search_div">Recommendations</a>
+						</div>
+				</div> 
+				<div class="subNavigation">
+					<button  class="subnavbtn" id="topMenuhotel" onclick="location.href='hotels-nuwaraeliya/hotel9_nuwaraeliya.html'">Nuwaraeliya <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a class="active" href="hotels-nuwaraeliya/hotel9_nuwaraeliya.html#description">Description</a>
+							<a href="hotels-nuwaraeliya/hotel9_nuwaraeliya#main_search_div">Recommendations</a>
+						</div>
+				</div> 
+				<div class="subNavigation">
+					<button  class="subnavbtn" id="topMenuhotel" onclick="location.href='hotels-polonnaruwa/hotel10_polonnaruwa.html'">Polonnaruwa <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a class="active" href="hotels-polonnaruwa/hotel10_polonnaruwa.html#description">Description</a>
+							<a href="hotels-polonnaruwa/hotel10_polonnaruwa.html#main_search_div">Recommendations</a>
+						</div>
+				</div> 
+				<div class="subNavigation" >
+					<button  class="subnavbtn" id="topMenuhotel" onclick="location.href='hotels-hambantota/hotel11_hambantota.html'">Hambantota <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a class="active" href="hotels-hambantota/hotel11_hambantota.html#description">Description</a>
+							<a href="hotels-hambantota/hotel11_hambantota.html#main_search_div">Recommendations</a>
+						</div>
+				</div> 
+				  
+				
+			</div>
+			<!-- content div with font size changer-->
+			<div class="content" id="changeFont"style="font-size: 16px;">
+				<h2>Where to stay in Sri lanka </h2>
+			
+				<p><b>Haven't yet found a place to stay for when 
+				you visit sri lanka? You have nothing to worry about.You will be spoilt for choice with 
+				all the different types of hotels Sri Lanka has to offer. Whether you are looking for a 
+				relaxing holiday in the hills or an exiting adventure on the beach you will have no trouble 
+				in finding the perfect type of accomodation for you.
+				<!--font size  changer-->
+					
+				<span id="dots"><br><br> With hotels ranging from 1 to 5 stars
+				you can plan for a trip well within your budget and still experience the tropical bliss this 
+				island has to offer.You can expect friendly service and the best standards in whichever range you choose. 
+				Find out more about the different types of accommodation and facilities they offer here.
+				 <ul>
+				<!--displayed on click of readmore button-->
+				 </span>
+					<span id="more">
+					<p><li>5 Stars </li>    
+
+						<p>Superior standard and an extensive range of first-class guest services</p>
+
+					<li>4 Stars  </li>
+
+						<p>Exceptional standard with high-quality furnishings and comfort</p>
+
+					<li>3 Stars  </li> 
+
+						<p>Well-appointed establishments with comfortable, clean rooms and quality furnishings</p>
+
+					<li>Less than 3 Stars</li>
+
+						<p>A basic, well-maintained standard</p>
+					<br><br>
+					
+					</span>
+					<div id="fontSizeChanger">
+						<div class="fontButtons">
+							<button class="fontSizeButtonDec" onclick="fontDecrease()">-</button>
+							<p id="textFontSize1">16</p>
+							<button class="fontSizeButtonIn" onclick="fontIncrease()">+</button>
+						</div>
+					</div>
+							</b></p>
+							<button onclick="myFunction()" class="readmore"id="readmorebutton">READ MORE</button>
+							<script>
+							function myFunction() {
+							  var dots = document.getElementById("dots");
+							  var moreText = document.getElementById("more");
+							  var btnText = document.getElementById("readmorebutton");
+
+							  if (dots.style.display == "none") {
+								dots.style.display = "inline";
+								btnText.innerHTML = "READ MORE"; 
+								moreText.style.display = "none";
+							  } else {
+								dots.style.display = "none";
+								btnText.innerHTML = "READ LESS"; 
+								moreText.style.display = "inline";
+							  }
+							}
+							</script>
+			<br>
+			
+			<br>
+			<!--easy access to different locations-->
+			<h2> Select a Location below </h2>
+			
+			
+			</div>
+				
+			
+			
+			<div class="colombobtn">
+			<a href="hotels-colombo/hotel1_colombo.html">
+				<img class="hotelLocation" src="images/hotelcolombo.jpg" alt="colombo"/>
+				<div class="hotelmain_inner">
+					<p> Colombo  </p>
+				</div>
+			</a>
+			</div>
+			
+			
+			<div class="gallebtn">
+			<a href="hotels-galle/hotel2_galle.html">
+				<img class="hotelLocation" src="images/hotel2_5img.jpg" alt="galle"/>
+				<div class="hotelmain_inner">
+					<p> Galle  </p>
+				</div>
+			</a>
+			</div>
+			
+			
+			<div class="hikkaduwabtn">
+			<a href="hotels-hikkaduwa/hotel3_hikkaduwa.html">
+				<img class="hotelLocation" src="images/hotel3_5img.jpg" alt="hikkaduwa"/>
+				<div class="hotelmain_inner">
+					<p> hikkaduwa  </p>
+				</div>
+			</a>
+			</div>
+			
+			<div class="kandybtn">
+			<a href="hotels-kandy/hotel4_kandy.html">
+				<img class="hotelLocation" src="images/hotel4_5img.jpg" alt="kandy"/>
+				<div class="hotelmain_inner">
+					<p> kandy  </p>
+				</div>
+			</a>
+			</div>
+			
+			<div class="anuradhapurabtn">
+			<a href="hotels-anuradhapura/hotel5_anuradhapura.html">
+				<img class="hotelLocation" src="images/hotel5_5img.jpg" alt="anuradhapura"/>
+				<div class="hotelmain_inner">
+					<p> anuradhapura  </p>
+				</div>
+			</a>
+			</div>
+			
+			<div class="trincobtn">
+			<a href="hotels-trinco/hotel6_trinco.html">
+				<img class="hotelLocation" src="images/hotel6_5img.jpg" alt="trinco"/>
+				<div class="hotelmain_inner">
+					<p> trinco  </p>
+				</div>
+			</a>
+			</div>
+			
+			
+			<div class="jaffnabtn">
+			<a href="hotels-jaffna/hotel7_jaffna.html">
+				<img class="hotelLocation" src="images/hotel7_5img.jpg" alt="jaffna"/>
+				<div class="hotelmain_inner">
+					<p> jaffna  </p>
+				</div>
+			</a>
+			</div>
+			
+			<div class="sigiriyabtn">
+			<a href="hotels-sigiriya/hotel8_sigiriya.html">
+				<img class="hotelLocation" src="images/hotel8_5img.jpg" alt="sigiriya"/>
+				<div class="hotelmain_inner">
+					<p> sigiriya  </p>
+				</div>
+			</a>
+			</div>
+			
+			<div class="nuwarabtn">
+			<a href="hotels-nuwaraeliya/hotel9_nuwaraeliya.html">
+				<img class="hotelLocation" src="images/hotel9_5img.jpg" alt="nuwara"/>
+				<div class="hotelmain_inner">
+					<p> NuwaraEliya  </p>
+				</div>
+			</a>
+			</div>
+			
+			<div class="polonnaruwabtn">
+			<a href="hotels-polonnaruwa/hotel10_polonnaruwa.html">
+				<img class="hotelLocation" src="images/hotel10_5img.jpg" alt="polonnaruwa"/>
+				<div class="hotelmain_inner">
+					<p> polonnaruwa  </p>
+				</div>
+			</a>
+			</div>
+			
+			
+			<div class="hambantotabtn">
+			<a href="hotels-hambantota/hotel11_hambantota.html">
+				<img class="hotelLocation" src="images/hotel11_5img.jpg" alt="hambantota"/>
+				<div class="hotelmain_inner">
+					<p> hambantota  </p>
+				</div>
+			</a>
+			</div>
+			
+			
+
+			
+			<div class="footer">
+				<div class="footerinner">
+					<img class="footerlogo" src="../images/logo.png" alt="logo"/>
+					<img class="footerbrand" src="../images/brand1.png" alt ="brandname"/>
+					<div class="footerlinks">
+								<a href="../home.html" > Home | </a><!--more links to different parts of the page-->
+								<a href="../comment-form/contact.html" > Contact | </a>
+								<a href="../sitemap/sitemap.html" > Sitemap | </a>
+								<a href="../cv/christina/christina-cv.html" > Christina Thambirajah </a>
+					</div>
+				</div>
+			</div>
+			
+	
+	
+		</div>
+		
+			
+			<script src="../function.js"></script>	
+
+		
+		</div>
+	</body>
+	
+</html>

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> DUPATHA | QUIZ </title>
+		
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="icon" href="../images/logo.png" sizes="16x16">
+			<link rel="stylesheet" href="take_quiz.css" type="text/css">
+			<link rel="stylesheet" href="../externalstyle.css" type="text/css">
+		
+			<script>
+				<!-- javascript for div which opens on scrolling-->
+				window.onscroll = function () { scrollFunction() };
+			</script>
+	</head>
+	<body>
+	<div class="quiz-grid">	
+			<!--div for navigation bar to access the menu-->
+			<div id="mainNav" class="mainNavBar">
+				<a href="javascript:void(0)" id="cross" class="closebtn" onclick="closeMenu()">&times;</a>
+				<a href="../home.html">Home</a>
+				<a href="../advice/advice.html">Things to know</a>
+				<a href="../destination/destinations.html">Destinations</a>
+				<a href="../colombo/colombo.html">Colombo</a>
+				<a href="../tours/tours.html">Tours</a>
+				<a href="../hotels/hotelmain.html">Accommodation</a>
+				<a href="../gallery/gallery.html">Gallery</a>
+				<a href="../boutique/product.html">Boutique</a>
+				<a href="../comment-form/contact.html">Contact</a>
+				<a href="../sitemap/sitemap.html">Sitemap</a>
+			</div>
+			
+			<!--links to visit different parts of the website on opaque div -->
+			<div id="scrollingNav">
+				<a href="#"></a>
+					<img id="navlogo" src="../images/logo.png" style="margin-top:8px; margin-left:40px;"/>
+				<img id="navlogotext" src="../images/brand1.png"/>
+				
+				<div id="main-1"class="readmore">
+					<span onclick="openMenu()"><b> MENU</b></span>
+				</div>
+					
+				<div id="main-2"class="readmore">
+					<a href="../comment-form/contact.html"><span><b> CONTACT</b></span></a>
+				</div>
+					
+				<div id="main-3"class="readmore">
+					<a href="../boutique/product.html"><span><b> BOUTIQUE</b></span></a>
+				</div>
+			</div>
+			
+
+			<!--images used for frame of decoration for quizpage-->
+			<img class="decor1" id="dec1"src="images/decor_1.jpg" alt="decor"/>
+			<img class="decor2" id="dec2"src="images/decor_2.jpg" alt="decor"/>
+			<img class="decor3" id="dec3"src="images/decor_3.jpg" alt="decor"/>
+			<img class="decor4" id="dec4"src="images/decor_4.jpg" alt="decor"/>
+			<img class="decor5" id="dec5"src="images/decor_5.jpg" alt="decor"/>
+			<img class="decor6" id="dec6"src="images/decor_6.jpg" alt="decor"/>
+			<img class="decor7" id="dec7"src="images/decor_7.jpg" alt="decor"/>
+			<img class="decor8" id="dec8"src="images/decor_8.jpg" alt="decor"/>
+			<img class="decor9" id="dec9"src="images/decor_9.jpg" alt="decor"/>
+			<img class="decor10" id="dec10"src="images/decor_10.jpg" alt="decor"/>
+			<img class="decor11" id="dec11"src="images/decor_11.jpg" alt="decor"/>
+			<img class="decor12" id="dec12"src="images/decor_12.jpg" alt="decor"/>
+			<img class="decor13" id="dec13"src="images/decor_13.jpg" alt="decor"/>
+			<img class="decor14" id="dec14"src="images/decor_14.jpg" alt="decor"/>
+			<img class="decor15" id="dec15"src="images/decor_15.jpg" alt="decor"/>
+		
+			<!--div containing all components of the quiz visible to user-->
+			<div id="quizContent"" class="content" >
+				
+				<div id="questionText">
+					<h2>QUIZ</h2>
+					<label id="timer">00:00</label><!--timer which runs backwards-->
+					<br><label id="timerFinal"></label>
+					<!--increasing variable to show question number-->
+					<p>Question number : <text id="questionNum">0</text></p>
+				</hr>
+						<!--display instruction to user-->
+						<div id="instruction">Click Begin To START! </div>
+				</div>
+				<div id="scoreKeeper">
+					<div id="question_1"></div><!--display question-->
+					<!--display answers-->
+					<div id="option_1"></div>
+					<br>
+					<div id="option_2"></div>
+					<br>
+					<div id="option_3"></div>
+					<br>
+					<div id="option_4"></div>
+					<div id="answer_1"></div>
+					<div id="questionText"><!--buttons to begin and end quiz-->
+					
+						<div id="hideDiv"><button class ="btn01" onclick="beginQuiz()">Begin</button></div>
+					</div>	
+					<div id="next_1"></div>
+					
+				</div>
+				<p>Correct Answers : <text id="score001">0</text></p>
+				<p>Incorrect Answers : <text id="iscore001">0</text></p>
+				<p>Your Final Score: <text id="fscore001">0</text></p>
+				<div id="summary1"></div><br><br> <!--to collect data to make question summary-->
+				<div id="summary2"></div><br><br>
+				<div id="summary3"></div><br><br>
+				<div id="summary4"></div><br><br>
+				<div id="summary5"></div><br><br>
+				<div id="summary6"></div><br><br>
+				<div id="summary7"></div><br><br>
+				<div id="summary8"></div><br><br>
+				<div id="summary9"></div><br><br>
+				<div id="summary10"></div>
+				
+			</div>
+			
+			 
+			<div id ="footer" class="footer"><!--footer div-->
+			<div class="footerinner">
+				<img class="footerlogo" src="../images/logo.png" alt="logo"/>
+				<img class="footerbrand" src="../images/brand1.png" alt ="brandname"/>
+				<div class="footerlinks">
+					<a href="../home.html" > Home | </a>
+					<a href="../comment-form/contact.html" > Contact | </a>
+					<a href="../sitemap/sitemap.html" > Sitemap | </a>
+					<a href="../cv/christina/christina-cv.html" > Christina Thambirajah </a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+		<script>
+		document.getElementById("timer").innerHTML=9 + ":" +59 ;
+			<!--timer element-->
+
+				<!--function to begin timer-->
+			function Begin_timer() {
+				var begin = document.getElementById("timer").innerHTML;
+				var count =  begin.split(/[:]+/);
+				var min = count[0];
+				var second = check_time((count[1] - 1));
+				if (second == 59){min=min-1}
+				if (min<0){
+					Begin_timer.stop();
+					endQuiz();
+				}
+
+			document.getElementById("timer").innerHTML =min + ":"+second;
+				setTimeout(Begin_timer,1000);
+				}
+			<!--function for control of number of seconds-->
+			function check_time (second) {
+			if (second < 10 && second>= 0) 
+				{
+					second = "0" + second
+				};
+				if (second < 0)
+				{
+					second = "59"
+				};
+				
+				return second;
+			}
+			<!--stoppign counter at end of quiz-->
+			function countoff() {
+			var time = document.getElementById("timer").innerHTML;
+			document.getElementById("timer").innerHTML =0+ ":"+0;
+				var finalTime =  time.split(/[:]+/);
+				var finalMin = finalTime[0];
+				var finalSecond = finalTime[1];
+				finalMin = 9 - finalMin;
+				finalSecond = check_time(60 - finalSecond);
+				
+			
+			timerFinal.innerHTML = "Time Taken ="+finalMin+":"+finalSecond;
+				
+			
+			}
+			<!--array of questions-->
+			var q=["Question 1<br />What is another popular name given to Sri Lanka?<br/>",
+					"Question 2<br/>How do you say hello in Sinhala?<br />",
+					"Question 3</br>Which of these actions are considered innapropriate in places of worship?</br>",
+					"Question 4 </br>Which of these is the financial capitol of Sri Lanaka</br>",
+					"Question 5</br>Which of these is not a method of public transprt within the country</br>",
+					"Question 6</br>When visiting nature reserves, which of theses actions is not prohibited?</br>",
+					"Question 7</br>Which of these districts are popular for their ancient ruins?</br>",
+					"Question 8</br>Which of these is a popular export from Sri Lanka?</br>",
+					"Question 9</br>Which of the following is incorrect.</br>",
+					"Question 10</br>What is the currency in Sri Lanka?</br>",];
+			<!--array of first option-->
+			var answer1=["<button class=btn02 onclick=q1c()>Ceylon</button>",
+					"<button class=btn02 onclick=q2i()>Bonjour</button>",
+					"<button class=btn02 onclick=q3i()>Wearing revealing clothes</button>",
+					"<button class=btn02 onclick=q4i()>Kandy</button>",
+					"<button class=btn02 onclick=q5i()>Tuk tuk</button>",
+					"<button class=btn02 onclick=q6i()>plucking flowers</button>",
+					"<button class=btn02 onclick=q7c()>Anuradhapura</button>",
+					"<button class=btn02 onclick=q8i()>cinnamon</button>",
+					"<button class=btn02 onclick=q9i()>smoking in public is illegal in Sri Lanka </button>",
+					"<button class=btn02 onclick=q10c()>Rupee</button>"];
+			<!--array of second option-->
+			var answer2=["<button class=btn02 onclick=q1i()>Dupatha</button>",
+					"<button class=btn02 onclick=q2i()>Sawasdee Krab</button>",
+					"<button class=btn02 onclick=q3i()>Making a lot of noise and disturbing the peace</button>",
+					"<button class=btn02 onclick=q4i()>Jaffna</button>",
+					"<button class=btn02 onclick=q5c()> the subway</button>",
+					"<button class=btn02 onclick=q6c()>taking pictures</button>",
+					"<button class=btn02 onclick=q7i()>Kandy</button>",
+					"<button class=btn02 onclick=q8i()>tea</button>",
+					"<button class=btn02 onclick=q9i()>drinking in public is illegal in Sri Lanka </button>",
+					"<button class=btn02 onclick=q10i()>yen</button>"];
+			<!--array of third option-->
+			var answer3=["<button class=btn02 onclick=q1i()>Pearl</button>",
+					"<button class=btn02 onclick=q2i()>Hola</button>",
+					"<button class=btn02 onclick=q3i()>Wearing shoes onto shrines</button>",
+					"<button class=btn02 onclick=q4c()>Colombo</button>",
+					"<button class=btn02 onclick=q5i()>train</button>",
+					"<button class=btn02 onclick=q6i()>taking animals out of the reserve</button>",
+					"<button class=btn02 onclick=q7i()>Ratnapura</button>",
+					"<button class=btn02 onclick=q8i()>coconut products</button>",
+					"<button class=btn02 onclick=q9c()>drinking is allowed on poya days</button>",
+					"<button class=btn02 onclick=q10i()>bhat</button>"];
+			<!--array of fourth option-->
+			var answer4=["<button class=btn02 onclick=q1i()>Colombo</button>",
+					"<button class=btn02 onclick=q2c()>Ayubowan</button>",
+					"<button class=btn02 onclick=q3c()>all of the above</button>",
+					"<button class=btn02 onclick=q4i()>Galle</button>",
+					"<button class=btn02 onclick=q5i()>bus</button>",
+					"<button class=btn02 onclick=q6i()>litering</button>",
+					"<button class=btn02 onclick=q7i()>hambantota</button>",
+					"<button class=btn02 onclick=q8c()>all of the above</button>",
+					"<button class=btn02 onclick=q9i()>drinking age is 21 in Sri Lanka</button>",
+					"<button class=btn02 onclick=q10i()>doller</button>"];
+			
+			
+			<!--to display when correct or incorrect-->
+			var c=["Correct","Correct","Correct","Correct","Correct","Correct","Correct","Correct","Correct","Correct"];
+			
+			var i=["Incorrect,the correct answer is Ceylon","Incorrect,the correct answer is Ayubowan",
+				  "Incorrect,the correct answer is all of the above","Incorrect,the correct answer is Colombo",
+				  "Incorrect,the correct answer is the subway","Incorrect,the correct answer is taking pictures",
+				  "Incorrect,the correct answer is Anuradhapura","Incorrect,the correct answer is all of the above",
+				  "Incorrect,the correct answer is drinking is allowed on poya days","Incorrect,the correct answer is Rupee",];
+			
+			
+			<!--variablws to keep track if correct and incorrect answers-->
+			var n =0;
+			n++;
+			
+			var s=0;
+			
+			var is=0;
+			
+			
+			<!--foolowing functions are the order of events which take place when a correct or incorrect answer is selected-->			
+			function beginQuiz(){
+				Begin_timer();
+				hideDiv.innerHTML="";
+				instruction.innerHTML="";
+				question_1.innerHTML=q[0];
+				option_1.innerHTML=answer1[0];
+				option_2.innerHTML=answer2[0];
+				option_3.innerHTML=answer3[0];
+				option_4.innerHTML=answer4[0];
+				questionNum.innerHTML=n++;
+				
+			}
+			
+			function q1c() {
+				answer_1.innerHTML="<div id=greenText>" + c[0]+ "</div>"
+				option_1.innerHTML="";
+				option_2.innerHTML="";
+				option_3.innerHTML="";
+				option_4.innerHTML="";
+				next_1.innerHTML="<button class=btn01 onclick=new002()>Next</button>";
+				score001.innerHTML=++s;
+				summary1.innerHTML=q[0]+ c[0];
+				
+				
+				
+				
+			}
+			
+			function q1i() {
+				answer_1.innerHTML="<div id=redText>" + i[0]+ "</div>"
+				option_1.innerHTML="";
+				option_2.innerHTML="";
+				option_3.innerHTML="";
+				option_4.innerHTML="";
+				next_1.innerHTML="<button class=btn01 onclick=new002()>Next</button>";
+				iscore001.innerHTML=++is;
+				summary1.innerHTML=q[0]+ i[0];
+			
+			}
+			
+			function new002(){
+				instruction.innerHTML="";
+				question_1.innerHTML=q[1];
+				option_1.innerHTML=answer1[1];
+				option_2.innerHTML=answer2[1];
+				option_3.innerHTML=answer3[1];
+				option_4.innerHTML=answer4[1];
+				next_1.innerHTML="";
+				answer_1.innerHTML="";
+				questionNum.innerHTML=n++;
+				
+			}
+			
+			function q2c() {
+				answer_1.innerHTML="<div id=greenText>" + c[1]+ "</div>"
+				option_1.innerHTML="";
+				option_2.innerHTML="";
+				option_3.innerHTML="";
+				option_4.innerHTML="";
+				next_1.innerHTML="<button class=btn01 onclick=new003()>Next</button>";
+				score001.innerHTML=++s;
+				summary2.innerHTML=q[1] + c[1];
+				
+			}
+			
+			function q2i() {
+				answer_1.innerHTML="<div id=redText>" + i[1]+ "</div>"
+				option_1.innerHTML="";
+				option_2.innerHTML="";
+				option_3.innerHTML="";
+				option_4.innerHTML="";
+				next_1.innerHTML="<button class=btn01 onclick=new003()>Next</button>";
+				iscore001.innerHTML=++is;
+				summary2.innerHTML=q[1]+ i[1];
+				
+			}
+			
+			function new003(){
+				instruction.innerHTML="";
+				question_1.innerHTML=q[2];
+				option_1.innerHTML=answer1[2];
+				option_2.innerHTML=answer2[2];
+				option_3.innerHTML=answer3[2];
+				option_4.innerHTML=answer4[2];
+				next_1.innerHTML="";
+				answer_1.innerHTML="";
+				questionNum.innerHTML=n++;
+				
+			}
+			
+			function q3c() {
+				answer_1.innerHTML="<div id=greenText>" + c[2]+ "</div>"
+				option_1.innerHTML="";
+				option_2.innerHTML="";
+				option_3.innerHTML="";
+				option_4.innerHTML="";
+				next_1.innerHTML="<button class=btn01 onclick=new004()>Next</button>";
+				score001.innerHTML=++s;
+				summary3.innerHTML=q[2]+ c[2];
+				
+			}
+			
+			function q3i() {
+				answer_1.innerHTML="<div id=redText>" + i[2]+ "</div>"
+				option_1.innerHTML="";
+				option_2.innerHTML="";
+				option_3.innerHTML="";
+				option_4.innerHTML="";
+				next_1.innerHTML="<button class=btn01 onclick=new004()>Next</button>";
+				iscore001.innerHTML=++is;
+				summary3.innerHTML=q[2]+ c[2];
+				
+			}
+			
+			function new004(){
+				instruction.innerHTML="";
+				question_1.innerHTML=q[3];
+				option_1.innerHTML=answer1[3];
+				option_2.innerHTML=answer2[3];
+				option_3.innerHTML=answer3[3];
+				option_4.innerHTML=answer4[3];
+				next_1.innerHTML="";
+				answer_1.innerHTML="";
+				questionNum.innerHTML=n++;
+				
+			}
+			
+			function q4c() {
+				answer_1.innerHTML="<div id=greenText>" + c[3]+ "</div>"
+				option_1.innerHTML="";
+				option_2.innerHTML="";
+				option_3.innerHTML="";
+				option_4.innerHTML="";
+				next_1.innerHTML="<button class=btn01 onclick=new005()>Next</button>";
+				score001.innerHTML=++s;
+				summary4.innerHTML=q[3]+ c[3];
+				
+			}
+			
+			function q4i() {
+				answer_1.innerHTML="<div id=redText>" + i[3]+ "</div>"
+				option_1.innerHTML="";
+				option_2.innerHTML="";
+				option_3.innerHTML="";
+				option_4.innerHTML="";
+				next_1.innerHTML="<button class=btn01 onclick=new005()>Next</button>";
+				iscore001.innerHTML=++is;
+				summary4.innerHTML=q[3]+ c[3];
+				
+			}
+			
+			function new005(){
+				instruction.innerHTML="";
+				question_1.innerHTML=q[4];
+				option_1.innerHTML=answer1[4];
+				option_2.innerHTML=answer2[4];
+				option_3.innerHTML=answer3[4];
+				option_4.innerHTML=answer4[4];
+				next_1.innerHTML="";
+				answer_1.innerHTML="";
+				questionNum.innerHTML=n++;
+				
+			}
+			
+			function q5c() {
+				answer_1.innerHTML="<div id=greenText>" + c[4]+ "</div>"
+				option_1.innerHTML="";
+				option_2.innerHTML="";
+				option_3.innerHTML="";
+				option_4.innerHTML="";
+				next_1.innerHTML="<button class=btn01 onclick=new006()>Next</button>";
+				score001.innerHTML=++s;
+				summary5.innerHTML=q[4] + c[4];
+			}
+			
+			function q5i() {
+				answer_1.innerHTML="<div id=redText>" + i[4]+ "</div>"
+				option_1.innerHTML="";
+				option_2.innerHTML="";
+				option_3.innerHTML="";
+				option_4.innerHTML="";
+				next_1.innerHTML="<button class=btn01 onclick=new006()>Next</button>";
+				iscore001.innerHTML=++is;
+				summary5.innerHTML=q[4] + i[4];
+		
+			}
+			
+			function new006(){
+				instruction.innerHTML="";
+				question_1.innerHTML=q[5];
+				option_1.innerHTML=answer1[5];
+				option_2.innerHTML=answer2[5];
+				option_3.innerHTML=answer3[5];
+				option_4.innerHTML=answer4[5];
+				next_1.innerHTML="";
+				answer_1.innerHTML="";
+				questionNum.innerHTML=n++;
+				
+			}
+			
+			function q6c() {
+				answer_1.innerHTML="<div id=greenText>" + c[5]+ "</div>"
+				option_1.innerHTML="";
+				option_2.innerHTML="";
+				option_3.innerHTML="";
+				option_4.innerHTML="";
+				next_1.innerHTML="<button class=btn01 onclick=new007()>Next</button>";
+				score001.innerHTML=++s;
+				summary6.innerHTML= q[5]+ c[5];
+			}
+			
+			function q6i() {
+				answer_1.innerHTML="<div id=redText>" + i[5]+ "</div>"
+				option_1.innerHTML="";
+				option_2.innerHTML="";
+				option_3.innerHTML="";
+				option_4.innerHTML="";
+				next_1.innerHTML="<button class=btn01 onclick=new007()>Next</button>";
+				iscore001.innerHTML=++is;
+				summary6.innerHTML= q[5]+i[5];
+
+			}
+			
+			function new007(){
+				instruction.innerHTML="";
+				question_1.innerHTML=q[6];
+				option_1.innerHTML=answer1[6];
+				option_2.innerHTML=answer2[6];
+				option_3.innerHTML=answer3[6];
+				option_4.innerHTML=answer4[6];
+				next_1.innerHTML="";
+				answer_1.innerHTML="";
+				questionNum.innerHTML=n++;
+			}
+			
+			function q7c() {
+				answer_1.innerHTML="<div id=greenText>" + c[6]+ "</div>"
+				option_1.innerHTML="";
+				option_2.innerHTML="";
+				option_3.innerHTML="";
+				option_4.innerHTML="";
+				next_1.innerHTML="<button class=btn01 onclick=new008()>Next</button>";
+				score001.innerHTML=++s;
+				summary7.innerHTML= q[6]+c[6];
+		
+			}
+			
+			function q7i() {
+				answer_1.innerHTML="<div id=redText>" + i[6]+ "</div>"
+				option_1.innerHTML="";
+				option_2.innerHTML="";
+				option_3.innerHTML="";
+				option_4.innerHTML="";
+				next_1.innerHTML="<button class=btn01 onclick=new008()>Next</button>";
+				iscore001.innerHTML=++is;
+				summary7.innerHTML= q[6]+i[6];
+		
+			}
+			
+			function new008(){
+				instruction.innerHTML="";
+				question_1.innerHTML=q[7];
+				option_1.innerHTML=answer1[7];
+				option_2.innerHTML=answer2[7];
+				option_3.innerHTML=answer3[7];
+				option_4.innerHTML=answer4[7];
+				next_1.innerHTML="";
+				answer_1.innerHTML="";
+				questionNum.innerHTML=n++;
+			}
+			
+			function q8c() {
+				answer_1.innerHTML="<div id=greenText>" + c[7]+ "</div>"
+				option_1.innerHTML="";
+				option_2.innerHTML="";
+				option_3.innerHTML="";
+				option_4.innerHTML="";
+				next_1.innerHTML="<button class=btn01 onclick=new009()>Next</button>";
+				score001.innerHTML=++s;
+				summary8.innerHTML= q[7]+c[7];
+		
+			}
+			
+			function q8i() {
+				answer_1.innerHTML="<div id=redText>" + i[7]+ "</div>"
+				option_1.innerHTML="";
+				option_2.innerHTML="";
+				option_3.innerHTML="";
+				option_4.innerHTML="";
+				next_1.innerHTML="<button class=btn01 onclick=new009()>Next</button>";
+				iscore001.innerHTML=++is;
+				summary8.innerHTML= q[7]+i[7];
+			
+			}
+			
+			function new009(){
+				instruction.innerHTML="";
+				question_1.innerHTML=q[8];
+				option_1.innerHTML=answer1[8];
+				option_2.innerHTML=answer2[8];
+				option_3.innerHTML=answer3[8];
+				option_4.innerHTML=answer4[8];
+				next_1.innerHTML="";
+				answer_1.innerHTML="";
+				questionNum.innerHTML=n++;
+			}
+			
+			function q9c() {
+				answer_1.innerHTML="<div id=greenText>" + c[8]+ "</div>"
+				option_1.innerHTML="";
+				option_2.innerHTML="";
+				option_3.innerHTML="";
+				option_4.innerHTML="";
+				next_1.innerHTML="<button class=btn01 onclick=new010()>Next</button>";
+				score001.innerHTML=++s;
+				summary9.innerHTML= q[8]+c[8];
+
+			}
+			
+			function q9i() {
+				answer_1.innerHTML="<div id=redText>" + i[8]+ "</div>"
+				option_1.innerHTML="";
+				option_2.innerHTML="";
+				option_3.innerHTML="";
+				option_4.innerHTML="";
+				next_1.innerHTML="<button class=btn01 onclick=new010()>Next</button>";
+				iscore001.innerHTML=++is;
+				summary9.innerHTML= q[8]+i[8];
+
+				
+			}
+			
+			function new010(){
+				instruction.innerHTML="";
+				question_1.innerHTML=q[9];
+				option_1.innerHTML=answer1[9];
+				option_2.innerHTML=answer2[9];
+				option_3.innerHTML=answer3[9];
+				option_4.innerHTML=answer4[9];
+				next_1.innerHTML="";
+				answer_1.innerHTML="";
+				questionNum.innerHTML=n++;
+			}
+			
+			function q10c() {
+				answer_1.innerHTML="<div id=greenText>" + c[9]+ "</div>"
+				option_1.innerHTML="";
+				option_2.innerHTML="";
+				option_3.innerHTML="";
+				option_4.innerHTML="";
+				next_1.innerHTML="<button class=btn01 onclick=endQuiz()>End</button>";
+				score001.innerHTML=++s;
+				summary10.innerHTML= q[9]+c[9];
+	
+			}
+			
+			function q10i() {
+				answer_1.innerHTML="<div id=redText>" + i[9]+ "</div>"
+				option_1.innerHTML="";
+				option_2.innerHTML="";
+				option_3.innerHTML="";
+				option_4.innerHTML="";
+				next_1.innerHTML="<button class=btn01 onclick=endQuiz()>End</button>";
+				iscore001.innerHTML=++is;
+				summary10.innerHTML= q[9]+i[9];
+		
+			}
+			<!--function for end of the quiz-->
+			function endQuiz(){
+				countoff();
+				var finalScore= ((s*2)-is);
+				if (finalScore<=0){
+				fscore001.innerHTML=0;}
+				else{
+				fscore001.innerHTML = finalScore;}
+				if(fscore001.innerHTML>15){
+					document.body.style.backgroundImage = "url('images/greenbg.jpg')";
+					document.getElementById("footer").style.backgroundImage = "url('images/greenbg.jpg')";}
+				else{
+					document.body.style.backgroundImage = "url('images/redbg.jpg')";
+					document.getElementById("footer").style.backgroundImage = "url('images/redbg.jpg')";}
+				instruction.innerHTML="End of QUIZ";
+				question_1.innerHTML="";
+				option_1.innerHTML="";
+				option_2.innerHTML="";
+				option_3.innerHTML="";
+				option_4.innerHTML="";
+				next_1.innerHTML="<div id=questionText>" + "<div><button class=btn01 onclick=repeatQuiz()>REPEAT</button></div>"+"<br><div><button class=btn01 onclick=displaySummary()>Display Summary</button></div>";
+				answer_1.innerHTML="";
+			}
+			<!--function to display the summary of answers at the end of the quiz-->
+			function displaySummary(){
+				
+				questionNum.innerHTML="";
+				questionText.innerHTML="";
+				instruction.innerHTML="";
+				question_1.innerHTML="";
+				option_1.innerHTML="";
+				option_2.innerHTML="";
+				option_3.innerHTML="";
+				option_4.innerHTML="";
+				 document.getElementById("summary1").style.display = "inline";
+				 document.getElementById("summary2").style.display = "inline";
+				 document.getElementById("summary3").style.display = "inline";
+				 document.getElementById("summary4").style.display = "inline";
+				 document.getElementById("summary5").style.display = "inline";
+				 document.getElementById("summary6").style.display = "inline";
+				 document.getElementById("summary7").style.display = "inline";
+				 document.getElementById("summary8").style.display = "inline";
+				document.getElementById("summary9").style.display = "inline";
+				document.getElementById("summary10").style.display = "inline";
+				next_1.innerHTML="<div id=questionText>" + "<div><button class=btn01 onclick=repeatQuiz()>REPEAT</button></div>";
+				answer_1.innerHTML="";
+							  }
+				<!--function for if user choses to retake the quiz-->			
+			function repeatQuiz(){
+				location.reload();
+			}
+			
+			</script>	
+			<script src="../function.js"></script>	
+			
+	</body>
+</html>

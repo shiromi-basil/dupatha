@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+	</style>
+		<title> Beach Tour | DUPATHA</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="../../images/logo.png" sizes="16x16">
+		<link rel="stylesheet" href="tourstyle.css" type="text/css">
+		<link rel="stylesheet" href="../../externalstyle.css" type="text/css" >
+		
+		<script>
+			window.onscroll = function () { scrollFunction() };
+		</script>
+		
+	</head>
+	
+	<body>
+		<div class="the-grid">
+			
+			<!--The header div that contains the main image, main heading and the two logos-->
+			<div class="header" role="banner">
+			<img class="headerimage" src="images/beach3.png" alt="header image">		
+				<div class="headerinner">
+					<h1 class="mainheading"> beach tours</h1>
+					<a href="../../home.html">
+						<img class="logo" src="../../images/logo.png" alt="logo"/>
+						<img class="brand" src="../../images/brand1.png" alt ="brandname"/>
+					</a>
+				</div>							
+			</div>
+			
+		<!--The mainNavBar div that contains the menu that pops up from the right side of the page-->
+		<div id="mainNav" class="mainNavBar">
+			  <a href="javascript:void(0)" id="cross" class="closebtn" onclick="closeMenu()">&times;</a>
+			  <a href="../../home.html">Home</a>
+			  <a href="../../advice/advice.html">Things to know</a>
+			  <a href="../../destination/destinations.html">Destinations</a>
+			  <a href="../../colombo/colombo.html">Colombo</a>
+			  <a href="../../tours/tours.html">Tours</a>
+			  <a href="../../hotels/hotelmain.html">Accommodation</a>
+			  <a href="../../gallery/gallery.html">Gallery</a>
+			  <a href="../../boutique/product.html">Boutique</a>
+			  <a href="../../comment-form/contact.html">Contact</a>
+			  <a href="../../sitemap/sitemap.html">Sitemap</a>
+		</div>
+		
+		<!--The div for the menu that pops when you scroll down the page-->
+		<div id="scrollingNav">
+			<img id="navlogo" src="../../images/logo.png" style="margin-top:8px; margin-left:40px;"/>
+			<img id="navlogotext" src="../../images/brand1.png"/>
+			
+			<div id="main-1"class="readmore">
+				<span onclick="openMenu()"><b> MENU</b></span>
+			</div>
+				
+			<div id="main-2"class="readmore">
+				<a href="../../comment-form/contact.html"><span><b> CONTACT</b></span></a>
+			</div>
+				
+			<div id="main-3"class="readmore">
+				<a href="../../boutique/product.html"><span><b> BOUTIQUE</b></span></a>
+			</div>
+		</div>
+			
+			<!--The topMenu div that contains all the anchors and navigation within the page-->
+			<div class="topMenu">
+				<div class="subNavigation">
+					<button  class="subnavbtn" id="active" >Beach <i class="" ></i></button>
+						<div class="subNavigation-content">
+							<a class="active" href="#intro">Introduction</a>
+							<a href="#recommendations">Recommendations</a>
+							<a href="#gallerylink">Gallery</a>
+						</div>
+				</div> 
+				  
+				<div class="subNavigation">
+					<button class="subnavbtn" onclick="loadPage1(1);"> cultural<i class=""></i></button>
+						<div class="subNavigation-content">
+							<a href="../cultural/culturaltour.html#intro">Introduction</a>
+							<a href="../cultural/culturaltour.html#recommendations">Recommendations</a>
+							<a href="../cultural/culturaltour.html#gallerylink">Gallery</a>
+						</div>
+				</div> 
+				  
+				 
+				<div class="subNavigation">
+					<button class="subnavbtn"  onclick="loadPage1(2);">safari <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a href="../safari/safaritour.html#intro">Introduction</a>
+							<a href="../safari/safaritour.html#recommendations">Recommendations</a>
+							<a href="../safari/safaritour.html#gallerylink">Gallery</a>			 
+						</div>
+				</div>
+				  
+				<div class="subNavigation" onclick="loadPage1(3);">
+					<button class="subnavbtn"> hillcountry<i class=""></i></button>
+						<div class="subNavigation-content">
+							<a href="../hill-country/hillcountrytour.html#intro">Introduction</a>
+							<a href="../hill-country/hillcountrytour.html#recommendations">Recommendations</a>
+							<a href="../hill-country/hillcountrytour.html#gallerylink">Gallery</a>  				 
+						</div>
+				</div>
+				  
+				<div class="subNavigation">
+					<button class="subnavbtn" onclick="loadPage1(4);">luxury <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a href="../luxury/luxurytour.html#intro">Introduction</a>
+							<a href="../luxury/luxurytour.html#recommendations">Recommendations</a>
+							<a href="../luxury/luxurytour.html#gallerylink">Gallery</a>				 
+						</div>
+				  </div>
+			</div>
+				
+			<!--The content div that contains the body text of the web page-->				
+			<div class="content">
+			
+				<h2 id="intro">Plan your next beach adventure </h2>
+			
+				<p><b><center>Whether it is your first time to Sri Lanka 
+				or a safari enthusiast who is looking for the next adventure.
+				We have chosen our destinations for their uniqueness and 
+				love of travelling a little off the beaten track. Remote
+				wilderness, a cultural experience with a touch of luxury.
+				</center> </b>
+				</p>
+				
+				<p>Enowned for the golden beaches that encompass the island, 
+				Sri Lanka has long attracted tourists seeking sand, sun-bathing,
+				swimming, water sports, deep sea fishing and diving. 
+				Quaint coastal hamlets have expanded to welcome tourists
+				staying in homely guesthouses, mainstream hotels or 
+				luxury boutique villas by the sea. Fringed by palm trees,
+				with soft sand and azure waters, these beaches make an 
+				ideal holiday location beside the Indian Ocean.
+				Thriving tourist hotspots, like the beaches of Negombo near 
+				the airport and to the South of Colombo, Mount Lavinia, Bentota,
+				Galle, Unawatuna and Mirissa, and in the East Trincomalee, 
+				Passikudah and Arugam Bay, are great destinations for our
+				tailor-made tours, or for any type of getaway, with budget-friendly
+				to top-notch luxury accommodation, and they boast many restaurants,
+				bars and fun activities too.
+				<br><br>
+				</p>
+				
+				<h2 id="recommendations"> Recommended destinations</h2> 
+			</div><!--end of content div-->
+			
+			<!-- toursections div that contains the recommendations-->
+			<div class="toursections">
+				<div class="sectionleft">
+					<img class = "sectionpicleft" src="images/unawatuna2.jpeg">
+					<div class="sectiontextright">
+						<h3> Unawatuna </h3>
+						<p> The vibrant town of Unawatuna remains one of the top 
+						holiday destinations, even considered by some to have one
+						of the best beaches in Asia. During the Dutch colonial 
+						period, the Dutch settlers, who fought for Galle in 1640,
+						built houses for their officers in this town, some of which
+						are seen to date, in their untouched exteriors. Unawatuna is home many endemic birds 
+						as well as an enthralling variety of fish and turtles. 
+						The Turtle Hatchery of Habaraduwa gives visitors the 
+						opportunity to observe the hatching process of endangered
+						turtle species.</p>
+					</div>
+				</div>
+				
+				<div class="sectionright">
+					<img class = "sectionpicright" src="images/arugambay.jpg">
+					<div class="sectiontextleft">
+						<h3> Arugam Bay </h3>
+						<p> The vibrant town of Arugam Bay remains one of the top 
+						holiday destinations, even considered by some to have one
+						of the best beaches in Asia. During the Dutch colonial 
+						period, the Dutch settlers, who fought for Galle in 1640,
+						built houses for their officers in this town, some of which
+						are seen to date, in their untouched exteriors. Unawatuna is home many endemic birds 
+						as well as an enthralling variety of fish and turtles. 
+						The Turtle Hatchery of Habaraduwa gives visitors the 
+						opportunity to observe the hatching process of endangered
+						turtle species.</p>
+					</div>
+				</div>
+				
+				<div class="sectionleft">
+					<img class = "sectionpicleft" src="images/passikudah1.jpeg">
+					<div class="sectiontextright">
+						<h3> Passikudah </h3>
+						<p> The vibrant town of Passikudah remains one of the top 
+						holiday destinations, even considered by some to have one
+						of the best beaches in Asia. During the Dutch colonial 
+						period, the Dutch settlers, who fought for Galle in 1640,
+						built houses for their officers in this town, some of which
+						are seen to date, in their untouched exteriors. Unawatuna is home many endemic birds 
+						as well as an enthralling variety of fish and turtles. 
+						The Turtle Hatchery of Habaraduwa gives visitors the 
+						opportunity to observe the hatching process of endangered
+						turtle species.</p>
+					</div>
+				</div>
+				
+				<div class="sectionright">
+					<img class = "sectionpicright" src="images/trinco3.jpeg">
+					<div class="sectiontextleft">
+						<h3> Trincomalee </h3>
+						<p> The vibrant town of Trincomalee remains one of the top 
+						holiday destinations, even considered by some to have one
+						of the best beaches in Asia. During the Dutch colonial 
+						period, the Dutch settlers, who fought for Galle in 1640,
+						built houses for their officers in this town, some of which
+						are seen to date, in their untouched exteriors. Unawatuna is home many endemic birds 
+						as well as an enthralling variety of fish and turtles. 
+						The Turtle Hatchery of Habaraduwa gives visitors the 
+						opportunity to observe the hatching process of endangered
+						turtle species.</p>
+					</div>
+				</div>
+				
+				<div class="sectionleft">
+					<img class = "sectionpicleft" src="images/puttalam1.jpeg">
+					<div class="sectiontextright">
+						<h3> Puttalam </h3>
+						<p> The vibrant town of Puttalam remains one of the top 
+						holiday destinations, even considered by some to have one
+						of the best beaches in Asia. During the Dutch colonial 
+						period, the Dutch settlers, who fought for Galle in 1640,
+						built houses for their officers in this town, some of which
+						are seen to date, in their untouched exteriors. Unawatuna is home many endemic birds 
+						as well as an enthralling variety of fish and turtles. 
+						The Turtle Hatchery of Habaraduwa gives visitors the 
+						opportunity to observe the hatching process of endangered
+						turtle species.</p>
+					</div>
+				</div>
+				
+				<div class="sectionright">
+					<img class = "sectionpicright" src="images/bentota.jpg">
+					<div class="sectiontextleft">
+						<h3> Bentota </h3>
+						<p> The vibrant town of Bentota remains one of the top 
+						holiday destinations, even considered by some to have one
+						of the best beaches in Asia. During the Dutch colonial 
+						period, the Dutch settlers, who fought for Galle in 1640,
+						built houses for their officers in this town, some of which
+						are seen to date, in their untouched exteriors. Unawatuna is home many endemic birds 
+						as well as an enthralling variety of fish and turtles. 
+						The Turtle Hatchery of Habaraduwa gives visitors the 
+						opportunity to observe the hatching process of endangered
+						turtle species.</p>
+					</div>
+				</div>
+				
+			</div>  <!--end of the toursections div--> 
+			
+			<!-- Gallery grid with 3 images and a video starts here-->
+			<h2 class="gallery" id="gallerylink" > Gallery </h2> 
+			
+				<div class="image1 ">
+					<img class="gimage1" src="images/arugambay.jpeg" style="width:330px; height:190px;" alt="" scale="0">
+				</div>
+						  
+				<div class="image2">
+					<img class="gimage2" src="images/fishermen.jpg" style="width:330px; height:185px;" alt="" scale="0">
+			
+				</div>
+						  
+				<div class="image3 ">
+					<img class="gimage3" src="images/coconut.jpeg" style="width:330px; height:380px;" alt="" scale="0">
+					
+				</div>
+						  
+				<div class="image4 ">
+					<video autoplay="" loop="" muted="" style="width: 670px; height: 410px;">
+						<source src="videos/beach.mp4" type="video/mp4">
+					</video>	
+				</div>
+							
+					
+			<!--The div for the footer that contains the two logos and links-->
+			<div class="footer">
+				<div class="footerinner">
+					<img class="footerlogo" src="../../images/logo.png" alt="logo"/>
+					<img class="footerbrand" src="../../images/brand1.png" alt ="brandname"/>
+					<div class="footerlinks">
+						<a href="../../home.html" > Home | </a>
+						<a href="../../comment-form/contact.html" > Contact | </a>
+						<a href="../../sitemap/sitemap.html" > Sitemap | </a>
+						<a href="../../cv/sajani/sajani-cv.html" > Sajani Sihara</a>
+					</div>
+				</div>
+			</div>
+	
+		</div> <!-- the end of the-grid div-->
+		
+		
+		<script src="../../function.js"></script>
+	</body>
+	
+</html>

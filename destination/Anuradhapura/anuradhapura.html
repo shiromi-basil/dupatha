@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Anuradhapura | DUPATHA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../images/logo.png" sizes="16x16">
+    <link rel="stylesheet" href="../popularPlacesGrids.css" type="text/css">
+    <link rel="stylesheet" href="anuraStyleSheet.css" type="text/css">
+    <link rel="stylesheet" href="../../externalstyle.css" type="text/css">
+    <script>
+        window.onscroll = function () { scrollFunction() };
+        //the arrays which have the ids of the show More/ show less button, and the span which has more information about the restaurant
+        function showHideFunction(number) {
+            var moreArray = [
+                "seedeviMore",
+                "nelumMore",
+                "walkersMore",
+                "shaliniMore",
+                "palhenaMore",
+                "paradiseMore",
+                "mangoMangoMore"
+            ]
+            var buttonArray = [
+                "seedeviBtn",
+                "nelumBtn",
+                "walkersBtn",
+                "shaliniBtn",
+                "palhenaBtn",
+                "paradiseBtn",
+                "mangoMangoBtn"
+            ]
+            //function used to open the span when show more button is clicked and to close it when the show less button is clicked
+            var moreInfo = document.getElementById(moreArray[number]);
+            var btn = document.getElementById(buttonArray[number])
+            //condition used to check it
+            if (moreInfo.style.display === "inline") {
+                moreInfo.style.display = "none";
+                btn.innerHTML = "SHOW MORE";
+            } else {
+                moreInfo.style.display = "inline";
+                btn.innerHTML = "SHOW LESS";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!--main grid begins here-->
+    <div class="mainGrid">
+        <!--header picture-->
+        <div class="header1" role="banner">
+            <img class="headerimage" src="images/anuradhapurabg.png " alt=" header image">
+            <div class="headerinner">
+                <h1 class="mainheading">anuradhapura</h1>
+                <a href="../../home.html">
+                    <img class="logo" src="../../images/logo.png" alt="logo" />
+                    <img class="brand" src="../../images/brand1.png" alt="brandname" />
+                </a>
+            </div>
+        </div>
+        <!--end of header picture-->
+        <!--The mainNavBar div that contains the menu that pops up from the right side of the page-->
+        <div id="mainNav" class="mainNavBar">
+            <a href="javascript:void(0)" id="cross" class="closebtn" onclick="closeMenu()">&times;</a>
+            <a href="../../home.html">Home</a>
+            <a href="../../advice/advice.html">Things to know</a>
+            <a href="../../destination/destinations.html">Destinations</a>
+            <a href="../../colombo/colombo.html">Colombo</a>
+            <a href="../../tours/tours.html">Tours</a>
+            <a href="../../hotels/hotelmain.html">Accommodation</a>
+            <a href="../../gallery/gallery.html">Gallery</a>
+            <a href="../../boutique/product.html">Boutique</a>
+            <a href="../../comment-form/contact.html">Contact</a>
+            <a href="../../sitemap/sitemap.html">Sitemap</a>
+        </div>
+
+        <!--The div for the menu that pops when you scroll down the page-->
+        <div id="scrollingNav">
+            <img id="navlogo" src="../../images/logo.png" style="margin-top:8px; margin-left:40px;" />
+            <img id="navlogotext" src="../../images/brand1.png" />
+
+            <div id="main-1" class="readmore">
+                <span onclick="openMenu()"><b> MENU</b></span>
+            </div>
+
+            <div id="main-2" class="readmore">
+                <a href="../../comment-form/contact.html"><span><b> CONTACT</b></span></a>
+            </div>
+
+            <div id="main-3" class="readmore">
+                <a href="../../boutique/product.html"><span><b> BOUTIQUE</b></span></a>
+            </div>
+        </div>
+        <!--anchors and destination navigation bar -->
+        <div class="topMenu">
+            <!--this page's anchors-->
+            <div class="subNavigation">
+                <button class="subnavbtnactive">Anuradhapura <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a class="active" href="#attractMainTitle">Attractions</a>
+                    <a href="#hotelID">Hotels</a>
+                    <a href="#restaurant">Restaurants</a>
+                    <a href="#mapOfPlace">Map</a>
+                </div>
+            </div>
+            <!--end of page's anchors-->
+            <!--link to pages and direct link to some parts of the particular page (Sub-Navigation bar)-->
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(1);">Galle <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Galle/galle1.html#attractMainTitle">Attractions</a>
+                    <a href="../Galle/galle1.html#hotelID">Hotels</a>
+                    <a href="../Galle/galle1.html#restaurant">Restaurants</a>
+                    <a href="../Galle/galle1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(2);">Hambantota <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Hambantota/hambantota1.html#attractMainTitle">Attractions</a>
+                    <a href="../Hambantota/hambantota1.html#hotelID">Hotels</a>
+                    <a href="../Hambantota/hambantota1.html#restaurant">Restaurants</a>
+                    <a href="../Hambantota/hambantota1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(3);">Hikkaduwa <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Hikkaduwa/hikkaduwa1.html#attractMainTitle">Attractions</a>
+                    <a href="../Hikkaduwa/hikkaduwa1.html#hotelID">Hotels</a>
+                    <a href="../Hikkaduwa/hikkaduwa1.html#restaurant">Restaurants</a>
+                    <a href="../Hikkaduwa/hikkaduwa1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(4);">Jaffna <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Jaffna/jaffna1.html#attractMainTitle">Attractions</a>
+                    <a href="../Jaffna/jaffna1.html#hotelID">Hotels</a>
+                    <a href="../Jaffna/jaffna1.html#restaurant">Restaurants</a>
+                    <a href="../Jaffna/jaffna1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(5);">Kandy <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Kandy/kandy1.html#attractMainTitle">Attractions</a>
+                    <a href="../Kandy/kandy1.html#hotelID">Hotels</a>
+                    <a href="../Kandy/kandy1.html#restaurant">Restaurants</a>
+                    <a href="../Kandy/kandy1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(6);">Nuwara Eliya <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Nuwara Eliya/nuwareEliya.html#attractMainTitle">Attractions</a>
+                    <a href="../Nuwara Eliya/nuwareEliya.html#hotelID">Hotels</a>
+                    <a href="../Nuwara Eliya/nuwareEliya.html#restaurant">Restaurants</a>
+                    <a href="../Nuwara Eliya/nuwareEliya.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(7);">Polonnaruwa <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Polonnaruwa/polon1.html#attractMainTitle">Attractions</a>
+                    <a href="../Polonnaruwa/polon1.html#hotelID">Hotels</a>
+                    <a href="../Polonnaruwa/polon1.html#restaurant">Restaurants</a>
+                    <a href="../Polonnaruwa/polon1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(8);">SIGIRIYA <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Sigiriya/sigiriya1.html#attractMainTitle">Attractions</a>
+                    <a href="../Sigiriya/sigiriya1.html#hotelID">Hotels</a>
+                    <a href="../Sigiriya/sigiriya1.html#restaurant">Restaurants</a>
+                    <a href="../Sigiriya/sigiriya1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(9);">Trincomalee <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Trincomalee/trinco1.html#attractMainTitle">Attractions</a>
+                    <a href="../Trincomalee/trinco1.html#hotelID">Hotels</a>
+                    <a href="../Trincomalee/trinco1.html#restaurant">Restaurants</a>
+                    <a href="../Trincomalee/trinco1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+            <!--end of sub navigation bar-->
+        </div>
+        <!--end of destination navigation bar-->
+        <!--introduction paragraph of the page-->
+        <div class="content">
+            <!--this paragraph's font size can be changed using fontSizeChanger-->
+            <div id="changeFont" style="font-size: 20px;">Asia’s most evocative sights. The sprawling complex contains a
+                rich collection of archaeological and
+                architectural wonders: enormous dagobas (brick stupas), ancient pools and crumbling temples, built
+                during Anuradhapura’s thousand years of rule over Sri Lanka. Today, several of the sites remain in use
+                as holy places and temples; frequent ceremonies give Anuradhapura a vibrancy that’s a sharp contrast to
+                the museum-like ambience at Polonnaruwa.
+            </div>
+            <!--used to change the font size of the introduction paragraph-->
+            <div id="fontSizeChanger">
+                <!--button used to decrease and increase the font size-->
+                <div class="fontButtons">
+                    <button class="fontSizeButtonDec" onclick="fontDecrease()">-</button>
+                    <p id="textFontSize1">20</p>
+                    <button class="fontSizeButtonIn" onclick="fontIncrease()">+</button>
+                </div>
+            </div>
+            <!--end of font Size changer-->
+        </div>
+        <!--end of introduction paragraph-->
+        <!--attractions in this destination-->
+        <div class="subHeading" id="attractMainTitle">
+            <h2>Major Attractions</h2>
+        </div>
+        <!--attraction 1-->
+        <div class="popularAttraction1" id="popularAttraction">
+            <img src="images\mihintale.jpg" alt="Mihintale" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Mihintale</p>
+                <p>
+                    Mihintale Mountain, with the arrival of Buddhism in Sri Lanka, began to serve as a residential
+                    area for the venerable monks headed by Arahath Mahinda Mahathera
+                </p>
+            </div>
+        </div>
+        <!--end of attraction 1-->
+        <!--attraction 2-->
+        <div class="popularAttraction2" id="popularAttraction">
+            <img src="images/isurumuniya.jpg" alt="Isurumuniya" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Isurumuniya</p>
+                <p>Isurumuniya is most famous for the stone carving of a couple located there. This carved stone was
+                    found in the royal pleasure garden and brought here. </p>
+            </div>
+        </div>
+        <!--end of attraction 2-->
+        <!--attraction 3-->
+        <div class="popularAttraction3" id="popularAttraction">
+            <img src="images/ruwanwelisaya.jpg" alt="Ruwanwelisaya" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Ruwanwelisaya</p>
+                <p>As the oldest stupa in Sri Lanka, Ruwanwelisaya is considered to be an icon of architectural
+                    glory in ancient Sri Lanka. It was built by King Dutugemunu in 140 B.C.
+                </p>
+            </div>
+        </div>
+        <!--end of attraction 3-->
+        <!--attraction 4-->
+        <div class="popularAttraction4" id="popularAttraction">
+            <img src="images/jayaSriMahaBodhi.jpg" alt="Jaya Sri Maha Bodhi" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Jaya Sri Maha Bodhi</p>
+                <p> It is a sapling from the Bodhi tree under which Buddha enlightened. It is the oldest living
+                    human-planted tree in the world,planted in 288 BC</p>
+            </div>
+        </div>
+        <!--end of attraction 4-->
+        <!--attraction 5-->
+        <div class="popularAttraction5" id="popularAttraction">
+            <img src="images/abhayagiriVihara.jpg" alt="Abhayagiri vihara" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Abhayagiri vihara</p>
+                <p>It was established in the 200 B.C., by King Valagamabau was not only
+                    complex of monastic buildings, but also a
+                    great seat of learning.</p>
+            </div>
+        </div>
+        <!--end of attraction 5-->
+        <!--attraction 6-->
+        <div class="popularAttraction6" id="popularAttraction">
+            <img src="images/ratnaPrasadaya.jpg" alt="Rathna Prasadaya" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Rathna Prasadaya</p>
+                <p>So called of Gem Progression, Rathnaprasada is the Uposatha house of Abhayagiri
+                    viharaya built by king Kavantissa in 192 AD. </p>
+            </div>
+        </div>
+        <!--end of attraction 6-->
+        <!--attraction 7-->
+        <div class="popularAttraction7" id="popularAttraction">
+            <img src="images/kuttamPokuna.jpg" alt="Kuttam Pokuna" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Kuttam Pokuna</p>
+                <p>The twin ponds are another hydrologic engineering marvels of the ancient Sri Lanka. These two
+                    ponds belong to the Abayagiri aramic complex.</p>
+            </div>
+        </div>
+        <!--end of attraction 7-->
+        <!--attraction 8-->
+        <div class="popularAttraction8" id="popularAttraction">
+            <img src="images/Jetavanaramaya.jpeg" alt="Jetavanaramaya" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Jetavanaramaya</p>
+                <p>Jethawana Stupa is the largest stupa in the Sri Lanka. It was built by King Mahasena of
+                    Anuradhapura was completed by his son.</p>
+            </div>
+        </div>
+        <!--end of attraction 8-->
+        <!--links to hotel page of destination-->
+        <div class="hotel1" id="hotelID" role="banner">
+            <div class="layerOver">
+                <h2 class="hotelHeading">Amazing hotels and B & B</h2>
+                <h3 class="nextHotel">We've pre-picked the best hotels and bed and breakfasts to make your stay as
+                    enjoyable as
+                    possible.</h3>
+                <div class="readmore1" id="linkToHotelPage"><a
+                        href="../../hotels/hotels-anuradhapura/hotel5_anuradhapura.html">View All Hotels</a></div>
+            </div>
+        </div>
+        <!--end of hotel linking-->
+        <!--popular restaurants in this destination-->
+        <div class="subHeading1" id="restaurant">
+            <h2>Popular Restaurants</h2>
+        </div>
+        <!--restaurant 1-->
+        <div class="popularRest1" id="popularRest">
+            <img class="popularImages" src="images\seedevi.png" alt="Seedevi Family Restaurant" />
+            <div class="restInfo">
+                <p class="restTitle">Seedevi Family Restaurant</p>
+                <p class="cuisine">Sri Lankan</p>
+                <!--span used to hide the timings and address-->
+                <span id="seedeviMore">
+                    <p>
+                        Address: 562/B/1, Jayanthi Mawatha, Anuradhapura
+                        <br />Telephone Number:252225509
+                        <br />Open Timings:6:00 AM - 10:30 PM
+                    </p>
+                </span>
+                <!--end of span-->
+                <!--function called when user clicks button to show the address and timing-->
+                <button onclick="showHideFunction(0);" id="seeedeviBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <!--end of restaurant 1-->
+        <!--restaurant 2-->
+        <div class="popularRest2" id="popularRest">
+            <img class="popularImages" src="images\nelum.jpg" alt="Nelum Kole Bath Kade" />
+            <div class="restInfo">
+                <p class="restTitle">Nelum Kole Bath Kade</p>
+                <p class="cuisine">Sri Lankan</p>
+                <!--span used to hide the timings and address-->
+                <span id="nelumMore">
+                    <p>
+                        Address: Kandy Road, Rambewa, Anuradhapura, <br />Telephone Number:
+                        0715943010<br />Open Timings:6.30AM - 08.00PM
+                    </p>
+                </span>
+                <!--end of span-->
+                <!--function called when user clicks button to show the address and timing-->
+                <button onclick="showHideFunction(1);" id="nelumBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <!--end of restaurant 2-->
+        <!--restaurant 3-->
+        <div class="popularRest3" id="popularRest">
+            <img class="popularImages" src="images\palhena.png" alt="Palhena" />
+            <div class="restInfo">
+                <p class="restTitle">Palhena</p>
+                <p class="cuisine">Indian</p>
+                <!--span used to hide the timings and address-->
+                <span id="palhenaMore">
+                    <p>
+                        Address:743 Freeman Road, Anuradhapura
+                        <br />Telephone Number:773581858<br />Open
+                        Timings:7.00AM - 10.00PM
+                    </p>
+                </span>
+                <!--end of span-->
+                <!--function called when user clicks button to show the address and timing-->
+                <button onclick="showHideFunction(4);" id="palHenaBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <!--end of restaurant 3-->
+        <!--restaurant 4-->
+        <div class="popularRest4" id="popularRest">
+            <img class="popularImages" src="images\shalini.png" alt="Shalini" />
+            <div class="restInfo">
+                <p class="restTitle">Shalini Restaurant</p>
+                <p class="cuisine">Seafood, Sri Lankan</p>
+                <!--span used to hide the timings and address-->
+                <span id="shaliniMore">
+                    <p>
+                        Address:941/388 Harischandra lane, Anuradhapura
+                        <br />Telephone Number:718073335
+                        <br />Open Timings:7.00AM -
+                        3.00PM
+                    </p>
+                </span>
+                <!--end of span-->
+                <!--function called when user clicks button to show the address and timing-->
+                <button onclick="showHideFunction(3);" id="shaliniBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <!--end of restaurant 4-->
+        <!--restaurant 5-->
+        <div class="popularRest5" id="popularRest">
+            <img class="popularImages" src="images\walkers.jpg" alt="Walkers" />
+            <div class="restInfo">
+                <p class="restTitle">Walkers</p>
+                <p class="cuisine">Sri Lankan</p>
+                <!--span used to hide the timings and address-->
+                <span id="walkersMore">
+                    <p>
+                        Address: Harischandra Mawatha, Anuradhapura
+                        <br />Telephone Number:
+                        712074535<br />Open Timings: 7.00am - 10.00pm
+                    </p>
+                </span>
+                <!--end of span-->
+                <!--function called when user clicks button to show the address and timing-->
+                <button onclick="showHideFunction(2);" id="walkersBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <!--end of restaurant 5-->
+        <!--restaurant 6-->
+        <div class="popularRest6" id="popularRest">
+            <img class="popularImages" src="images\paradise.jpeg" alt="Little Paradise Anuradhapura
+                " />
+            <div class="restInfo">
+                <p class="restTitle">Little Paradise</p>
+                <p class="cuisine">Sri Lankan</p>
+                <!--span used to hide the timings and address-->
+                <span id="paradiseMore">
+                    <p>
+                        Address: | 622/18, Godage Mawatha, Anuradhapura
+                        <br />Telephone Number:252235132<br />Open
+                        Timings:7.00AM - 12.00AM
+                    </p>
+                </span>
+                <!--end of span-->
+                <!--function called when user clicks button to show the address and timing-->
+                <button onclick="showHideFunction(5);" id="paradiseBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <!--end of restaurant 6-->
+        <!--restaurant 7-->
+        <div class="popularRest7" id="popularRest">
+            <img class="popularImages" src="images\mangoMango.png" alt="Mango Mango" />
+            <div class="restInfo">
+                <p class="restTitle">Mango Mango</p>
+                <p class="cuisine">Sri Lankan</p>
+                <!--span used to hide the timings and address-->
+                <span id="mangoMangoMore">
+                    <p>
+                        Address: Jayanthi Mawatha, Anuradhapura
+
+                        <br />Telephone Number: 252227501<br />Open Timings:09.00AM - 10.00PM
+                    </p>
+                </span>
+                <!--end of span-->
+                <!--function called when user clicks button to show the address and timing-->
+                <button onclick="showHideFunction(6);" id="mangoMangoBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <!--end of restaurant 7-->
+        <!--google maps embedded into the html using iframe-->
+        <div class="mapOfPlace">
+            <div class="googleMap"><iframe width="1348" height="600" id="googleMap"
+                    src="https://maps.google.com/maps?q=anuradhapura&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+            </div>
+        </div>
+        <!--end of the map-->
+        <!--footer-->
+        <div class="footer">
+            <div class="footerinner">
+                <img class="footerlogo" src="../../images/logo.png" alt="logo" />
+                <img class="footerbrand" src="../../images/brand1.png" alt="brandname" />
+                <div class="footerlinks">
+                    <a href="../../home.html"> Home | </a>
+                    <a href="../../comment-form/contact.html"> Contact | </a>
+                    <a href="../../sitemap/sitemap.html"> Sitemap | </a>
+                    <a href="../../cv/safiyyah/safiyyah-cv.html"> Safiyyah Thur Rahman </a>
+                </div>
+            </div>
+        </div>
+        <!--end of footer-->
+    </div>
+    <!--end of the grid-->
+    <!--link the function file because it has the function decrease and increase the font size and also the function to make the header and back to the top button sticky-->
+    <script src="../../function.js"></script>
+
+</body>
+
+</html>

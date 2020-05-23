@@ -1,0 +1,11 @@
+/*the address and the timing are not displayed initially*/
+#tunaMore,
+#riceMore,
+#cafe18More,
+#neroMore,
+#easternMore,
+#kingFishMore,
+#gomezMore,
+#variBalajiMore{
+    display: none;
+}

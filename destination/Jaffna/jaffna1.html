@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jaffna | DUPATHA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../images/logo.png" sizes="16x16">
+    <link rel="stylesheet" href="../popularPlacesGrids.css" type="text/css">
+    <link rel="stylesheet" href="jaffnaStyleSheet.css" type="text/css">
+    <link rel="stylesheet" href="../../externalstyle.css" type="text/css">
+    <script>
+        window.onscroll = function () { scrollFunction() };
+        //the arrays which have the ids of the show More/ show less button, and the span which has more information about the restaurant
+        function showHideFunction(number) {
+            var moreArray = [
+                "malayanMore",
+                "rioMore",
+                "mangosMore",
+                "nallurMore",
+                "linganMore",
+                "elevenRMore",
+                "greenGrassMore",
+                "cosyMore",
+                "akshathaiMore"
+            ];
+
+            var buttonArray = [
+                "malayanBtn",
+                "rioBtn",
+                "mangosBtn",
+                "nallurBtn",
+                "linganBtn",
+                "elevenRBtn",
+                "greenGrassBtn",
+                "cosyBtn",
+                "akshathaiBtn"
+            ];
+            //function used to open the span when show more button is clicked and to close it when the show less button is clicked
+            var moreInfo = document.getElementById(moreArray[number]);
+            var btn = document.getElementById(buttonArray[number])
+            //condition used to check it
+            if (moreInfo.style.display === "inline") {
+                moreInfo.style.display = "none";
+                btn.innerHTML = "SHOW MORE";
+            } else {
+                moreInfo.style.display = "inline";
+                btn.innerHTML = "SHOW LESS";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!--main grid begins here-->
+    <div class="mainGrid">
+        <!--header picture-->
+        <div class="header1" role="banner">
+            <img class="headerimage" src="images/jaffnabg.png" alt="header image">
+            <div class="headerinner">
+                <h1 class="mainheading">jaffna</h1>
+                <a href="../../home.html">
+                    <img class="logo" src="../../images/logo.png" alt="logo" />
+                    <img class="brand" src="../../images/brand1.png" alt="brandname" />
+                </a>
+            </div>
+        </div>
+        <!--end of header picture-->
+        <!--The mainNavBar div that contains the menu that pops up from the right side of the page-->
+        <div id="mainNav" class="mainNavBar">
+            <a href="javascript:void(0)" id="cross" class="closebtn" onclick="closeMenu()">&times;</a>
+            <a href="../../home.html">Home</a>
+            <a href="../../advice/advice.html">Things to know</a>
+            <a href="../../destination/destinations.html">Destinations</a>
+            <a href="../../colombo/colombo.html">Colombo</a>
+            <a href="../../tours/tours.html">Tours</a>
+            <a href="../../hotels/hotelmain.html">Accommodation</a>
+            <a href="../../gallery/gallery.html">Gallery</a>
+            <a href="../../boutique/product.html">Boutique</a>
+            <a href="../../comment-form/contact.html">Contact</a>
+            <a href="../../sitemap/sitemap.html">Sitemap</a>
+        </div>
+
+        <!--The div for the menu that pops when you scroll down the page-->
+        <div id="scrollingNav">
+            <img id="navlogo" src="../../images/logo.png" style="margin-top:8px; margin-left:40px;" />
+            <img id="navlogotext" src="../../images/brand1.png" />
+
+            <div id="main-1" class="readmore">
+                <span onclick="openMenu()"><b> MENU</b></span>
+            </div>
+
+            <div id="main-2" class="readmore">
+                <a href="../../comment-form/contact.html"><span><b> CONTACT</b></span></a>
+            </div>
+
+            <div id="main-3" class="readmore">
+                <a href="../../boutique/product.html"><span><b> BOUTIQUE</b></span></a>
+            </div>
+        </div>
+        <!--end of menu-->
+        <!--anchors and destination navigation bar -->
+        <div class="topMenu">
+            <!--link to pages and direct link to some parts of the particular page (Sub-Navigation bar)-->
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(0);">Anuradhapura <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Anuradhapura/anuradhapura.html#attractMainTitle">Attractions</a>
+                    <a href="../Anuradhapura/anuradhapura.html#hotelID">Hotels</a>
+                    <a href="../Anuradhapura/anuradhapura.html#restaurant">Restaurants</a>
+                    <a href="../Anuradhapura/anuradhapura.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <!--end of page's anchors-->
+            <!--link to pages and direct link to some parts of the particular page (Sub-Navigation bar)-->
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(1);">Galle <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Galle/galle1.html#attractMainTitle">Attractions</a>
+                    <a href="../Galle/galle1.html#hotelID">Hotels</a>
+                    <a href="../Galle/galle1.html#restaurant">Restaurants</a>
+                    <a href="../Galle/galle1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(2);">Hambantota <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Hambantota/hambantota1.html#attractMainTitle">Attractions</a>
+                    <a href="../Hambantota/hambantota1.html#hotelID">Hotels</a>
+                    <a href="../Hambantota/hambantota1.html#restaurant">Restaurants</a>
+                    <a href="../Hambantota/hambantota1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(3);">Hikkaduwa <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Hikkaduwa/hikkaduwa1.html#attractMainTitle">Attractions</a>
+                    <a href="../Hikkaduwa/hikkaduwa1.html#hotelID">Hotels</a>
+                    <a href="../Hikkaduwa/hikkaduwa1.html#restaurant">Restaurants</a>
+                    <a href="../Hikkaduwa/hikkaduwa1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtnactive" onclick="loadPage(4);">Jaffna <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Jaffna/jaffna1.html#attractMainTitle">Attractions</a>
+                    <a href="../Jaffna/jaffna1.html#hotelID">Hotels</a>
+                    <a href="../Jaffna/jaffna1.html#restaurant">Restaurants</a>
+                    <a href="../Jaffna/jaffna1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(5);">Kandy <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Kandy/kandy1.html#attractMainTitle">Attractions</a>
+                    <a href="../Kandy/kandy1.html#hotelID">Hotels</a>
+                    <a href="../Kandy/kandy1.html#restaurant">Restaurants</a>
+                    <a href="../Kandy/kandy1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(6);">Nuwara Eliya <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Nuwara Eliya/nuwareEliya.html#attractMainTitle">Attractions</a>
+                    <a href="../Nuwara Eliya/nuwareEliya.html#hotelID">Hotels</a>
+                    <a href="../Nuwara Eliya/nuwareEliya.html#restaurant">Restaurants</a>
+                    <a href="../Nuwara Eliya/nuwareEliya.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(7);">Polonnaruwa <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Polonnaruwa/polon1.html#attractMainTitle">Attractions</a>
+                    <a href="../Polonnaruwa/polon1.html#hotelID">Hotels</a>
+                    <a href="../Polonnaruwa/polon1.html#restaurant">Restaurants</a>
+                    <a href="../Polonnaruwa/polon1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(8);">SIGIRIYA <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Sigiriya/sigiriya1.html#attractMainTitle">Attractions</a>
+                    <a href="../Sigiriya/sigiriya1.html#hotelID">Hotels</a>
+                    <a href="../Sigiriya/sigiriya1.html#restaurant">Restaurants</a>
+                    <a href="../Sigiriya/sigiriya1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(9);">Trincomalee <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Trincomalee/trinco1.html#attractMainTitle">Attractions</a>
+                    <a href="../Trincomalee/trinco1.html#hotelID">Hotels</a>
+                    <a href="../Trincomalee/trinco1.html#restaurant">Restaurants</a>
+                    <a href="../Trincomalee/trinco1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+            <!--end of sub navigation bar-->
+        </div>
+        <!--end of destination navigation bar-->
+
+        <!--introduction paragraph of the page-->
+        <div class="content">
+            <!--this paragraph's font size can be changed using fontSizeChanger-->
+            <div id="changeFont" style="font-size: 20px;">Inescapably, decades of war, emigration,
+                embargoes and
+                loss of life and property deeply affected this historic town, but the city is surprisingly green and
+                leafy with
+                beautiful temples and churches. Ancient sights both in the centre of town and on the outskirts make for
+                compelling
+                attractions. The city is an ideal base for forays to the idyllic islands just to the west and
+                trips along the coastline and lagoons of the surrounding peninsula.
+            </div>
+            <!--used to change the font size of the introduction paragraph-->
+            <div id="fontSizeChanger">
+                <!--button used to decrease and increase the font size-->
+                <div class="fontButtons">
+                    <button class="fontSizeButtonDec" onclick="fontDecrease()">-</button>
+                    <p id="textFontSize1">20</p>
+                    <button class="fontSizeButtonIn" onclick="fontIncrease()">+</button>
+                </div>
+            </div>
+            <!--end of font Size changer-->
+        </div>
+        <!--end of introduction paragraph-->
+        <!--attractions in this destination-->
+        <div class="subHeading" id="attractMainTitle">
+            <h2>Major Attractions</h2>
+        </div>
+        <!--attractions-->
+        <div class="popularAttraction1" id="popularAttraction">
+            <img src="images\nallurKovil.jpg" alt="Nallur Kandaswamy Kovil" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Nallurn Kandaswamy Kovil</p>
+                <p>
+                    This huge Hindu temple, is one of the most significant Hindu religious complexes in Sri Lanka.
+                    Its sacred
+                    deity is Murugan.
+                </p>
+            </div>
+        </div>
+        <div class="popularAttraction2" id="popularAttraction">
+            <img src="images/jaffnaFort.jpeg" alt="Jaffna Fort" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Fort Jaffna</p>
+                <p>The Jaffna Fort was originally constructed by the Portuguese in 1618. A few years later it
+                    was captured by the Dutch and now only the ruins remain.</p>
+            </div>
+        </div>
+        <div class="popularAttraction3" id="popularAttraction">
+            <img src="images/jaffnaLibrary.jpg" alt="Jaffna Library" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Jaffna Library</p>
+                <p>The library was built in 1933 and burnt in 1981. During the early 1980s, it was one of the
+                    biggest
+                    libraries
+                    in Asia and it was rebuilt in 2001.</p>
+            </div>
+        </div>
+        <div class="popularAttraction4" id="popularAttraction">
+            <img src="images/sangili.JPG" alt="Sangiliyan Statue" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Sangiliyan Statue</p>
+                <p>The Sangiliyan statue was dedicated to Cankili II a Tamil martyr and the last king of Jaffna
+                    Kingdom. The
+                    statue is a landmark of Jaffna</p>
+            </div>
+        </div>
+        <div class="popularAttraction5" id="popularAttraction">
+            <img src="images/casuarinaBeach.jpg" alt="Casuarina Beach" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Casuarina Beach</p>
+                <p>The Casuarina Beach is the best beach in the Nothern Province and a go to for many travellers as
+                    it shallow
+                    and have smooth waves.</p>
+            </div>
+        </div>
+        <div class="popularAttraction6" id="popularAttraction">
+            <img src="images/jaffnaMarket.jpg" alt="Jaffna Market" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Jaffna Market</p>
+                <p>Jaffna city is famous for many things like Mango, Grape and Nelli Syrup.This is the go to place
+                    to
+                    get all jaffna products at a reasonable price.</p>
+            </div>
+        </div>
+        <div class="popularAttraction7" id="popularAttraction">
+            <img src="images/keerimalaiPond.jpg" alt="Keerimalai Hot Springs" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Keerimalai Hot Springs</p>
+                <p>Keerimalai is also known as a natural pool which is said to have healing properties and there are
+                    separate
+                    spring for male and female. </p>
+            </div>
+        </div>
+        <div class="popularAttraction8" id="popularAttraction">
+            <img src="images/queenTower.jpg" alt="Queen's Tower" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Delft Island</p>
+                <p>Here you can see wild horses, Queen's Tower, Ruins of ancient Stupas and an old Portugese Fort
+                    but to get
+                    here it will take an hour by boat.</p>
+            </div>
+        </div>
+        <div class="popularAttraction9" id="popularAttraction">
+            <img src="images/clockTower.jpg" alt="Clock Tower" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Clock Tower</p>
+                <p>Clock Tower was erected in 1875 to honour a visit by the Prince of
+                    Wales.The clock were replaced in 2000 by Prince Charles.</p>
+            </div>
+        </div>
+        <!--end of attractions-->
+        <!--links to hotel page of destination-->
+        <div class="hotel1" id="hotelID" role="banner">
+            <div class="layerOver">
+                <h2 class="hotelHeading">Amazing hotels and B & B</h2>
+                <h3 class="nextHotel">We've pre-picked the best hotels and bed and breakfasts to make your stay as
+                    enjoyable as
+                    possible.</h3>
+                <div class="readmore1" id="linkToHotelPage"><a href="../../hotels/hotels-jaffna/hotel7_jaffna.html">View
+                        All Hotels</a></div>
+            </div>
+        </div>
+        <!--end of hotel linking-->
+        <!--popular restaurants in this destination-->
+        <div class="subHeading1" id="restaurant">
+            <h2>Popular Restaurants</h2>
+        </div>
+        <!--restaurants-->
+        <div class="popularRest1" id="popularRest">
+            <img class="popularImages" src="images\malayan.jpg" alt="Malayan Restuarant" />
+            <div class="restInfo">
+                <p class="restTitle">Malayan Cafe</p>
+                <p class="cuisine">South Indian</p>
+                <!--span used to hide the timings and address-->
+                <span id="malayanMore">
+                    <p>
+                        Address: 36-38 Grand Bazaar, Jaffna <br />Telephone Number:
+                        0914552214<br />Open Timings:5.00AM - 9.00PM
+                    </p>
+                </span>
+                <!--end of span-->
+                <!--function called when user clicks button to show the address and timing-->
+                <button onclick="showHideFunction(0);" id="malayanBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest2" id="popularRest">
+            <img class="popularImages" src="images\rio.jpg" alt="Rio Icecream Parlour" />
+            <div class="restInfo">
+                <p class="restTitle">Rio Icecream Parlour</p>
+                <p class="cuisine">Desert</p>
+
+                <span id="rioMore">
+                    <p>
+                        Address: 448A Point Pedro Rd, Jaffna <br />Telephone Number:
+                        0212227224<br />Open Timings:9.00AM - 10.00PM
+                    </p>
+                </span>
+                <button onclick="showHideFunction(1);" id="rioBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest3" id="popularRest">
+            <img class="popularImages" src="images\mangos.jpg" alt="Mangos" />
+            <div class="restInfo">
+                <p class="restTitle">Mangos</p>
+                <p class="cuisine">Indian</p>
+
+                <span id="mangosMore">
+                    <p>
+                        Address: 359/3 Temple Rd Nallur, Jaffna<br />Telephone Number:
+                        0212228294<br />Open Timings:8.00AM - 10.30PM
+                    </p>
+                </span>
+                <button onclick="showHideFunction(2);" id="mangosBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest4" id="popularRest">
+            <img class="popularImages" src="images\nallur.jpg" alt="Nallur Bhavan" />
+            <div class="restInfo">
+                <p class="restTitle">Nallur Bhavan</p>
+                <p class="cuisine">Vegetarian</p>
+
+                <span id="nallurMore">
+                    <p>
+                        Address: 250 Kovil Rd, Jaffna <br />Telephone Number:
+                        0212225556<br />Open Timings:8.00AM - 10.00PM
+                    </p>
+                </span>
+                <button onclick="showHideFunction(3);" id="nallurBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest5" id="popularRest">
+            <img class="popularImages" src="images\lingan.jpg" alt="Lingan Icecream Parlour" />
+            <div class="restInfo">
+                <p class="restTitle">Lingan Icream Parlour</p>
+                <p class="cuisine">Desert</p>
+
+                <span id="linganMore">
+                    <p>
+                        Address: 269/3C, Kovil Rd <br />Telephone Number:
+                        0212224945<br />Open Timings:8.00AM - 10.00PM
+                    </p>
+                </span>
+                <button onclick="showHideFunction(4);" id="linganBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest6" id="popularRest">
+            <img class="popularImages" src="images\elevenR.jpg" alt="Eleven to Eleven Pizza" />
+            <div class="restInfo">
+                <p class="restTitle">Eleven to Eleven Pizza</p>
+                <p class="cuisine">Fast Food</p>
+
+                <span id="elevenRMore">
+                    <p>
+                        Address: 128 Palali Rd, Jaffna <br />Telephone Number:
+                        0777444225<br />Open Timings:11.00AM - 11.00PM
+                    </p>
+                </span>
+                <button onclick="showHideFunction(5);" id="elevenRBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest7" id="popularRest">
+            <img class="popularImages" src="images\greenGrass.jpg" alt="Green Grass Hotel & Restaurant" />
+            <div class="restInfo">
+                <p class="restTitle">Green Grass Restaurant</p>
+                <p class="cuisine">Sri Lankan</p>
+
+                <span id="greenGrassMore">
+                    <p>
+                        Address: 33 Aseervatham Lane Hospital Road, Jaffna <br />Telephone Number:
+                        212224385<br />Open Timings:7.00AM - 12.00AM
+                    </p>
+                </span>
+                <button onclick="showHideFunction(6);" id="greenGrassBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest8" id="popularRest">
+            <img class="popularImages" src="images\cosy.jpg" alt="Cosy Restauran" />
+            <div class="restInfo">
+                <p class="restTitle">Cosy Restaurant</p>
+                <p class="cuisine">Indian</p>
+
+                <span id="cosyMore">
+                    <p>
+                        Address: 15 Sirampiradi Lane, Jaffna <br />Telephone Number:
+                        212225899<br />Open Timings:11.00AM - 11.00PM
+                    </p>
+                </span>
+                <button onclick="showHideFunction(7);" id="cosyBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest9" id="popularRest">
+            <img class="popularImages" src="images\akshathai.jpg" alt="Akshathai" />
+            <div class="restInfo">
+                <p class="restTitle">Akshathai</p>
+                <p class="cuisine">Indian</p>
+
+                <span id="akshathaiMore">
+                    <p>
+                        Address: 60 Stanley Rd, Jaffna <br />Telephone Number:
+                        212219946<br />Open Timings:7.00AM - 9.00PM
+                    </p>
+                </span>
+                <button onclick="showHideFunction(8);" id="akshathaiBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <!--end of restaurants-->
+        <!--google maps embedded into the html using iframe-->
+        <div class="mapOfPlace">
+            <div class="googleMap"><iframe width="1348" height="600" id="googleMap"
+                    src="https://maps.google.com/maps?q=anuradhapura&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+            </div>
+        </div>
+        <!--end of the map-->
+        <!--footer-->
+        <div class="footer">
+            <div class="footerinner">
+                <img class="footerlogo" src="../../images/logo.png" alt="logo" />
+                <img class="footerbrand" src="../../images/brand1.png" alt="brandname" />
+                <div class="footerlinks">
+                    <a href="../../home.html"> Home | </a>
+                    <a href="../../comment-form/contact.html"> Contact | </a>
+                    <a href="../../sitemap/sitemap.html"> Sitemap | </a>
+                    <a href="../../cv/safiyyah/safiyyah-cv.html"> Safiyyah Thur Rahman </a>
+                </div>
+            </div>
+        </div>
+        <!--end of footer-->
+    </div>
+    <!--end of the grid-->
+    <!--link the function file because it has the function decrease and increase the font size and also the function to make the header and back to the top button sticky-->
+    <script src="../../function.js"></script>
+</body>
+
+</html>

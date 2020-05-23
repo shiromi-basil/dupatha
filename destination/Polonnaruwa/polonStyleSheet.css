@@ -1,0 +1,11 @@
+/*the address and the timing are not displayed initially*/
+#jagaMore,
+#gamiMore,
+#priyamaliMore,
+#mahaMore,
+#rajaMore,
+#wishmaMore,
+#ariyaMore,
+#bananaMore{
+  display: none;
+}

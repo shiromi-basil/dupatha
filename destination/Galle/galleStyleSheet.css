@@ -1,0 +1,11 @@
+/*the address and the timing are not displayed initially*/
+#hoppaMore,
+#cocoMore,
+#imalMore,
+#decoMore,
+#isleMore,
+#amangallaMore,
+#pedlarMore,
+#bombayMore {
+  display: none;
+}

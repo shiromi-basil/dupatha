@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> DUPATHA | HOTELS-COLOMBO </title>
+		<!--the head-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="../../images/logo.png" sizes="16x16">
+		<link rel="stylesheet" type="text/css" href="../../externalstyle.css">
+		<link rel="stylesheet" type="text/css" href="../hotelsub.css">
+		
+		<script>
+			window.onscroll = function () {scrollFunction()};
+		</script>
+	</head>
+	
+	<body>
+		<div class="hotelsub-grid">
+			
+			<div class="header" role="banner">
+			<!-- contents of the header-->
+			<img class="headerimage" src="images/hotelcolombo.png" alt="header image">		
+					<div class="headerinner">
+					<h1 class="mainheading"> colombo </h1>
+					<a href="../../home.html">
+					<img class="logo" src="../../images/logo.png" alt="logo"/>
+					<img class="brand" src="../../images/brand1.png" alt ="brandname"/>
+					</a>
+				</div>							
+			</div>
+			<!--The main navigation of the page-->
+			<div id="mainNav" class="mainNavBar">
+			  <a href="javascript:void(0)" id="cross" class="closebtn" onclick="closeMenu()">&times;</a>
+			  <a href="../../home.html">Home</a>
+			  <a href="../../advice/advice.html">Things to know</a>
+			  <a href="../../destination/destinations.html">Destinations</a>
+			  <a href="../../colombo/colombo.html">Colombo</a>
+			  <a href="../../tours/tours.html">Tours</a>
+			  <a href="../../hotels/hotelmain.html">Accommodation</a>
+			  <a href="../../gallery/gallery.html">Gallery</a>
+			  <a href="../../boutique/product.html">Boutique</a>
+			  <a href="../../comment-form/contact.html">Contact</a>
+			  <a href="../../sitemap/sitemap.html">Sitemap</a>
+			</div>
+			<!--div for navigation that apeasr on scrolling-->
+			<div id="scrollingNav">
+			<a href="#"></a>
+			<img id="navlogo" src="../../images/logo.png" style="margin-top:8px; margin-left:40px;"/>
+			<img id="navlogotext" src="../../images/brand1.png"/>
+			
+			<div id="main-1"class="readmore">
+				<span onclick="openMenu()"><b> MENU</b></span>
+			</div>
+				
+			<div id="main-2"class="readmore">
+				<a href="../../comment-form/contact.html"><span><b> CONTACT</b></span></a>
+			</div>
+				
+			<div id="main-3"class="readmore">
+				<a href="../../boutique/product.html"><span><b> BOUTIQUE</b></span></a>
+			</div>
+			</div>
+			<!-- anchors for navigation to other pages-->
+
+			<div class="topMenu" >
+				<div class="subNavigation" >
+					<button  class="subnavbtn" id="topMenuhotel" onclick="location.href='hotel1_colombo.html'">Colombo <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a class="active" href="hotel1_colombo.html#changeFont">Description</a>
+							<a href="hotel1_colombo.html#main_search_div">Recommendations</a>
+						</div>
+				</div> 
+				<div class="subNavigation">
+					<button  class="subnavbtn" id="topMenuhotel"  onclick="location.href='../hotels-galle/hotel2_galle.html'">Galle <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a class="active" href="../hotels-galle/hotel2_galle.html#changeFont">Description</a>
+							<a href="../hotels-galle/hotel2_galle.html#main_search_div">Recommendations</a>
+						</div>
+				</div> 
+				<div class="subNavigation">
+					<button  class="subnavbtn" id="topMenuhotel" onclick="location.href='../hotels-hikkaduwa/hotel3_hikkaduwa.html'">Hikkaduwa <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a class="active" href="../hotels-hikkaduwa/hotel3_hikkaduwa.html#changeFont">Description</a>
+							<a href="../hotels-hikkaduwa/hotel3_hikkaduwa.html#main_search_div">Recommendations</a>
+						</div>
+				</div>  
+				<div class="subNavigation">
+					<button  class="subnavbtn" id="topMenuhotel" onclick="location.href='../hotels-kandy/hotel4_kandy.html'">Kandy <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a class="active" href="../hotels-kandy/hotel4_kandy.html#changeFont">Description</a>
+							<a href="../hotels-kandy/hotel4_kandy.html#main_search_div">Recommendations</a>
+						</div>
+				</div> 
+				<div class="subNavigation">
+					<button  class="subnavbtn" id="topMenuhotel" onclick="location.href='../hotels-anuradhapura/hotel5_anuradhapura.html'">Anuradhapura <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a class="active" href="../hotels-anuradhapura/hotel5_anuradhapura.html#changeFont">Description</a>
+							<a href="../hotels-anuradhapura/hotel5_anuradhapura.html#main_search_div">Recommendations</a>
+						</div>
+				</div> 
+				<div class="subNavigation">
+					<button  class="subnavbtn" id="topMenuhotel" onclick="location.href='../hotels-trinco/hotel6_trinco.html'">Trinco <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a class="active" href="../hotels-trinco/hotel6_trinco.html#changeFont">Description</a>
+							<a href="../hotels-trinco/hotel6_trinco.html#main_search_div">Recommendations</a>
+						</div>
+				</div> 
+				<div class="subNavigation">
+					<button  class="subnavbtn" id="topMenuhotel" onclick="location.href='../hotels-jaffna/hotel7_jaffna.html'">Jaffna <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a class="active" href="../hotels-jaffna/hotel7_jaffna.html#changeFont">Description</a>
+							<a href="../hotels-jaffna/hotel7_jaffna#main_search_div">Recommendations</a>
+						</div>
+				</div> 
+				<div class="subNavigation">
+					<button  class="subnavbtn" id="topMenuhotel" onclick="location.href='../hotels-sigiriya/hotel8_sigiriya.html'">Sigiriya <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a class="active" href="../hotels-sigiriya/hotel8_sigiriya.html#changeFont">Description</a>
+							<a href="../hotels-sigiriya/hotel8_sigiriya.html#main_search_div">Recommendations</a>
+						</div>
+				</div> 
+				<div class="subNavigation">
+					<button  class="subnavbtn" id="topMenuhotel" onclick="location.href='../hotels-nuwaraeliya/hotel9_nuwaraeliya.html'">Nuwaraeliya <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a class="active" href="../hotels-nuwaraeliya/hotel9_nuwaraeliya.html#changeFont">Description</a>
+							<a href="../hotels-nuwaraeliya/hotel9_nuwaraeliya#main_search_div">Recommendations</a>
+						</div>
+				</div> 
+				<div class="subNavigation">
+					<button  class="subnavbtn" id="topMenuhotel" onclick="location.href='../hotels-polonnaruwa/hotel10_polonnaruwa.html'">Polonnaruwa <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a class="active" href="../hotels-polonnaruwa/hotel10_polonnaruwa.html#changeFont">Description</a>
+							<a href="../hotels-polonnaruwa/hotel10_polonnaruwa.html#main_search_div">Recommendations</a>
+						</div>
+				</div> 
+				<div class="subNavigation" >
+					<button  class="subnavbtn" id="topMenuhotel" onclick="location.href='../hotels-hambantota/hotel11_hambantota.html'">Hambantota <i class=""></i></button>
+						<div class="subNavigation-content">
+							<a class="active" href="../hotels-hambantota/hotel11_hambantota.html#changeFont">Description</a>
+							<a href="../hotels-hambantota/hotel11_hambantota.html#main_search_div">Recommendations</a>
+						</div>
+				</div> 
+				  
+				
+			</div><!--and of navigation-->
+			<div class="content"id="changeFont"style="font-size: 16px";>
+				
+					<h2>Hotels in Colombo</h2>
+					<p> Colombo is the beautiful city in the easter province of colombo, as the capitol city of Sri Lanka it provides the widest selection of hotels compared to any other place in the country.
+					Being the city by the seashore the best hotels here provide an ocean veiw with most five star hotels being located on the infamous galle face strech, but if you came to Sri Lanka on buisness there are several comforatble city
+					hotels you can chose from. With such a wide variety of hotels you can be sure to find a hotel that will fit well into your budget as well. If you do not hope to stay full board also do not worry as colombo has thousands of restaurants 
+					that can cater to your needs.</p>
+				<div id="fontSizeChanger">
+					<div class="fontButtons">
+					<button class="fontSizeButtonDec" onclick="fontDecrease()">-</button>
+					<p id="textFontSize1">16</p>
+					<button class="fontSizeButtonIn" onclick="fontIncrease()">+</button>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class ="main_search_div" id="main_search_div">
+				<div class ="div_hotel" id="div_hotel1_5">
+					<div class="span-image">
+						<figure><img class="hotelmainimg" src="images/hotel1_5img.jpg"></figure>
+				   </div>
+					<div class="hotel-datails">
+					<h4>The Kingsbury</h4>                        
+						<p>No 48, Janadhipathi Mawatha, Colombo 01</p>
+						<div class="row">
+							<div class="span-main">
+								<p>Stars</p>
+							</div>
+							<div class="span-sub"> 
+									 <ul class="starRating">
+											<li><img src="images/star.png" width="30px" height="30px"class="icon-star"></li>
+											<li><img src="images/star.png" width="30px" height="30px"class="icon-star"></li>
+											<li><img src="images/star.png" width="30px" height="30px"class="icon-star"></li>
+											<li><img src="images/star.png" width="30px" height="30px"class="icon-star"></li>
+											<li><img src="images/star.png" width="30px" height="30px"class="icon-star"></li>
+										 </ul>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="span-main">
+								<p><span>229 Rooms</span></p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="span-main">
+								<p>Web</p>
+							</div>
+							<div class="span-sub">
+								<p>
+									<span><a href="https://www.thekingsburyhotel.com/" target="_blank">www.thekingsburyhotel.com</a></span>
+								</p>
+							</div>
+						</div>
+						<br><div class="row">
+							<div class="span-main">
+								<p>Email</p>
+							</div>
+							<div class="span-sub">
+								<p>
+									<span>accountant@thekingsburyhotel.com</span>
+								</p>
+							</div>
+						</div>
+						<br><div class="row">
+							<div class="span-main">
+								<p>Tel</p>
+							</div>
+							<div class="span-sub">
+								<p><span>0112421221</span></p>
+							</div>
+						</div>
+						<br>
+					</div>
+				</div>
+				<br>
+				<div class ="div_hotel" id="div_hotel1_4">
+					<div class="span-image">
+					<figure><img class="hotelmainimg" src="images/hotel1_4img.jpg"></figure>
+					</div>
+					<div class="hotel-datails">	
+						<h4>Mount Lavinia Hotel</h4>                        
+							<p>No. 100, Hotel Road, Mt. Lavinia</p>
+							<div class="row">
+								<div class="span-main">
+									<p>Stars</p>
+								</div>
+								<div class="span-sub"> 
+										<ul class="starRating">
+											<li><img src="images/star.png" width="30px" height="30px"class="icon-star"></li>
+											<li><img src="images/star.png" width="30px" height="30px"class="icon-star"></li>
+											<li><img src="images/star.png" width="30px" height="30px"class="icon-star"></li>
+											<li><img src="images/star.png" width="30px" height="30px"class="icon-star"></li>
+											
+										</ul>
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="span-main">
+									<p><span>176 Rooms</span></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="span-main">
+									<p>Web</p>
+								</div>
+								<div class="span-sub">
+									<p>
+										<span><a href="www.mountlaviniahotel.com" target="_blank">www.mountlaviniahotel.com</a></span>
+									</p>
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="span-main">
+									<p>Tel</p>
+								</div>
+								<div class="span-sub">
+									<p><span>0112421221</span></p>
+								</div>
+							</div>
+							
+						
+					</div>
+				</div>
+				<div class ="div_hotel" id="div_hotel1_3">
+					<div class="span-image">
+						<figure><img class="hotelmainimg" src="images/hotel1_3img.jpg"></figure>
+				    </div>
+					<div class="hotel-datails">
+						<h4>Cinnamon Red Colombo</h4>                         
+						<p><span>No:59, Ananda Coomaraswamy Mawatha, Colombo 03.</span></p>
+						<div class="row">
+							<div class="span-main">
+								<p>Stars</p>
+							</div>
+							<div class="span-sub"> 
+									 <ul class="starRating">
+											<li><img src="images/star.png" width="30px" height="30px"class="icon-star"></li>
+											<li><img src="images/star.png" width="30px" height="30px"class="icon-star"></li>
+											<li><img src="images/star.png" width="30px" height="30px"class="icon-star"></li>
+											
+										 </ul>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="span-main">
+								<p><span>243 Rooms</span></p>
+							</div>
+						</div>
+						 
+						
+						<div class="row">
+							<div class="span-main">
+								<p>Web</p>
+							</div>
+							<div class="span-sub">
+								<p>
+									<span><a href="http://www.cinnamonhotels.com" target="_blank">www.cinnamonhotels.com</a></span>
+								</p>
+							</div>
+						</div>
+						<br>
+					  
+						<div class="row">
+							<div class="span-main">
+								<p>Email</p>
+							</div>
+							<div class="span-sub">
+								<p>
+									<span>sampath.jkh@keells.com</span>
+								</p>
+							</div>
+						</div>
+						<br>
+		 
+					   <div class="row">
+							<div class="span-main">
+								<p>Tel</p>
+							</div>
+							<div class="span-sub">
+								<p><span>0112145145</span></p>
+							</div>
+						</div>
+						<br>
+						
+					</div>    
+				</div>
+				<div class ="div_hotel" id="div_hotel1_2">
+					<div class="span-image">
+						<figure><img class="hotelmainimg" src="images/hotel1_2img.jpg"></figure>
+				    </div>
+					<div class="hotel-datails">
+						<h4>Hotel Sapphire</h4>                         
+						<p><span>No. 371, Galle Road, Colombo 06.</span></p>
+						<div class="row">
+							<div class="span-main">
+								<p>Stars</p>
+							</div>
+							<div class="span-sub"> 
+									 <ul class="starRating">
+											<li><img src="images/star.png" width="30px" height="30px"class="icon-star"></li>
+											<li><img src="images/star.png" width="30px" height="30px"class="icon-star"></li>
+											
+										 </ul>
+							</div>
+						</div>
+						<br>
+												
+						 
+						<div class="row">
+							<div class="span-main">
+								<p><span>40 Rooms</span></p>
+							</div>
+						</div>
+						 
+						
+						<div class="row">
+							<div class="span-main">
+								<p>Web</p>
+							</div>
+							<div class="span-sub">
+								<p>
+									<span><a href="https://www.hotelsapphirelk.com/" target="_blank">www.hotelsapphirelk.com</a></span>
+								</p>
+							</div>
+						</div>
+						<br>
+					  
+						<div class="row">
+							<div class="span-main">
+								<p>Email</p>
+							</div>
+							<div class="span-sub">
+								<p>
+									<span>ceo@hotelsapphirelk.com</span>
+								</p>
+							</div>
+						</div>
+						<br>
+		 
+						<div class="row">
+							<div class="span-main">
+								<p>Tel</p>
+							</div>
+							<div class="span-sub">
+								<p><span>0112363306</span></p>
+							</div>
+						</div>
+								
+					</div>
+				</div>
+					
+				<div class ="div_hotel" id="div_hotel1_1">
+					<div class="span-image">
+						<figure><img class="hotelmainimg" src="images/hotel1_1img.jpg"></figure>
+				    </div>
+					<div class="hotel-datails">
+						<h4>Colombo City Hotel</h4>                          
+						<p><span>Level 3, No. 33, Canal Row, Colombo 01</span></p>
+						<div class="row">
+							<div class="span-main">
+								<p>Stars</p>
+							</div>
+							<div class="span-sub"> 
+									 <ul class="starRating">
+											<li><img src="images/star.png" width="30px" height="30px"class="icon-star"></li>
+							
+											
+										 </ul>
+							</div>
+						</div>
+						<br>
+												
+						 
+						<div class="row">
+							<div class="span-main">
+								<p><span>40 Rooms</span></p>
+							</div>
+						</div>
+						 
+						
+						<div class="row">
+							<div class="span-main">
+								<p>Web</p>
+							</div>
+							<div class="span-sub">
+								<p>
+									<span><a href="https://www.colombocityhotels.com/" target="_blank">www.colombocityhotels.com</a></span>
+								</p>
+							</div>
+						</div>
+						<br>
+					  
+						<div class="row">
+							<div class="span-main">
+								<p>Email</p>
+							</div>
+							<div class="span-sub">
+								<p>
+									<span>cmb_cityhotels@sltnet.lk</span>
+								</p>
+							</div>
+						</div>
+						<br>
+		 
+						<div class="row">
+							<div class="span-main">
+								<p>Tel</p>
+							</div>
+							<div class="span-sub">
+								<p><span>0115341962</span></p>
+							</div>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		
+		
+			<div class="footer">
+				<div class="footerinner">
+					<img class="footerlogo" src="../../images/logo.png" alt="logo"/>
+					<img class="footerbrand" src="../../images/brand1.png" alt ="brandname"/>
+					<div class="footerlinks">
+						<a href="../../home.html" > Home | </a>
+						<a href="../../comment-form/contact.html" > Contact | </a>
+						<a href="../../sitemap/sitemap.html" > Sitemap | </a>
+						<a href="../../cv/chrsitina/chrsitina-cv.html" > Christina Thambirajah </a>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+		<script src="../../function.js"></script>	
+
+	</body>
+
+</html>

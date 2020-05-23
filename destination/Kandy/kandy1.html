@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en" />
+
+<head>
+    <title>Kandy | DUPATHA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../images/logo.png" sizes="16x16">
+    <link rel="stylesheet" href="../popularPlacesGrids.css" type="text/css">
+    <link rel="stylesheet" href="kandyStyleSheet.css" type="text/css">
+    <link rel="stylesheet" href="../../externalstyle.css" type="text/css">
+    <script>
+        window.onscroll = function () { scrollFunction() };
+        function showHideFunction(number) {
+            var moreArray = [
+                "sharonMore",
+                "kandyCafeMore",
+                "salaThaiMore",
+                "grillRestMore",
+                "balajiMore",
+                "divineMore",
+                "coolParMore",
+                "vitoMore"
+            ];
+
+            var buttonArray = [
+                "sharonBtn",
+                "kandyCafeBtn",
+                "salaThaiBtn",
+                "grillRestBtn",
+                "balajiBtn",
+                "divineBtn",
+                "coolParBtn",
+                "vitoBtn"
+            ];
+            //function used to open the span when show more button is clicked and to close it when the show less button is clicked
+            var moreInfo = document.getElementById(moreArray[number]);
+            var btn = document.getElementById(buttonArray[number])
+            //condition used to check it
+            if (moreInfo.style.display === "inline") {
+                moreInfo.style.display = "none";
+                btn.innerHTML = "SHOW MORE";
+            } else {
+                moreInfo.style.display = "inline";
+                btn.innerHTML = "SHOW LESS";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!--main grid begins here-->
+    <div class="mainGrid">
+        <!--header picture-->
+        <div class="header1" role="banner">
+            <img class="headerimage" src="images/kandybg.png" alt="header image">
+            <div class="headerinner">
+                <h1 class="mainheading">kandy</h1>
+                <a href="../../home.html">
+                    <img class="logo" src="../../images/logo.png" alt="logo" />
+                    <img class="brand" src="../../images/brand1.png" alt="brandname" />
+                </a>
+            </div>
+        </div>
+        <!--end of header picture-->
+        <!--The mainNavBar div that contains the menu that pops up from the right side of the page-->
+        <div id="mainNav" class="mainNavBar">
+            <a href="javascript:void(0)" id="cross" class="closebtn" onclick="closeMenu()">&times;</a>
+            <a href="../../home.html">Home</a>
+            <a href="../../advice/advice.html">Things to know</a>
+            <a href="../../destination/destinations.html">Destinations</a>
+            <a href="../../colombo/colombo.html">Colombo</a>
+            <a href="../../tours/tours.html">Tours</a>
+            <a href="../../hotels/hotelmain.html">Accommodation</a>
+            <a href="../../gallery/gallery.html">Gallery</a>
+            <a href="../../boutique/product.html">Boutique</a>
+            <a href="../../comment-form/contact.html">Contact</a>
+            <a href="../../sitemap/sitemap.html">Sitemap</a>
+        </div>
+
+        <!--The div for the menu that pops when you scroll down the page-->
+        <div id="scrollingNav">
+            <img id="navlogo" src="../../images/logo.png" style="margin-top:8px; margin-left:40px;" />
+            <img id="navlogotext" src="../../images/brand1.png" />
+
+            <div id="main-1" class="readmore">
+                <span onclick="openMenu()"><b> MENU</b></span>
+            </div>
+
+            <div id="main-2" class="readmore">
+                <a href="../../comment-form/contact.html"><span><b> CONTACT</b></span></a>
+            </div>
+
+            <div id="main-3" class="readmore">
+                <a href="../../boutique/product.html"><span><b> BOUTIQUE</b></span></a>
+            </div>
+        </div>
+        <!--end of menu-->
+        <!--anchors and destination navigation bar -->
+        <div class="topMenu">
+            <!--link to pages and direct link to some parts of the particular page (Sub-Navigation bar)-->
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(0);">Anuradhapura <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Anuradhapura/anuradhapura.html#attractMainTitle">Attractions</a>
+                    <a href="../Anuradhapura/anuradhapura.html#hotelID">Hotels</a>
+                    <a href="../Anuradhapura/anuradhapura.html#restaurant">Restaurants</a>
+                    <a href="../Anuradhapura/anuradhapura.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+            <!--link to pages and direct link to some parts of the particular page (Sub-Navigation bar)-->
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(1);">Galle <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Galle/galle1.html#attractMainTitle">Attractions</a>
+                    <a href="../Galle/galle1.html#hotelID">Hotels</a>
+                    <a href="../Galle/galle1.html#restaurant">Restaurants</a>
+                    <a href="../Galle/galle1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(2);">Hambantota <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Hambantota/hambantota1.html#attractMainTitle">Attractions</a>
+                    <a href="../Hambantota/hambantota1.html#hotelID">Hotels</a>
+                    <a href="../Hambantota/hambantota1.html#restaurant">Restaurants</a>
+                    <a href="../Hambantota/hambantota1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(3);">Hikkaduwa <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Hikkaduwa/hikkaduwa1.html#attractMainTitle">Attractions</a>
+                    <a href="../Hikkaduwa/hikkaduwa1.html#hotelID">Hotels</a>
+                    <a href="../Hikkaduwa/hikkaduwa1.html#restaurant">Restaurants</a>
+                    <a href="../Hikkaduwa/hikkaduwa1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(4);">Jaffna <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Jaffna/jaffna1.html#attractMainTitle">Attractions</a>
+                    <a href="../Jaffna/jaffna1.html#hotelID">Hotels</a>
+                    <a href="../Jaffna/jaffna1.html#restaurant">Restaurants</a>
+                    <a href="../Jaffna/jaffna1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtnactive" onclick="loadPage(5);">Kandy <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="#attractMainTitle">Attractions</a>
+                    <a href="#hotelID">Hotels</a>
+                    <a href="#restaurant">Restaurants</a>
+                    <a href="#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(6);">Nuwara Eliya <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Nuwara Eliya/nuwareEliya.html#attractMainTitle">Attractions</a>
+                    <a href="../Nuwara Eliya/nuwareEliya.html#hotelID">Hotels</a>
+                    <a href="../Nuwara Eliya/nuwareEliya.html#restaurant">Restaurants</a>
+                    <a href="../Nuwara Eliya/nuwareEliya.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(7);">Polonnaruwa <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Polonnaruwa/polon1.html#attractMainTitle">Attractions</a>
+                    <a href="../Polonnaruwa/polon1.html#hotelID">Hotels</a>
+                    <a href="../Polonnaruwa/polon1.html#restaurant">Restaurants</a>
+                    <a href="../Polonnaruwa/polon1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(8);">SIGIRIYA <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Sigiriya/sigiriya1.html#attractMainTitle">Attractions</a>
+                    <a href="../Sigiriya/sigiriya1.html#hotelID">Hotels</a>
+                    <a href="../Sigiriya/sigiriya1.html#restaurant">Restaurants</a>
+                    <a href="../Sigiriya/sigiriya1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(9);">Trincomalee <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Trincomalee/trinco1.html#attractMainTitle">Attractions</a>
+                    <a href="../Trincomalee/trinco1.html#hotelID">Hotels</a>
+                    <a href="../Trincomalee/trinco1.html#restaurant">Restaurants</a>
+                    <a href="../Trincomalee/trinco1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+            <!--end of sub navigation bar-->
+        </div>
+        <!--end of destination navigation bar-->
+        <!--introduction paragraph of the page-->
+        <div class="content">
+            <!--this paragraph's font size can be changed using fontSizeChanger-->
+            <div id="changeFont" style="font-size: 20px;">A city of imposing colonial-era and Kandyan
+                architecture, none more impressive than the Temple of the Sacred Tooth Relic, one of Buddhism's most
+                sacred
+                shrines.
+                History and culture are on tap. Yes, the city is renowned for the great Kandy Esala Perahera festival
+                (held
+                annually in July/August), but its vibrant cultural life and attractions more than justify a visit at any
+                time of year.
+            </div>
+            <!--used to change the font size of the introduction paragraph-->
+            <div id="fontSizeChanger">
+                <!--button used to decrease and increase the font size-->
+                <div class="fontButtons">
+                    <button class="fontSizeButtonDec" onclick="fontDecrease()">-</button>
+                    <p id="textFontSize1">20</p>
+                    <button class="fontSizeButtonIn" onclick="fontIncrease()">+</button>
+                </div>
+            </div>
+            <!--end of font Size changer-->
+        </div>
+        <!--end of introduction paragraph-->
+        <!--attractions in this destination-->
+        <div class="subHeading" id="attractMainTitle">
+            <h2>Major Attractions</h2>
+        </div>
+        <!--attractions-->
+        <div class="popularAttraction1" id="popularAttraction">
+            <img src="images\toothRelic.jpg" alt="Temple of the Sacred Tooth Relic" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Sri Dalada Maligawa</p>
+                <p>It is also known as the Temple of the Sacred Tooth Relic. It is located in the royal palace
+                    complex
+                    which houses the Relic of the tooth of Buddha.</p>
+            </div>
+        </div>
+        <div class="popularAttraction2" id="popularAttraction">
+            <img src="images\peradeniya.jpg" alt="Royal Botanical Gardens" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Royal Botanical Gardens</p>
+                <p>These stunning gardens were once reserved exclusively for Kandyan royalty. It is the most
+                    impressive
+                    and largest botanic gardens in Sri Lanka.</p>
+            </div>
+        </div>
+        <div class="popularAttraction3" id="popularAttraction">
+            <img src="images\kandyLake.jpg" alt="Kandy Lake" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Kandy Lake</p>
+                <p>Kandy Lake, also known the Sea of Milk, is an artificial lake in the heart of Kandy, built in
+                    1807
+                    next to the Temple of the Tooth.</p>
+            </div>
+        </div>
+        <div class="popularAttraction4" id="popularAttraction">
+            <img src="images\royalKandy.jpg" alt="Royal Palace of Kandy" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Royal Palace of Kandy</p>
+                <p>It was the royal residence of the Kingdom of Kandy in Sri Lanka. The last
+                    king to reside in it was King Sri Vikrama Rajasinha until he was overthrown by the British</p>
+            </div>
+        </div>
+        <div class="popularAttraction5" id="popularAttraction">
+            <img src="images\museumkandy.jpg" alt="National Museum of Kandy" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">National Museum of Kandy</p>
+                <p>This museum once housed Kandyan royal concubines and now features pre-European Artifacts. One of
+                    the
+                    most impressive exhibits is Rajasinha II's golden crown</p>
+            </div>and have smooth waves.</p>
+        </div>
+        <div class="popularAttraction6" id="popularAttraction">
+            <img src="images\hortonPlains.jpg" alt="Horton Plains" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Horton Plains</p>
+                <p>Horton Plains in Sri Lanka, is the coldest and windiest location in the country. In the year
+                    1969, it
+                    was declared a nature reserve and in 1988, as a National Park.</p>
+            </div>
+        </div>
+        <div class="popularAttraction7" id="popularAttraction">
+            <img src="images\teaMuseum.jpg" alt="Ceylon Tea Museum" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Ceylon Tea Museum</p>
+                <p>This museum occupies the 1925-vintage Hantane Tea Factory. Abandoned for more than a decade, it
+                    was
+                    recently refurbished and has good exhibits on tea pioneers</p>
+            </div>
+        </div>
+        <div class="popularAttraction8" id="popularAttraction">
+            <img src="images\asgiriyaViharaya.jpg" alt="Asgiri Maha Viharaya" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Asgiri Maha Viharaya</p>
+                <p>The Asgiriya monastery lay on the hill crop to the west of the Sri Dalada Maligawa. The monastery
+                    is
+                    said to have been founded during the period of king Parakramabahu IV.
+                </p>
+            </div>
+        </div>
+        <!--end of attractions-->
+        <!--links to hotel page of destination-->
+        <div class="hotel1" id="hotelID" role="banner">
+            <div class="layerOver">
+                <h2 class="hotelHeading">Amazing hotels and B & B</h2>
+                <h3 class="nextHotel">We've pre-picked the best hotels and bed and breakfasts to make your stay as
+                    enjoyable as
+                    possible.</h3>
+                <div class="readmore1" id="linkToHotelPage"><a href="../../hotels/hotels-kandy/hotel4_kandy.html">View
+                        All Hotels</a></div>
+            </div>
+        </div>
+        <!--end of hotel linking-->
+        <!--popular restaurants in this destination-->
+        <div class="subHeading1" id="restaurant">
+            <h2>Popular Restaurants</h2>
+        </div>
+        <!--restaurants-->
+        <div class="popularRest1" id="popularRest">
+            <img class="popularImages" src="images\sharon.jpg" alt="Sharon Inn" />
+            <div class="restInfo">
+                <p class="restTitle">Sharon Inn</p>
+                <p class="cuisine">Sri Lankan</p>
+                <!--span used to hide the timings and address-->
+                <span id="sharonMore">
+                    <p>Address: 59 Saranankara Rd, Kandy<br />Telephone Number: 812222416<br />Open
+                        Timings: 7.00AM -10.30PM</p>
+
+                </span>
+                <!--end of span-->
+                <!--function called when user clicks button to show the address and timing-->
+                <button onclick="showHideFunction(0);" id="sharonBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest2" id="popularRest">
+            <img class="popularImages" src="images\kandyCafe.jpg" alt="The Kandy Garden Cafe" />
+            <div class="restInfo">
+                <p class="restTitle">The Kandy Garden Cafe</p>
+                <p class="cuisine">Cafe</p>
+
+                <span id="kandyCafeMore">
+                    <p>Address: 9 Sangaraja Mawatha, Kandy <br>Telephone Number: 812220355
+                        <br>Open
+                        Timings: 8.00AM -11.00PM</p>
+                </span>
+                <button onclick="showHideFunction(1);" id="kandyCafeBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest3" id="popularRest">
+            <img class="popularImages" src="images\salaThai.jpg" alt="Sala Thai" />
+            <div class="restInfo">
+                <p class="restTitle">Sala Thai</p>
+                <p class="cuisine">Thai</p>
+
+                <span id="salaThaiMore">
+                    <p>Address: 921 Peradeniya Road, Kandy
+                        <br>Telephone Number: 814504505<br>Open
+                        Timings:
+                        11.00AM -10.00PM</p>
+                </span>
+                <button onclick="showHideFunction(2);" id="salaThaiBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest4" id="popularRest">
+            <img class="popularImages" src="images\balaji.jpg" alt="Balaji Dosai" />
+            <div class="restInfo">
+                <p class="restTitle">Balaji Dosai</p>
+                <p class="cuisine">Vegetarian</p>
+
+                <span id="balajiMore">
+                    <p>Address: 9 Peradeniya Road,Kandy<br>Telephone Number: 812208080<br>Open
+                        Timings: 6:00 AM - 12:00 AM</p>
+                </span>
+                <button onclick="showHideFunction(4);" id="balajiBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest5" id="popularRest">
+            <img class="popularImages" src="images\grillRest.jpg" alt="Licensed to Grill" />
+            <div class="restInfo">
+                <p class="restTitle">Licensed to Grill</p>
+                <p class="cuisine">Barbeque</p>
+
+                <span id="grillRestMore">
+                    <p>Address: 23/3 Kotugodella street, Kandy <br>Telephone Number: +94 77 741 0666
+                        <br>Open
+                        Timings: 6.00AM -11.00PM</p>
+                </span>
+                <button onclick="showHideFunction(3);" id="grillRestBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest6" id="popularRest">
+            <img class="popularImages" src="images\divine.jpg" alt="Cafe Divine Street" />
+            <div class="restInfo">
+                <p class="restTitle">Cafe Divine Street</p>
+                <p class="cuisine">Cafe</p>
+
+                <span id="divineMore">
+                    <p> Address: 139 Colombo Street, Kandy<br>Telephone Number: +94 77 699 2799<br>Open Timings:
+                        10:00 AM - 9:00 PM</p>
+                </span> <button onclick="showHideFunction(5);" id="divineBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest7" id="popularRest">
+            <img class="popularImages" src="images\coolPar.jpg" alt="Cool Corner Fried Ice Cream Parlor" />
+            <div class="restInfo">
+                <p class="restTitle">Cool Corner</p>
+                <p class="cuisine">Desert</p>
+
+                <span id="coolParMore">
+                    <p> Address: 114 Peradeniya Rd, Kandy
+                        <br>Telephone Number: 812205218<br>Open Timings: 10.30AM-7.00PM
+                    </p>
+                </span>
+                <button onclick="showHideFunction(6);" id="coolParBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest8" id="popularRest">
+            <img class="popularImages" src="images\vito.jpg" alt="Vito Wood Fired Pizza" />
+            <div class="restInfo">
+                <p class="restTitle">Vito Wood Fired Pizza</p>
+                <p class="cuisine">Italian</p>
+
+                <span id="vitoMore">
+                    <p>Address: No 43 Saranankara Road, Kandy<br>Telephone Number: 774549000<br>Open Timings:
+                        1.00PM-10.00PM
+                    </p>
+                </span>
+                <button onclick="showHideFunction(7);" id="vitoBtn" class="readmore1">
+                    SHOW MORE
+                    </buttom>
+            </div>
+        </div>
+        <!--end of restaurants-->
+        <!--google maps embedded into the html using iframe-->
+        <div class="mapOfPlace">
+            <div class="googleMap"><iframe width="1348" height="600" id="googleMap"
+                    src="https://maps.google.com/maps?q=anuradhapura&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+            </div>
+        </div>
+        <!--end of the map-->
+        <div class="footer">
+            <div class="footerinner">
+                <img class="footerlogo" src="../../images/logo.png" alt="logo" />
+                <img class="footerbrand" src="../../images/brand1.png" alt="brandname" />
+                <div class="footerlinks">
+                    <a href="../../home.html"> Home | </a>
+                    <a href="../../comment-form/contact.html"> Contact | </a>
+                    <a href="../../sitemap/sitemap.html"> Sitemap | </a>
+                    <a href="../../cv/safiyyah/safiyyah-cv.html"> Safiyyah Thur Rahman </a>
+                </div>
+            </div>
+        </div>
+        <!--end of footer-->
+    </div>
+    <!--end of the grid-->
+    <!--link the function file because it has the function decrease and increase the font size and also the function to make the header and back to the top button sticky-->
+    <script src="../../function.js"></script>
+</body>
+
+</html>s

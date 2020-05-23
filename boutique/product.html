@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Boutique | DUPATHA</title>
+    <link rel="icon" href="../images/logo.png" sizes="16x16">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="productGrid.css" type="text/css">
+    <link rel="stylesheet" href="../externalstyle.css" type="text/css">
+    <script>
+        //onscroll the 2 functions are called
+        window.onscroll = function () { scroll() };
+        function scroll() {
+            //sticky menu
+            scrollFunction();
+            // back to top button
+            scrollDown()
+        }
+    </script>
+</head>
+
+<body>
+    <!--the grid starts here-->
+    <div class="main_Grid">
+        <!--the main pic at the beginning-->
+        <div class="header1" role="banner">
+            <img class="headerimage" src="images/storebg.png" alt="header image">
+            <div class="headerinner">
+                <!--the main heading, logo and the brand name-->
+                <!--this link is to the home page-->
+                <h1 class="mainheading">boutique</h1>
+                <a href="../home.html">
+                    <img class="logo" src="../images/logo.png" alt="logo" />
+                    <img class="brand" src="../images/brand1.png" alt="brandname" />
+                </a>
+            </div>
+        </div>
+        <!--The mainNavBar div that contains the menu that pops up from the right side of the page-->
+        <div id="mainNav" class="mainNavBar">
+            <a href="javascript:void(0)" id="cross" class="closebtn" onclick="closeMenu()">&times;</a>
+            <a href="../home.html">Home</a>
+            <a href="../advice/advice.html">Things to know</a>
+            <a href="../destination/destinations.html">Destinations</a>
+            <a href="../colombo/colombo.html">Colombo</a>
+            <a href="../tours/tours.html">Tours</a>
+            <a href="../hotels/hotelmain.html">Accommodation</a>
+            <a href="../gallery/gallery.html">Gallery</a>
+            <a href="../boutique/product.html">Boutique</a>
+            <a href="../comment-form/contact.html">Contact</a>
+            <a href="../sitemap/sitemap.html">Sitemap</a>
+        </div>
+
+        <!--The div for the menu that pops when you scroll down the page-->
+        <div id="scrollingNav">
+            <img id="navlogo" src="../images/logo.png" style="margin-top:8px; margin-left:40px;" />
+            <img id="navlogotext" src="../images/brand1.png" />
+
+            <div id="main-1" class="readmore">
+                <span onclick="openMenu()"><b> MENU</b></span>
+            </div>
+
+            <div id="main-2" class="readmore">
+                <a href="../comment-form/contact.html"><span><b> CONTACT</b></span></a>
+            </div>
+
+            <div id="main-3" class="readmoreActive">
+                <a href="../boutique/product.html"><span><b> BOUTIQUE</b></span></a>
+            </div>
+        </div>
+        <!--the back to top button-->
+        <div class="backButton">
+            <button id="scrollButton" title="Click to go to the Top">
+                <a href="#productTable">
+                    <svg height="40" width="40">
+                        <line id="redArrow" x1="5" y1="30" x2="20" y2="10" />
+                        <line id="redArrow" x1="35" y1="30" x2="19" y2="10" />
+                    </svg>
+                </a>
+            </button>
+        </div>
+        <!--end of back to top button-->
+        <!--product 1 with four options to choose from and there is also 2 weights to select from-->
+        <div class="product1" id="product">
+            <div class="imageProduct">
+                <img src="images/englishTea.jpg" alt="Tea" class="img1" id="tea">
+            </div>
+            <!--this allows the user to choose 4 different varities of tea -->
+            <!--the showImage function is used to change the main image displayed onclick-->
+            <div class="picsRow" title="Available in 4 different flavours">
+                <img src="images/englishTea.jpg" class="morePics" onclick="showImage(4);">
+                <img src="images/blackTea.jpg" class="morePics" onclick="showImage(5);">
+                <img src="images/greenTea.jpg" class="morePics" onclick="showImage(6);">
+                <img src="images/whiteTea.jpg" class="morePics" onclick="showImage(7);">
+            </div>
+            <!--the product's description (name of the product, price, select the weight of the product, type of tea and the add to the cart buttons)-->
+            <div class="description">
+                <div class="descriptionOverlay">
+                    <p class="nameOfItem">Tea Leaves</p>
+                    <p id="descriptionTea">Type: English Breakfest Tea</p>
+                    <div class="selectWeight">
+                        <div class="nameOfItem1">Select the weight</div>
+                        <input type="radio" name="teaGrams" value="100" id="tea100" onclick="showPrice(2);"
+                            checked /><label>100g</label>
+                        <!--onclick of the radio buttons the price will change-->
+                        <input type="radio" name="teaGrams" value="200" id="tea200"
+                            onclick="showPrice(3);" /><label>200g</label></br><br>
+                    </div>
+                    <p class="price" id="teaPrice">£10.00</p>
+                </div>
+                <!--the quantity can be increased and decreased using the buttons-->
+                <div class="quantityButtons">
+                    <!--this button is used is used to decrease the quantity of the item-->
+                    <button class="quantityDecrease" onclick="cartDecrease(0)">-</button>
+                    <p class="showQuantity" id="textFontSize0">1</p>
+                    <!--this button is used to increase the quantity of the item-->
+                    <button class="quantityIncrease" onclick="cartIncrease(0)">+</button>
+                    <!--the reason a value is passed using the function is because it indicates the positino of it in the declared array-->
+                    <button class="addToCartButton" onclick="addtoCart(0)"> Add
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--product 1 finished-->
+        <!--the product 2 begins in this the user can select 2 different weights to choose from -->
+        <div class="product2" id="product">
+            <div class="imageProduct">
+                <img src="images/cinnamon.jpg" alt="Cinnamon Sticks" class="img1" id="cinnamon">
+            </div>
+            <!--this div is present to ensure the product is aligned with the above product-->
+            <div class="picsRow" title="Available in 4 different flavours">
+            </div>
+            <!--the product's description (name of the product, price, select the weight and the add to the cart buttons)-->
+            <div class="description">
+                <div class="descriptionOverlay">
+                    <p class="nameOfItem">Cinnamon Sticks</p>
+                    <p>The pure Ceylon Cinnamon, which has a sweet taste and fragrance, has many health benifits. </p>
+                    <!--choose the weight-->
+                    <div class="selectWeight">
+                        <div class="nameOfItem1">Select the weight</div>
+                        <input type="radio" name="cinGrams" value="100" id="cinnamon100" onclick="showPrice(0);"
+                            checked /><label>100g</label>
+                        <!--if any of the weight has been selected then the price will change accordingly-->
+                        <input type="radio" name="cinGrams" value="200" id="cinnamon100"
+                            onclick="showPrice(1);" /><label>200g</label></br><br>
+                    </div>
+                    <p class="price" id="cinPrice">£10.00</p>
+                </div>
+                <div class="quantityButtons">
+                    <!--this button is used is used to decrease the quantity of the item-->
+                    <button class="quantityDecrease" onclick="cartDecrease(1)">-</button>
+                    <p class="showQuantity" id="textFontSize2">1</p>
+                    <!--this button is used to increase the quantity of the item-->
+                    <button class="quantityIncrease" onclick="cartIncrease(1)">+</button>
+                    <!--the reason a value is passed using the function is because it indicates the positino of it in the declared array-->
+                    <button class="addToCartButton" onclick="addtoCart(1)"> Add
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--end of the product 2-->
+        <!--product 3-->
+        <div class="product3" id="product">
+            <div class="imageProduct">
+                <img src="images/spicePackage.jpg" alt="Spice Package" class="img1" id="spicepackage">
+            </div>
+            <!--this is div is used to keep space between the picture and the decription-->
+            <div class="picsRow">
+
+            </div>
+            <!--the product's description (name of the product, price and the add to the cart buttons)-->
+            <div class="description">
+                <div class="descriptionOverlay">
+                    <p class="nameOfItem">Spice Package</p>
+                    <p>8 Bottles filled with the most 8 important powdered spices of Sri
+                        Lanka</p>
+                    <p class="price">£30.00</p>
+                </div>
+                <div class="quantityButtons">
+                    <!--this button is used is used to decrease the quantity of the item-->
+                    <button class="quantityDecrease" onclick="cartDecrease(2)">-</button>
+                    <p class="showQuantity" id="textFontSize3">1</p>
+                    <!--this button is used to increase the quantity of the item-->
+                    <button class="quantityIncrease" onclick="cartIncrease(2)">+</button>
+                    <!--the reason a value is passed using the function is because it indicates the positino of it in the declared array-->
+                    <button class="addToCartButton" onclick="addtoCart(2)"> Add
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--end of product 3-->
+        <!--product 4-->
+        <div class="product4" id="product">
+            <div class="imageProduct">
+                <img src="images/sareeCherryRed.jpg" alt="Saree" class="img1" id="saree">
+            </div>
+            <!--the options of sarees the user can choose from-->
+            <div class="picsRow" title="Available in 4 different Styles">
+                <img src="images/sareeCherryRed.jpg" class="morePics" onclick="showImage(0);">
+                <img src="images/sareeOliveGreen.jpg" class="morePics" onclick="showImage(1);">
+                <img src="images/sareeDarkBlue.jpg" class="morePics" onclick="showImage(2);">
+                <img src="images/sareeBlack.jpg" class="morePics" onclick="showImage(3);">
+            </div>
+            <!--the product's description (name of the product, price and the add to the cart buttons)-->
+            <div class="description">
+                <div class="descriptionOverlay">
+                    <p class="nameOfItem">Handloom Saree</p>
+                    <p id="descriptionSaree">Handloom Saree in Cherry Red and salmon pink</p>
+                    <p class="price">£25.00</p>
+                </div>
+                <div class="quantityButtons">
+                    <!--this button is used is used to decrease the quantity of the item-->
+                    <button class="quantityDecrease" onclick="cartDecrease(3)">-</button>
+                    <p class="showQuantity" id="textFontSize4">1</p>
+                    <!--this button is used to increase the quantity of the item-->
+                    <button class="quantityIncrease" onclick="cartIncrease(3)">+</button>
+                    <!--the reason a value is passed using the function is because it indicates the position of it in the declared array-->
+                    <button class="addToCartButton" onclick="addtoCart(3)"> Add
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--end of product 4-->
+        <!--product 5-->
+        <div class="product5" id="product">
+            <div class="imageProduct">
+                <img src="images/sarongBlack.jpg" alt="Sarong" class="img1" id="sarong">
+            </div>
+            <!--the options of sarongs the user can choose from-->
+            <div class="picsRow" title="Available in 4 different Styles">
+                <img src="images/sarongBlack.jpg" class="morePics" onclick="showImage(8);">
+                <img src="images/sarongBrown.jpg" class="morePics" onclick="showImage(9);">
+                <img src="images/sarongGrey.jpg" class="morePics" onclick="showImage(10);">
+                <img src="images/sarongLightBlue.jpg" class="morePics" onclick="showImage(11);">
+            </div>
+            <!--the product's description (name of the product, price and the add to the cart buttons)-->
+            <div class="description">
+                <div class="descriptionOverlay">
+                    <p class="nameOfItem">Handloom Sarong</p>
+                    <p id="descriptionSarong">Handloom Sarong in Black shade and red and blue stripes</p>
+                    <p class="price">£13.00</p>
+                </div>
+                <div class="quantityButtons">
+                    <!--this button is used is used to decrease the quantity of the item-->
+                    <button class="quantityDecrease" onclick="cartDecrease(4)">-</button>
+                    <p class="showQuantity" id="textFontSize5">1</p>
+                    <!--this button is used to increase the quantity of the item-->
+                    <button class="quantityIncrease" onclick="cartIncrease(4)">+</button>
+                    <!--the reason a value is passed using the function is because it indicates the positino of it in the declared array-->
+                    <button class="addToCartButton" onclick="addtoCart(4)"> Add
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--end of product 5-->
+        <!--product 6-->
+        <div class="product6" id="product">
+            <div class="imageProduct">
+                <img src="images/handloomPencilCase.jpg" alt="Handloom Pencil Case" class="img1" id="pencilCase">
+            </div>
+            <!--this is div is used to keep space between the picture and the decription-->
+            <div class="picsRow">
+
+            </div>
+            <!--the product's description (name of the product, price and the add to the cart buttons)-->
+            <div class="description">
+                <div class="descriptionOverlay">
+                    <p class="nameOfItem">Handloom Sarong</p>
+                    <p>Handloom Pencil Case in a mixture of warm Colours and a pink Zip</p>
+                    <p class="price">£5.00</p>
+                </div>
+                <div class="quantityButtons">
+                    <!--this button is used is used to decrease the quantity of the item-->
+                    <button class="quantityDecrease" onclick="cartDecrease(5)">-</button>
+                    <p class="showQuantity" id="textFontSize6">1</p>
+                    <!--this button is used to increase the quantity of the item-->
+                    <button class="quantityIncrease" onclick="cartIncrease(5)">+</button>
+                    <!--the reason a value is passed using the function is because it indicates the positino of it in the declared array-->
+                    <button class="addToCartButton" onclick="addtoCart(5)"> Add
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--end of product 6-->
+        <!--product 7-->
+        <div class="product7" id="product">
+            <div class="imageProduct">
+                <img src="images/woodenMask.jpg" alt="Raksha Mask( Wooden)" class="img1" id="woodenmask">
+            </div>
+            <!--this is div is used to keep space between the picture and the decription-->
+            <div class="picsRow">
+
+            </div>
+            <!--the product's description (name of the product, price and the add to the cart buttons)-->
+            <div class="description">
+                <div class="descriptionOverlay">
+                    <p class="nameOfItem">Raksha Mask (Wooden Mask ) </p>
+                    <p>Used to perform Raksha dances in Kolam Maduwa. The mask brings harmony and friendship.</p>
+                    <p class="price">£15.00</p>
+                </div>
+                <div class="quantityButtons">
+                    <!--this button is used is used to decrease the quantity of the item-->
+                    <button class="quantityDecrease" onclick="cartDecrease(6)">-</button>
+                    <p class="showQuantity" id="textFontSize7">1</p>
+                    <!--this button is used to increase the quantity of the item-->
+                    <button class="quantityIncrease" onclick="cartIncrease(6)">+</button>
+                    <!--the reason a value is passed using the function is because it indicates the positino of it in the declared array-->
+                    <button class="addToCartButton" onclick="addtoCart(6)"> Add
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--end of product 7-->
+        <!--product 8-->
+        <div class="product8" id="product">
+            <div class="imageProduct">
+                <img src="images/fridgeMagnet1.jpg" alt="Fridge Magnet" class="img1" id="fridgemagnet">
+            </div>
+            <!--this is div is used to keep space between the picture and the decription-->
+            <div class="picsRow">
+
+            </div>
+            <!--the product's description (name of the product, price and the add to the cart buttons)-->
+            <div class="description">
+                <div class="descriptionOverlay">
+                    <p class="nameOfItem">Fridge Magnet </p>
+                    <p> A wooden fridge magnet which shows the stages of tea from plucking the leaves to the final
+                        product</p>
+                    <p class="price">£3.00</p>
+                </div>
+                <div class="quantityButtons">
+                    <!--this button is used is used to decrease the quantity of the item-->
+                    <button class="quantityDecrease" onclick="cartDecrease(7)">-</button>
+                    <p class="showQuantity" id="textFontSize8">1</p>
+                    <!--this button is used to increase the quantity of the item-->
+                    <button class="quantityIncrease" onclick="cartIncrease(7)">+</button>
+                    <!--the reason a value is passed using the function is because it indicates the positino of it in the declared array-->
+                    <button class="addToCartButton" onclick="addtoCart(7)"> Add
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--end of product 8-->
+        <!--product 9-->
+        <div class="product9" id="product">
+            <div class="imageProduct">
+                <img src="images/elephantStatue.jpg" alt="Elephant Statue" class="img1" id="elephant">
+            </div>
+            <!--this is div is used to keep space between the picture and the decription-->
+            <div class="picsRow">
+            </div>
+            <div class="description">
+                <div class="descriptionOverlay">
+                    <p class="nameOfItem">Elephant Statue</p>
+                    <p>Dimensions: 10cm x 15cm x 11cm<br> Colour:Purple<br>Weight:0.200kg
+                    </p>
+                    <p class="price">£4.50</p>
+                </div>
+                <div class="quantityButtons">
+                    <!--this button is used is used to decrease the quantity of the item-->
+                    <button class="quantityDecrease" onclick="cartDecrease(8)">-</button>
+                    <p class="showQuantity" id="textFontSize9">1</p>
+                    <!--this button is used to increase the quantity of the item-->
+                    <button class="quantityIncrease" onclick="cartIncrease(8)">+</button>
+                    <!--the reason a value is passed using the function is because it indicates the positino of it in the declared array-->
+                    <button class="addToCartButton" onclick="addtoCart(8)"> Add
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--end of product 9-->
+        <!--the table displayed so the user can see the items ordered-->
+        <div class="shoppingCart">
+            <table id="productTable">
+                <!--the headings have been displayed and the content will added as the user adds it to the cart-->
+                <tr>
+                    <th id="nameProduct">Name</th>
+                    <th id="quantityProducrt">Quantity</th>
+                    <th id="priceProduct">Price(£)</th>
+                    <th id="totalPriceProduct">Total Price(£)</th>
+                    <!--this column allows the user to delete the item from the cart -->
+                    <th id="deleteProduct"></th>
+                </tr>
+                <tr>
+                    <td colspan="3">Total(£)</td>
+                    <td id="total"></td>
+                </tr>
+            </table>
+            <!--when the user clicks this button then the checkout form will be become visibleunder the table and the proceed button will be hidden-->
+            <button onclick="showForm();" class="continueToCheckOut" id="continueToCheckOut1"
+                title="Click to fill checkout form">Proceed</button>
+            <form id="form2" method="POST">
+                <!--this section is for personal information-->
+                <fieldset>
+                    <!--placeHolders have been given so the user has an idea what to enter-->
+                    <legend> Personal Details</legend>
+                    <label>First name*</label>
+                    <input type="text" size="25" id="fname" name="firstname" placeholder="John"><br><br>
+                    <label>Last name*</label>
+                    <input type="text" size="25" id="lname" name="lastName" placeholder="Steve"><br /><br />
+                    <label>Email*:&emsp;&emsp;</label>
+                    <input type="email" id="email" name="email" placeholder="John@gmail.com"><br /><br />
+                    <label>Contact Number</label><label class="smallDetail">(Enter with Phone Number
+                        Extension)*</label>
+                    <input type="text" id="telephone" name="telephone" placeholder="0094764001994"><br><br>
+                </fieldset>
+                <!--end of the personal information section-->
+                <!--this section is used to fill the Billing Address-->
+                <div class="addressForm">
+                    <fieldset>
+                        <legend>Billing Details</legend>
+                        <!--&ensp denotes en space-->
+                        <label>Street line*&ensp;</label>
+                        <input type="text" id="street1" name="street1" placeHolder=" 57 Ramakrishna Road"><br><br>
+                        <!--&emsp denotes em space and &nbsp denotes non breaking space-->
+                        <label>City*&emsp;&emsp;&emsp;&nbsp;</label>
+                        <input type="text" placeholder="Colombo 6" id="city" name="city"><br><br>
+                        <label>Postal Code</label>
+                        <input type="text" placeholder="HA3 7NL" id="postalCode" name="postalCode"><br><br>
+                        <!--the countries are given for the user in a drop down to make it easier in alphabetical order-->
+                        <label>Country* &emsp;&nbsp;</label>
+                        <select name="country" class="selectCountry" id="country">
+                            <option value="" selected="selected"></option>
+                            <option value="Afghanistan">Afghanistan</option>
+                            <option value="Albania">Albania</option>
+                            <option value="Algeria">Algeria</option>
+                            <option value="Andorra">Andorra</option>
+                            <option value="Angola">Angola</option>
+                            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Armenia">Armenia</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Austria">Austria</option>
+                            <option value="Azerbaijan">Azerbaijan</option>
+                            <option value="Bahamas">Bahamas</option>
+                            <option value="Bahrain">Bahrain</option>
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="Barbados">Barbados</option>
+                            <option value="Belarus">Belarus</option>
+                            <option value="Belgium">Belgium</option>
+                            <option value="Belize">Belize</option>
+                            <option value="Benin">Benin</option>
+                            <option value="Bermuda">Bermuda</option>
+                            <option value="Bhutan">Bhutan</option>
+                            <option value="Bolivia">Bolivia</option>
+                            <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                            <option value="Botswana">Botswana</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="Brunei">Brunei </option>
+                            <option value="Bulgaria">Bulgaria</option>
+                            <option value="Burkina Faso">Burkina Faso</option>
+                            <option value="Burundi">Burundi</option>
+                            <option value="Cambodia">Cambodia</option>
+                            <option value="Cameroon">Cameroon</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Central African Republic">Central African Republic</option>
+                            <option value="Chad">Chad</option>
+                            <option value="Chile">Chile</option>
+                            <option value="China">China</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Comoros">Comoros</option>
+                            <option value="Congo">Congo</option>
+                            <option value="Costa Rica">Costa Rica</option>
+                            <option value="Cote D'ivoire">Cote D'ivoire</option>
+                            <option value="Croatia">Croatia</option>
+                            <option value="Cuba">Cuba</option>
+                            <option value="Cyprus">Cyprus</option>
+                            <option value="Czech Republic">Czech Republic</option>
+                            <option value="	Democratic Republic of the Congo">Democratic Republic of the Congo
+                            </option>
+                            <option value="Denmark">Denmark</option>
+                            <option value="Djibouti">Djibouti</option>
+                            <option value="Dominica">Dominica</option>
+                            <option value="Dominican Republic">Dominican Republic</option>
+                            <option value="Ecuador">Ecuador</option>
+                            <option value="Egypt">Egypt</option>
+                            <option value="El Salvador">El Salvador</option>
+                            <option value="Equatorial Guinea">Equatorial Guinea</option>
+                            <option value="Eritrea">Eritrea</option>
+                            <option value="Estonia">Estonia</option>
+                            <option value="Ethiopia">Ethiopia</option>
+                            <option value="Fiji">Fiji</option>
+                            <option value="Finland">Finland</option>
+                            <option value="France">France</option>
+                            <option value="Gabon">Gabon</option>
+                            <option value="Gambia">Gambia</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Ghana">Ghana</option>
+                            <option value="Greece">Greece</option>
+                            <option value="Greenland">Greenland</option>
+                            <option value="Grenada">Grenada</option>
+                            <option value="Guatemala">Guatemala</option>
+                            <option value="Guinea">Guinea</option>
+                            <option value="Guinea-bissau">Guinea-bissau</option>
+                            <option value="Guyana">Guyana</option>
+                            <option value="Haiti">Haiti</option>
+                            <option value="Holy See">Holy See</option>
+                            <option value="Honduras">Honduras</option>
+                            <option value="Hong Kong">Hong Kong</option>
+                            <option value="Hungary">Hungary</option>
+                            <option value="Iceland">Iceland</option>
+                            <option value="India">India</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="Iran">Iran</option>
+                            <option value="Iraq">Iraq</option>
+                            <option value="Ireland">Ireland</option>
+                            <option value="Israel">Israel</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Jamaica">Jamaica</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Jordan">Jordan</option>
+                            <option value="Kazakhstan">Kazakhstan</option>
+                            <option value="Kenya">Kenya</option>
+                            <option value="Kiribati">Kiribati</option>
+                            <option value="Kuwait">Kuwait</option>
+                            <option value="Kyrgyzstan">Kyrgyzstan</option>
+                            <option value="Laos">Laos</option>
+                            <option value="Latvia">Latvia</option>
+                            <option value="Lebanon">Lebanon</option>
+                            <option value="Lesotho">Lesotho</option>
+                            <option value="Liberia">Liberia</option>
+                            <option value="Libya">Libya</option>
+                            <option value="Liechtenstein">Liechtenstein</option>
+                            <option value="Lithuania">Lithuania</option>
+                            <option value="Luxembourg">Luxembourg</option>
+                            <option value="Macao">Macao</option>
+                            <option value="Macedonia">Macedonia</option>
+                            <option value="Madagascar">Madagascar</option>
+                            <option value="Malawi">Malawi</option>
+                            <option value="Malaysia">Malaysia</option>
+                            <option value="Maldives">Maldives</option>
+                            <option value="Mali">Mali</option>
+                            <option value="Malta">Malta</option>
+                            <option value="Marshall Islands">Marshall Islands</option>
+                            <option value="Mauritania">Mauritania</option>
+                            <option value="Mauritius">Mauritius</option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="Micronesia">Micronesia</option>
+                            <option value="Moldova">Moldova</option>
+                            <option value="Monaco">Monaco</option>
+                            <option value="Mongolia">Mongolia</option>
+                            <option value="Morocco">Morocco</option>
+                            <option value="Mozambique">Mozambique</option>
+                            <option value="Myanmar">Myanmar</option>
+                            <option value="Namibia">Namibia</option>
+                            <option value="Nauru">Nauru</option>
+                            <option value="Nepal">Nepal</option>
+                            <option value="Netherlands">Netherlands</option>
+                            <option value="New Zealand">New Zealand</option>
+                            <option value="Nicaragua">Nicaragua</option>
+                            <option value="Niger">Niger</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="North Korea">North Korea</option>
+                            <option value="Norway">Norway</option>
+                            <option value="Oman">Oman</option>
+                            <option value="Pakistan">Pakistan</option>
+                            <option value="Palau">Palau</option>
+                            <option value="Palestinian State">Palestinian State</option>
+                            <option value="Panama">Panama</option>
+                            <option value="Papua New Guinea">Papua New Guinea</option>
+                            <option value="Paraguay">Paraguay</option>
+                            <option value="Peru">Peru</option>
+                            <option value="Philippines">Philippines</option>
+                            <option value="Poland">Poland</option>
+                            <option value="Portugal">Portugal</option>
+                            <option value="Puerto Rico">Puerto Rico</option>
+                            <option value="Qatar">Qatar</option>
+                            <option value="Romania">Romania</option>
+                            <option value="Russia">Russia</option>
+                            <option value="Rwanda">Rwanda</option>
+                            <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                            <option value="Saint Lucia">Saint Lucia</option>
+                            <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines
+                            </option>
+                            <option value="Samoa">Samoa</option>
+                            <option value="San Marino">San Marino</option>
+                            <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                            <option value="Saudi Arabia">Saudi Arabia</option>
+                            <option value="Senegal">Senegal</option>
+                            <option value="Serbia">Serbia</option>
+                            <option value="Seychelles">Seychelles</option>
+                            <option value="Sierra Leone">Sierra Leone</option>
+                            <option value="Singapore">Singapore</option>
+                            <option value="Slovakia">Slovakia</option>
+                            <option value="Slovenia">Slovenia</option>
+                            <option value="Solomon Islands">Solomon Islands</option>
+                            <option value="Somalia">Somalia</option>
+                            <option value="South Africa">South Africa</option>
+                            <option value="South Korea">South Korea</option>
+                            <option value="South Sudan">South Sudan</option>
+                            <option value="Spain">Spain</option>
+                            <option value="Sri Lanka">Sri Lanka</option>
+                            <option value="Sudan">Sudan</option>
+                            <option value="Suriname">Suriname</option>
+                            <option value="Swaziland">Swaziland</option>
+                            <option value="Sweden">Sweden</option>
+                            <option value="Switzerland">Switzerland</option>
+                            <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                            <option value="Taiwan, Province of China">Taiwan</option>
+                            <option value="Tajikistan">Tajikistan</option>
+                            <option value="Tanzania, ">Tanzania</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Timor-leste">Timor-leste</option>
+                            <option value="Togo">Togo</option>
+                            <option value="Tonga">Tonga</option>
+                            <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                            <option value="Tunisia">Tunisia</option>
+                            <option value="Turkey">Turkey</option>
+                            <option value="Turkmenistan">Turkmenistan</option>
+                            <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                            <option value="Tuvalu">Tuvalu</option>
+                            <option value="Uganda">Uganda</option>
+                            <option value="Ukraine">Ukraine</option>
+                            <option value="United Arab Emirates">United Arab Emirates</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="United States">United States</option>
+                            <option value="Uruguay">Uruguay</option>
+                            <option value="Uzbekistan">Uzbekistan</option>
+                            <option value="Vanuatu">Vanuatu</option>
+                            <option value="Venezuela">Venezuela</option>
+                            <option value="Viet Nam">Viet Nam</option>
+                            <option value="Yemen">Yemen</option>
+                            <option value="Zambia">Zambia</option>
+                            <option value="Zimbabwe">Zimbabwe</option>
+                        </select><br><br>
+                    </fieldset>
+                </div>
+                <!--end of the billing address section-->
+                <!--this section is for the user to pick which method they want to pay by cash or by card-->
+                <div class="paymentForm">
+                    <fieldset>
+                        <legend>Payment Details</legend>
+                        <!--the user can pay using two methods cash on delivery or by card-->
+                        <label>Payment Methods</label><br><br>
+                        <div id="payCard">
+                            <input type="radio" name="pay" id="payMethod1" value="Card" onclick="payByCard();">
+                            <label>Pay by Card</label><br><br>
+                            <div class="cardPics">Accepted Cards*<br>
+                                <img src="images/cards.png" height="60px" width="125px" />
+                                <!--only if they choose to pay by card the card fields will become visible-->
+                                <div id="payByAnyCard">
+                                    <label>Card Number* &emsp;&emsp;</label>
+                                    <input type="text" id="cardNumber" name="cardNumber"
+                                        placeholder="4187 5676 3445 7689" /><br><br>
+                                    <label>Expiry date of card*</label>
+                                    <input type="month" id="myDate" value="2019-03"><br><br>
+                                    <label>CVC number*&emsp;&emsp;&ensp;</label>
+                                    <input type="text" id="cvcNumber" name="cvcNumber" placeholder="320"
+                                        title="the last 3 digits at the back of the card" /><br /><br />
+                                </div>
+                            </div>
+                        </div>
+                        <input type="radio" name="pay" id="payMethod2" value="Cash" onclick="payByCash();">
+                        <label>Cash on Delivery</label>
+                        <!--once the click the checkout button the form get validated using the Javascript below-->
+                        <div id="checkOut">
+                            <input type="button" class="continueToCheckOut" id="checkOut1" value="Check Out"
+                                title="Click to Complete CheckOut" onclick="validateCard();" />
+                        </div>
+                    </fieldset>
+                    <!--end of payment details-->
+                </div>
+            </form>
+            <!--end of the checkOut form-->
+        </div>
+        <!--the footer which has the logo, brand and the link to thecv of the student who made the webpage -->
+        <div class="footer">
+            <div class="footerinner">
+                <img class="footerlogo" src="../images/logo.png" alt="logo" />
+                <img class="footerbrand" src="../images/brand1.png" alt="brandname" />
+                <div class="footerlinks">
+                    <a href="../home.html"> Home | </a>
+                    <a href="../comment-form/contact.html"> Contact | </a>
+                    <a href="../sitemap/sitemap.html"> Sitemap | </a>
+                    <a href="../cv/safiyyah/safiyyah-cv.html"> Safiyyah Thur Rahman </a>
+                </div>
+            </div>
+        </div>
+        <!--end of the grid-->
+        <script>
+            //the public arrays 
+            //nameBillArray is used to store the names of the products and likewise the others
+            var nameBillArray = [];
+            var quantityBillArray = [];
+            var priceBillArray = [];
+            //the total price of the individual product is stored
+            var totalPriceBillArray = [];
+            //the names of the products and names of the images are saved together in a 2d Array to access them when adding items to the table
+            var nameProductArray = [
+                ["cinnamon", "Cinnamon Packet"],
+                ["englishTea", "English Tea"],
+                ["whiteTea", "White Tea"],
+                ["blackTea", "Black Tea"],
+                ["greenTea", "Green Tea"],
+                ["elephantStatue", "Elephant Statue"],
+                ["sareeDarkBlue", "Dark Blue and Red Saree"],
+                ["sareeBlack", " Black and Dark Grey Saree"],
+                ["sareeOliveGreen", " Olive Green Saree"],
+                ["sareeCherryRed", "Cherry Red Saree"],
+                ["fridgeMagnet1", "Fridge Magnet"],
+                ["handloomPencilCase", "Handloom Pencil Case"],
+                ["sarongBlack", "Black Sarong"],
+                ["sarongBrown", " Brown  Sarong"],
+                ["sarongGrey", " Grey Sarong"],
+                ["sarongLightBlue", "Lightblue Sarong"],
+                ["woodenMask", "Wooden Mask"],
+                ["spicePackage", " Package of Sri Lankan Spices"]
+            ]
+            //array which has all the textFontSize IDs
+            var quantityIdArray = ["textFontSize0", "textFontSize2", "textFontSize3", "textFontSize4", "textFontSize5", "textFontSize6", "textFontSize7", "textFontSize8", "textFontSize9"]
+            //array which has all the id's of the product's picture
+            var idArray = ["tea", "cinnamon", "spicepackage", "saree", "sarong", "pencilCase", "woodenmask", "fridgemagnet", "elephant"];
+            //end of public arrays
+
+            //this function is used to show the images when the user clicks the smaller images
+            function showImage(imgValue) {
+                var descriptImgArray = ["Handloom Saree in Cherry Red and salmon pink.", "Handloom Saree in Olive Green and Brown Stripes", "Handloom Saree in Maroon and DarkBlue.", "Handloom Saree in Black and Dark Grey", "Type: English Breakfest Tea", "Type: Black Tea", "Type: Green Tea", "Type: White Tea", "Handloom Sarong in Black shade and red and blue stripes", "Handloom Sarong in Brown shade and white stripes", "Handloom Sarong in Black and Grey", "Handloom Sarong in Light Blue shade and white stripes"];
+                var imgArray = ["sareeCherryRed", "sareeOliveGreen", "sareeDarkBlue", "sareeBlack", "englishTea", "blackTea", "greenTea", "whiteTea", "sarongBlack", "sarongBrown", "sarongGrey", "sarongLightBlue"];
+                var img3 = "images/" + imgArray[imgValue] + ".jpg";
+                if (imgValue < 4) {
+                    document.getElementById("saree").src = img3;
+                    document.getElementById("descriptionSaree").innerHTML = descriptImgArray[imgValue];
+                } else if (imgValue < 8) {
+                    document.getElementById("tea").src = img3;
+                    document.getElementById("descriptionTea").innerHTML = descriptImgArray[imgValue];
+                } else {
+                    document.getElementById("sarong").src = img3;
+                    document.getElementById("descriptionSarong").innerHTML = descriptImgArray[imgValue];
+                }
+            }
+
+            //the function is used to change the price of the cinnamon and the tea when the 100g or 200g radio button is clicked
+            function showPrice(priceValue) {
+                //switch case is used to assign the price to the specific id
+                switch (priceValue) {
+                    case 0:
+                        document.getElementById("cinPrice").innerHTML = "£10.00";
+                        break;
+                    case 1:
+                        document.getElementById("cinPrice").innerHTML = "£15.00";
+                        break;
+                    case 2:
+                        document.getElementById("teaPrice").innerHTML = "£10.00";
+                        break;
+                    case 3:
+                        document.getElementById("teaPrice").innerHTML = "£15.00";
+                        break;
+
+                }
+            }
+
+            //function used to increase the number in the p called 'textFontSize' tag of each product box
+            function cartIncrease(cartValue) {
+                var currentQuantity = document.getElementById(quantityIdArray[cartValue]).innerHTML;
+                //parseInt is used becuase value stored intially is a string
+                currentQuantity = parseInt(currentQuantity);
+                //if the quantity is less than the 5 only then number will decrease else an error message will be displayed
+                if (currentQuantity < 5) {
+                    currentQuantity++;
+                    document.getElementById(quantityIdArray[cartValue]).innerHTML = currentQuantity;
+                } else {
+                    alert("maximum quantity reached")
+                }
+            }
+
+            //function used to decrease the number in the textFontSize box
+            function cartDecrease(cartValue) {
+                var currentQuantity = document.getElementById(quantityIdArray[cartValue]).innerHTML;
+                currentQuantity = parseInt(currentQuantity);
+                //only if the quantity is greater than 1 the number will decrease else an error message will be displayed
+                if (currentQuantity > 1) {
+                    currentQuantity--;
+                    document.getElementById(quantityIdArray[cartValue]).innerHTML = currentQuantity;
+                } else {
+                    alert("minimum quantity reached")
+                }
+            }
+            //function used to calculate the total
+            function calcFinalAmt() {
+                var finalAmount = 0;
+                for (var index = 0; index < totalPriceBillArray.length; index++) {
+                    finalAmount += totalPriceBillArray[index];
+                }
+                document.getElementById("total").innerHTML = finalAmount;
+            }
+            //this function is used to add the items in the cart
+            function addtoCart(value2) {
+                //all the prices are in an array
+                var priceArray = [10.00, 10.00, 30.00, 25.00, 13.00, 5.00, 15.00, 3.00, 4.50];
+                //the quantity is taken from the number box
+                var quantity = document.getElementById(quantityIdArray[value2]).innerHTML;
+                //and the product name extracted from src of the image
+                var imageSource = document.getElementById(idArray[value2]).src;
+                var priceItem1 = priceArray[value2];
+                var res = imageSource.split(".jpg");
+                var res1 = res[0].split("/");
+                var nameImage = res1[res1.length - 1];
+                var nameItem1 = "";
+                //if the user chooses either cinnamon or tea then the weight of the packet needs to be added 
+                if (value2 == 1) {
+                    if (document.getElementById("cinnamon100").checked) {
+                        nameItem1 = "100g ";
+                    } else {
+                        nameItem1 = "200g ";
+                        priceItem1 += 5;
+                    }
+                } else if (value2 == 0) {
+                    if (document.getElementById("tea100").checked) {
+                        nameItem1 += "100g ";
+                    } else {
+                        nameItem1 += "200g ";
+                        priceItem1 += 5;
+                    }
+                }
+                // the correct name is found using the below for loop by matching the current src to the saved src and the corresponding name is saved
+                for (var index = 0; index < nameProductArray.length; index++) {
+                    if (nameImage == nameProductArray[index][0]) {
+                        nameItem1 += nameProductArray[index][1];
+                        break;
+                    }
+                }
+
+                var found = false;
+                //if the product has already been chosen before then it is checked if the quantity at that time entered is less then 5 and if so
+                // the addition of the current quantity and the previous quantity will be checked if it is less or equal 5 and if so the addition will be assigned
+                for (var index2 = 0; index2 < nameBillArray.length; index2++) {
+                    if (nameBillArray[index2] === nameItem1) {
+                        found = true;
+                        quantity = parseInt(quantity);
+                        quantityBillArray[index] = parseInt(quantityBillArray[index]);
+                        var rowChangeCell = document.getElementById("productTable").rows[index2 + 1].cells;
+                        quantityBillArray[index2] = quantity;
+                        rowChangeCell[1].innerHTML = quantityBillArray[index2];
+                        var priceChange = rowChangeCell[2].innerHTML;
+                        var total = quantityBillArray[index2] * priceChange;
+                        rowChangeCell[3].innerHTML = total;
+                        totalPriceBillArray[index2] = total;
+                        calcFinalAmt();
+                    }
+                    break;
+                }
+                //and if the product hasnt been chosen before then the total price will be calculated
+                if (!found) {
+                    quantity = parseInt(quantity);
+                    var totalPrice = quantity * priceItem1;
+                    //each attribute of the product will then be pushed into an array
+                    nameBillArray.push(nameItem1);
+                    priceBillArray.push(priceItem1);
+                    quantityBillArray.push(quantity);
+                    totalPriceBillArray.push(totalPrice);
+                    var table = document.getElementById("productTable");
+                    //then a row will be inserted and the cells will be filled using the code below
+                    var itemRow = table.insertRow(nameBillArray.length);
+                    itemRow.id = "index" + nameBillArray.length;
+                    var nameCell = itemRow.insertCell(0);
+                    var quantityCell = itemRow.insertCell(1);
+                    var priceCell = itemRow.insertCell(2);
+                    var totalpriceCell = itemRow.insertCell(3);
+                    var crossCell = itemRow.insertCell(4);
+                    nameCell.innerHTML = nameItem1;
+                    quantityCell.innerHTML = quantity;
+                    priceCell.innerHTML = priceItem1;
+                    totalpriceCell.innerHTML = totalPrice;
+                    //the crosscell has the onclick function to delete the item from the shopping cart
+                    crossCell.innerHTML = '<img src="images/delete.png" height="18px" width="18px"/>';
+                    crossCell.id = "cross" + nameBillArray.length;
+                    crossCell.title = "Click to remove item from your Cart";
+                    calcFinalAmt();
+                    if (nameBillArray.length === 1) {
+                        document.getElementById("productTable").style.visibility = "visible";
+                        document.getElementById("continueToCheckOut1").style.visibility = "visible";
+                    }
+                    //the function has been assigned using the below code to delete an item from the cart
+                    document.getElementById(crossCell.id).addEventListener("click", function () {
+                        deleteRow(itemRow.id);
+                    });
+                }
+            }
+
+
+            // the function is used to the item from the shopping cart
+            function deleteRow(itemRowId) {
+                var row = document.getElementById(itemRowId);
+                //var indexArray = parseInt(itemRowId.slice(itemRowId.length - 1, itemRowId.length)) - 1;
+                var indexArray = row.rowIndex - 1;
+                //removes item from the specific index
+                //indexArray is index of the item in the array and 1 indicates how many items to be removed from the array
+                nameBillArray.splice(indexArray, 1);
+                priceBillArray.splice(indexArray, 1);
+                quantityBillArray.splice(indexArray, 1);
+                totalPriceBillArray.splice(indexArray, 1);
+                //removes the row in the table
+                row.parentNode.removeChild(row);
+                var finalAmount = 0;
+                calcFinalAmt();
+                //if the array nameBillArray has 0 elements then the form will be hidden and the product container will be visible and the proceed button will be hidden
+                if (nameBillArray.length === 0) {
+                    document.getElementById("form2").style.display = "none";
+                    document.getElementById("continueToCheckOut1").style.visibility = "hidden";
+                    document.getElementById("productTable").style.visibility = "hidden";
+                }
+
+            }
+
+            //the function used to show the form when the user clicks the proceed button
+            function showForm() {
+                document.getElementById("form2").style.display = "block";
+                document.getElementById("continueToCheckOut1").style.visibility = "hidden"
+            }
+
+            //function used to show the payByAnyCard div tag
+            function payByCard() {
+                document.getElementById("payByAnyCard").style.display = "block";
+            }
+
+            //function used to hide the payByAnyCard div tag
+            function payByCash() {
+                document.getElementById("payByAnyCard").style.display = "none";
+            }
+
+            //function used to validate the form
+            function validateCard() {
+                var creditValid = true;
+                //values are obtained from the fields
+                var enteredFName = document.getElementById("fname").value;
+                var enteredLName = document.getElementById("lname").value;
+                var enteredEmail = document.getElementById("email").value;
+                var enteredTelNo = document.getElementById("telephone").value;
+                var enteredStreet = document.getElementById("street1").value;
+                var enteredCity = document.getElementById("city").value;
+                var enteredCountry = document.getElementById("country").value;
+                //the @ symbol and '.''position is obtained to check whether the email is valid or not
+                var atSymIndex = enteredEmail.indexOf("@");
+                var dotSymIndex = enteredEmail.lastIndexOf(".");
+                //the below nested if used as a presence check and appropriate error messages will be alerted if the user leaves a field empty
+                if (enteredFName.length <= 0) {
+                    alert("Enter First Name");
+                    creditValid = false;
+                } else if (enteredLName.length <= 0) {
+                    alert("Enter last Name");
+                    creditValid = false;
+                } else if (atSymIndex == 0 || dotSymIndex < atSymIndex + 2 || dotSymIndex + 2 >= enteredEmail.length) {
+                    alert("Enter correct Email");
+                    creditValid = false;
+                    //in this case the telephone is checked if only numbers have been entered
+                } else if (isNaN(enteredTelNo)) {
+                    alert("Enter only integers for the Telephone Number.");
+                    creditValid = false;
+                    //the length of the telephone number has also been checked as the highest is 15 
+                } else if (enteredTelNo.length > 15 || enteredTelNo.length < 7) {
+                    alert("Enter correct Telephone Number");
+                    creditValid = false;
+                    //the length has been checked for the below fields
+                } else if (enteredStreet.length < 1) {
+                    alert("Enter correct Street");
+                    creditValid = false;
+                } else if (enteredCity.length < 1) {
+                    alert("Enter Correct City Name");
+                    creditValid = false;
+                } else if (enteredCountry.value == "") {
+                    alert("Select a country");
+                    creditValid = false;
+                    //now the payment methods are checked if card has been selected then the below checks will take place
+                } else if (document.getElementById("payMethod1").checked) {
+                    var cvcNumber = document.getElementById("cvcNumber").value;
+                    var cardNumber = document.getElementById("cardNumber").value;
+                    cardNumber = cardNumber.split(" ").join('');
+                    //this is used to check if the entered card is expired 
+                    var d = new Date();
+                    var currentMonth = d.getMonth() + 1;
+                    var currentYear = d.getFullYear();
+                    var enteredDate = document.getElementById("myDate").value;
+                    var enteredDate1 = enteredDate.split("-")
+                    if (!((enteredDate1[0] >= currentYear) && (enteredDate1[1] > (currentMonth + 2)))) {
+                        alert("Card expired! Enter a different Card.");
+                        creditValid = false;
+                    } else if (cardNumber.length != 16) {
+                        alert("Enter the valid card number.");
+                        creditValid = false;
+                    } else if (cvcNumber.length != 3) {
+                        alert("Enter the valid card number! CVC is Invalid");
+                        creditValid = false;
+                        //the below validation checks if the card number and cvc is an integer
+                    } else if (isNaN(cardNumber)) {
+                        alert("Enter only integers for the card number")
+                        creditValid = false;
+                    } else if (isNaN(cvcNumber)) {
+                        alert("Enter only integers for the cvc number")
+                        creditValid = false;
+                    }
+                    //this checks if the user has clicked one of the option
+                } else if (!(document.getElementById("payMethod2").checked)) {
+                    alert("Select a payment Method");
+                    creditValid = false;
+                }
+                //if all the validations are done then the below constructed message will be alerted
+                if (creditValid) {
+                    var message = "Dear ";
+                    message += enteredFName;
+                    message += " you have ordered "
+                    for (var indexConfirm = 0; indexConfirm < nameBillArray.length; indexConfirm++) {
+                        message += quantityBillArray[indexConfirm] + " No(s) ";
+                        message += nameBillArray[indexConfirm];
+                        //if the item's quantity is greater than 1 then an 's' will be added to the end of the product name 
+                        // if (quantityBillArray[indexConfirm] > 1) {
+                        //     message += "s "
+                        // } else {
+                        //     message += " "
+                        // }
+                        message = message + " at a cost of " + "£" + totalPriceBillArray[indexConfirm];
+                        if (indexConfirm == nameBillArray.length - 2) {
+                            message += " and "
+                        } else if (indexConfirm == nameBillArray.length - 1) {
+                            message += ". "
+                        } else {
+                            message += ", "
+                        }
+                    }
+                    var finalAmount = document.getElementById("total").innerHTML;
+                    message += "\n\nThe total amount you have to pay is £" + finalAmount;
+                    message += "\nPress OK to confirm order or Cancel to Continue shopping";
+                    //if the user clicks ok then the final price will be alerted else the form will be hidden again
+                    if (confirm(message)) {
+                        alert("Thank You for purchasing at DUPATHA Boutique.")
+                        location.reload();
+
+                    }
+                }
+            }
+            function scrollDown() {
+                if (document.documentElement.scrollTop > 250) {
+                    document.getElementById("scrollButton").style.display = "block";
+                } else {
+                    document.getElementById("scrollButton").style.display = "none";
+                }
+            }
+
+
+        </script>
+        <!--calling the function.js file which has the function to increase and decrease the font size and also the back to top button-->
+        <script src="../function.js"></script>
+</body>
+
+</html>

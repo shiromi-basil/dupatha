@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hambantota | DUPATHA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../images/logo.png" sizes="16x16">
+    <link rel="stylesheet" href="../popularPlacesGrids.css" type="text/css">
+    <link rel="stylesheet" href="hambantotaStyleSheet.css" type="text/css">
+    <link rel="stylesheet" href="../../externalstyle.css" type="text/css">
+    <script>
+        window.onscroll = function () { scrollFunction() };
+        function showHideFunction(number) {
+            var moreArray = [
+                "ruhunuRestMore",
+                "bojunhalaMore",
+                "ulpathaMore",
+                "ladyRestMore",
+                "nonagamaMore",
+                "yalaCotMore",
+                "chillMore"
+            ]
+
+            var buttonArray = [
+                "ruhunuRestBtn",
+                "bojunhalaBtn",
+                "ulpathaBtn",
+                "ladyRestBtn",
+                "nonagamaBtn",
+                "yalaCotBtn",
+                "chillBtn"
+            ]
+            //function used to open the span when show more button is clicked and to close it when the show less button is clicked
+            var moreInfo = document.getElementById(moreArray[number]);
+            var btn = document.getElementById(buttonArray[number])
+            //condition used to check it
+            if (moreInfo.style.display === "inline") {
+                moreInfo.style.display = "none";
+                btn.innerHTML = "SHOW MORE";
+            } else {
+                moreInfo.style.display = "inline";
+                btn.innerHTML = "SHOW LESS";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!--main grid begins here-->
+    <div class="mainGrid">
+        <!--header picture-->
+        <div class="header1" role="banner">
+            <img class="headerimage" src="images/hambantotabg.png" alt="header image">
+            <div class="headerinner">
+                <h1 class="mainheading">hambanthota</h1>
+                <a href="../../home.html">
+                    <img class="logo" src="../../images/logo.png" alt="logo" />
+                    <img class="brand" src="../../images/brand1.png" alt="brandname" />
+                </a>
+            </div>
+        </div>
+        <!--end of header picture-->
+        <!--The mainNavBar div that contains the menu that pops up from the right side of the page-->
+        <div id="mainNav" class="mainNavBar">
+            <a href="javascript:void(0)" id="cross" class="closebtn" onclick="closeMenu()">&times;</a>
+            <a href="../../home.html">Home</a>
+            <a href="../../advice/advice.html">Things to know</a>
+            <a href="../../destination/destinations.html">Destinations</a>
+            <a href="../../colombo/colombo.html">Colombo</a>
+            <a href="../../tours/tours.html">Tours</a>
+            <a href="../../hotels/hotelmain.html">Accommodation</a>
+            <a href="../../gallery/gallery.html">Gallery</a>
+            <a href="../../boutique/product.html">Boutique</a>
+            <a href="../../comment-form/contact.html">Contact</a>
+            <a href="../../sitemap/sitemap.html">Sitemap</a>
+        </div>
+
+        <!--The div for the menu that pops when you scroll down the page-->
+        <div id="scrollingNav">
+            <img id="navlogo" src="../../images/logo.png" style="margin-top:8px; margin-left:40px;" />
+            <img id="navlogotext" src="../../images/brand1.png" />
+
+            <div id="main-1" class="readmore">
+                <span onclick="openMenu()"><b> MENU</b></span>
+            </div>
+
+            <div id="main-2" class="readmore">
+                <a href="../../comment-form/contact.html"><span><b> CONTACT</b></span></a>
+            </div>
+
+            <div id="main-3" class="readmore">
+                <a href="../../boutique/product.html"><span><b> BOUTIQUE</b></span></a>
+            </div>
+        </div>
+        <!--end of menu-->
+
+        <!--anchors and destination navigation bar -->
+        <div class="topMenu">
+            <!--link to pages and direct link to some parts of the particular page (Sub-Navigation bar)-->
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(0);">Anuradhapura <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Anuradhapura/anuradhapura.html#attractMainTitle">Attractions</a>
+                    <a href="../Anuradhapura/anuradhapura.html#hotelID">Hotels</a>
+                    <a href="../Anuradhapura/anuradhapura.html#restaurant">Restaurants</a>
+                    <a href="../Anuradhapura/anuradhapura.html#mapOfPlace">Map</a>
+
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(1);">Galle <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Galle/galle1.html#attractMainTitle">Attractions</a>
+                    <a href="../Galle/galle1.html#hotelID">Hotels</a>
+                    <a href="../Galle/galle1.html#restaurant">Restaurants</a>
+                    <a href="../Galle/galle1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+            <!--this page's anchors-->
+            <div class="subNavigation">
+                <button class="subnavbtnactive">Hambantota <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="#attractMainTitle">Attractions</a>
+                    <a href="#hotelID">Hotels</a>
+                    <a href="#restaurant">Restaurants</a>
+                    <a href="#mapOfPlace">Map</a>
+                </div>
+            </div>
+            <!--end of page's anchors-->
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(3);">Hikkaduwa <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Hikkaduwa/hikkaduwa1.html#attractMainTitle">Attractions</a>
+                    <a href="../Hikkaduwa/hikkaduwa1.html#hotelID">Hotels</a>
+                    <a href="../Hikkaduwa/hikkaduwa1.html#restaurant">Restaurants</a>
+                    <a href="../Hikkaduwa/hikkaduwa1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(4);">Jaffna <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Jaffna/jaffna1.html#attractMainTitle">Attractions</a>
+                    <a href="../Jaffna/jaffna1.html#hotelID">Hotels</a>
+                    <a href="../Jaffna/jaffna1.html#restaurant">Restaurants</a>
+                    <a href="../Jaffna/jaffna1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(5);">Kandy <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Kandy/kandy1.html#attractMainTitle">Attractions</a>
+                    <a href="../Kandy/kandy1.html#hotelID">Hotels</a>
+                    <a href="../Kandy/kandy1.html#restaurant">Restaurants</a>
+                    <a href="../Kandy/kandy1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(6);">Nuwara Eliya <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Nuwara Eliya/nuwareEliya.html#attractMainTitle">Attractions</a>
+                    <a href="../Nuwara Eliya/nuwareEliya.html#hotelID">Hotels</a>
+                    <a href="../Nuwara Eliya/nuwareEliya.html#restaurant">Restaurants</a>
+                    <a href="../Nuwara Eliya/nuwareEliya.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(7);">Polonnaruwa <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Polonnaruwa/polon1.html#attractMainTitle">Attractions</a>
+                    <a href="../Polonnaruwa/polon1.html#hotelID">Hotels</a>
+                    <a href="../Polonnaruwa/polon1.html#restaurant">Restaurants</a>
+                    <a href="../Polonnaruwa/polon1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(8);">SIGIRIYA <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Sigiriya/sigiriya1.html#attractMainTitle">Attractions</a>
+                    <a href="../Sigiriya/sigiriya1.html#hotelID">Hotels</a>
+                    <a href="../Sigiriya/sigiriya1.html#restaurant">Restaurants</a>
+                    <a href="../Sigiriya/sigiriya1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+
+            <div class="subNavigation">
+                <button class="subnavbtn" onclick="loadPage(9);">Trincomalee <i class=""></i></button>
+                <div class="subNavigation-content">
+                    <a href="../Trincomalee/trinco1.html#attractMainTitle">Attractions</a>
+                    <a href="../Trincomalee/trinco1.html#hotelID">Hotels</a>
+                    <a href="../Trincomalee/trinco1.html#restaurant">Restaurants</a>
+                    <a href="../Trincomalee/trinco1.html#mapOfPlace">Map</a>
+                </div>
+            </div>
+            <!--end of sub navigation bar-->
+        </div>
+        <!--end of destination navigation bar-->
+    
+        <!--introduction paragraph of the page-->
+        <div class="content">
+            <!--this paragraph's font size can be changed using fontSizeChanger-->
+            <div id="changeFont" style="font-size: 20px;">Hambantota town is often considered the heart of
+                the
+                “Deep South” of Sri Lanka. It’s a coastal town which has seen rapid development in recent years and
+                promoted
+                as a second commercial hub of the country after Colombo. The architecture from the Dutch and British
+                periods
+                are scattered throughout the district. The Hambantota area has long been known in Sri Lanka as the best
+                source of salt in the land. It is also a convinient base to visit Tissamaharama and Kataragama.
+            </div>
+            <!--used to change the font size of the introduction paragraph-->
+            <div id="fontSizeChanger">
+                <!--button used to decrease and increase the font size-->
+                <div class="fontButtons">
+                    <button class="fontSizeButtonDec" onclick="fontDecrease()">-</button>
+                    <p id="textFontSize1">20</p>
+                    <button class="fontSizeButtonIn" onclick="fontIncrease()">+</button>
+                </div>
+            </div>
+            <!--end of font Size changer-->
+        </div>
+        <!--end of introduction paragraph-->
+        <!--attractions in this destination-->
+        <div class="subHeading" id="attractMainTitle">
+            <h2>Major Attractions</h2>
+        </div>
+        <!--attraction 1-->
+        <div class="popularAttraction1" id="popularAttraction">
+            <img src="images\mirijjawila.jpg" alt="Mirijjawila Botanical Gardens" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Mirijjawila Botanical Gardens</p>
+                <p>
+                    This is second largest botanical garden in Sri Lanka. Large variety of dry zone plants are
+                    scattered
+                    around. There are also a vriety of birds and butterflies in the garden.
+                </p>
+            </div>
+        </div>
+        <!--end of attraction 1-->
+        <!--attraction 2-->
+        <div class="popularAttraction2" id="popularAttraction">
+            <img src="images/religiousSite.png" alt="Multi-Religious Place Of Worship" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Multi-Religious Place Of Worship</p>
+                <p>It is a site where you can see the buddhists, hindus' and muslims' place of worship side-by-side.
+                    It
+                    is located in kataragama an hour's drive from hambantota.</p>
+            </div>
+        </div>
+        <!--end of attraction 2-->
+        <!--attraction 3-->
+        <div class="popularAttraction3" id="popularAttraction">
+            <img src="images/hambantotaPort.jpg" alt="Magampura Mahinda Rajapaksa Port" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Mahinda Rajapaksa Port</p>
+                <p>The Hambantota Port is a maritime port in Sri Lanka. It is named after former President
+                    Mahinda Rajapaksa. It is built inland and operated by the SL Ports Authority.
+                </p>
+            </div>
+        </div>
+        <!--end of attraction 3-->
+        <!--attraction 4-->
+        <div class="popularAttraction4" id="popularAttraction">
+            <img src="images/yalaPark.JPG" alt="Yala National Park" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Yala National Park</p>
+                <p>Beautiful wild life and the best national park to see a leopard also you can see so many other
+                    animals like mongoose, deers and crocodiles.</p>
+            </div>
+        </div>
+        <!--end of attraction 4-->
+        <!--attraction 5-->
+        <div class="popularAttraction5" id="popularAttraction">
+            <img src="images/mricStadium.jpg" alt="MRIC Stadium" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">MRIC Stadium</p>
+                <p>It was built for the 2011 Cricket World Cup. The stadium has a capacity of
+                    35,000 people making it the second largest stadium in SL.</p>
+            </div>
+        </div>
+        <!--end of attraction 5-->
+        <!--attraction 6-->
+        <div class="popularAttraction6" id="popularAttraction">
+            <img src="images/tissaWevaT.jpg" alt="Tissa Weva" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Tissa Weva(Tissamahrama)</p>
+                <p>It is an artificial reservoir which was constructed in the 3 BC, in order to irrigate
+                    paddy lands and supply water to Tissamaharama.</p>
+            </div>
+        </div>
+        <!--end of attraction 6-->
+        <!--attraction 7-->
+        <div class="popularAttraction7" id="popularAttraction">
+            <img src="images/tissamaharamaTemple.jpg" alt="Tissamaharama Raja Maha Viharaya" class="popularImages" />
+            <div class="attractionInfo">
+                <p class="attractTitle">Tissamaharama Raja Maha Viharaya</p>
+                <p>It was built by King Kavan Tissa in the 2nd Century BC. The Stupa is one of the largest dagabas
+                    in
+                    Sri Lanka.</p>
+            </div>
+        </div>
+        <!--end of attraction 7-->
+        <!--links to hotel page of destination-->
+        <div class="hotel1" id="hotelID" role="banner">
+            <div class="layerOver">
+                <h2 class="hotelHeading">Amazing hotels and B & B</h2>
+                <h3 class="nextHotel">We've pre-picked the best hotels and bed and breakfasts to make your stay as
+                    enjoyable as
+                    possible.</h3>
+                <div class="readmore1" id="linkToHotelPage"><a
+                        href="../../hotels/hotels-hambantota/hotel11_hambantota.html">View All Hotels</a></div>
+            </div>
+        </div>
+        <!--end of hotel linking-->
+        <!--popular restaurants in this destination-->
+        <div class="subHeading1" id="restaurant">
+            <h2>Popular Restaurants</h2>
+        </div>
+        <!--restaurants-->
+        <div class="popularRest1" id="popularRest">
+            <img class="popularImages" src="images\ruhunuRest.jpg" alt="Ruhunu Resort" />
+            <div class="restInfo">
+                <p class="restTitle">Ruhunu Resort</p>
+                <p class="cuisine">Sri Lankan</p>
+                <!--span used to hide the timings and address-->
+                <span id="ruhunuRestMore">
+                    <p>
+                        Address: Tissamaharama road, Hambantota<br />Telephone Number:472223221
+                        <br />Open Timings:9.00AM - 9.00PM
+                    </p>
+                </span>
+                <!--end of span-->
+                <!--function called when user clicks button to show the address and timing-->
+                <button onclick="showHideFunction(0);" id="ruhunuRestBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest2" id="popularRest">
+            <img class="popularImages" src="images\bojunhala.jpg" alt="Bojunhala" />
+            <div class="restInfo">
+                <p class="restTitle">Bojunhala</p>
+                <p class="cuisine">Sri Lankan</p>
+                <span id="bojunhala"></span>
+                <span id="bojunhalaMore">
+                    <p>
+                        Address: Shangri La, Hambantota <br />Telephone Number:
+                        0472 227 044<br />Open Timings:6.30AM - 08.00PM
+                    </p>
+                </span>
+                <button onclick="showHideFunction(1);" id="bojunhalaBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest3" id="popularRest">
+            <img class="popularImages" src="images\nonagama.jpg" alt="Nonagama Village Restaurant" />
+            <div class="restInfo">
+                <p class="restTitle">Nonagama Village Restaurant</p>
+                <p class="cuisine">Sri Lankan</p>
+                <span id="nonagama"></span>
+                <span id="nonagamaMore">
+                    <p>
+                        Address: 275 Tangalle Road, Ekkassa <br />Telephone Number:472223383<br />Open
+                        Timings:8.00AM - 11.00PM
+                    </p>
+                </span>
+                <button onclick="showHideFunction(4);" id="nonagamaBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest4" id="popularRest">
+            <img class="popularImages" src="images\ladyRest.jpg" alt="Chef Lady Restaurant" />
+            <div class="restInfo">
+                <p class="restTitle">Chef Lady Restaurant</p>
+                <p class="cuisine">Sri Lankan</p>
+                <span id="ladyRest"></span>
+                <span id="ladyRestMore">
+                    <p>
+                        Address: 92/B Sadagiripura, Tissamaharama<br />Telephone Number:771099588
+                        <br />Open Timings:9.00AM - 11.00PM
+                    </p>
+                </span>
+                <button onclick="showHideFunction(3);" id="ladyRestBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest5" id="popularRest">
+            <img class="popularImages" src="images\ulpatha.jpg" alt="Ulpatha" />
+            <div class="restInfo">
+                <p class="restTitle">Ulpatha</p>
+                <p class="cuisine">European</p>
+                <span id="ulpatha"></span>
+                <span id="ulpathaMore">
+                    <p>
+                        Address: Shangri La, Hambantota<br />Telephone Number:
+                        47 7 888888<br />Open Timings: 24hrs
+                    </p>
+                </span>
+                <button onclick="showHideFunction(2);" id="ulpathaBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest6" id="popularRest">
+            <img class="popularImages" src="images\yalaCot.jpg" alt="Yala Peace Cottage Restaurant
+        " />
+            <div class="restInfo">
+                <p class="restTitle">Yala Peace Restaurant</p>
+                <p class="cuisine">Sri Lankan</p>
+                <span id="yalaCot"></span>
+                <span id="yalaCotMore">
+                    <p>
+                        Address: 43 Sandagirigama Road Tissamaharama <br />Telephone Number:776230420<br />Open
+                        Timings:7.00AM - 12.00AM
+                    </p>
+                </span>
+                <button onclick="showHideFunction(5);" id="yalaCotBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <div class="popularRest7" id="popularRest">
+            <img class="popularImages" src="images\chill.jpg" alt="The Chill Restaurant" />
+            <div class="restInfo">
+                <p class="restTitle">The Chill Restaurant</p>
+                <p class="cuisine">Sri Lankan</p>
+                <span id="chill"></span>
+                <span id="chillMore">
+                    <p>
+                        Address: Abhaya Mawatha Kataragama, <br />Telephone Number:
+                        +94 47 2 236173<br />Open Timings:07.00AM - 11.30PM
+                    </p>
+                </span>
+                <button onclick="showHideFunction(6);" id="chillBtn" class="readmore1">
+                    SHOW MORE
+                </button>
+            </div>
+        </div>
+        <!--end of restaurants-->
+        <!--google maps embedded into the html using iframe-->
+        <div class="mapOfPlace">
+            <div class="googleMap"><iframe width="1348" height="600" id="googleMap"
+                    src="https://maps.google.com/maps?q=anuradhapura&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+            </div>
+        </div>
+        <!--end of the map-->
+        <!--footer-->
+        <div class="footer">
+            <div class="footerinner">
+                <img class="footerlogo" src="../../images/logo.png" alt="logo" />
+                <img class="footerbrand" src="../../images/brand1.png" alt="brandname" />
+                <div class="footerlinks">
+                    <a href="../../home.html"> Home | </a>
+                    <a href="../../comment-form/contact.html"> Contact | </a>
+                    <a href="../../sitemap/sitemap.html"> Sitemap | </a>
+                    <a href="../../cv/safiyyah/safiyyah-cv.html"> Safiyyah Thur Rahman </a>
+                </div>
+            </div>
+        </div>
+        <!--end of footer-->
+    </div>
+    <!--end of the grid-->
+    <!--link the function file because it has the function decrease and increase the font size and also the function to make the header and back to the top button sticky-->
+    <script src="../../function.js"></script>
+
+</body>
+
+</html>

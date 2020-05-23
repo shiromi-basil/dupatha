@@ -1,0 +1,107 @@
+.the-grid {
+	display: grid;
+	grid-template-columns: 335px 335px 335px 345px;
+	grid-template-rows: auto;
+}
+.header{
+	grid-column:1/5;
+	grid-row:1/2;
+}
+.content{
+	grid-column:1/5;
+	grid-row:3/4;
+}
+.mainNavBar {
+	grid-column:4/5;
+}
+.toursections{
+	grid-column:1/5;
+	grid-row:4/5;
+	margin-bottom:60px;
+}
+
+.subNavigation-content {
+	width: 25%;
+}
+
+.topMenu {
+	grid-column:2/4;
+	grid-row:2/3;
+	margin-left:11%;
+	width:81.3%;
+}
+.sectionright{
+	max-width: 60rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+	text-align:justify;
+	clear:both;
+	border-top:solid 1px;
+	border-top-color:black;
+}
+.sectionleft{
+	max-width: 60rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+	text-align:justify;
+	clear:both;
+	border-top:solid 1px;
+	border-top-color:black;
+}
+.sectionpicleft{
+	margin-top:30px;
+	float:left;
+	width:45%;
+	height:280px;
+}
+.sectionpicright{
+	margin-top:30px;
+	float:right;
+	width:45%;
+	height:280px;
+}
+.sectiontextright{
+	width:50%;
+	float:right;
+}
+.sectiontextleft{
+	width:50%;
+	float:left;
+}
+.gallery{
+	grid-column:1/5;
+	grid-row:5/6;
+	margin-bottom:40px;
+}
+	
+.image1{
+	grid-column:1/2;
+	grid-row:6/7;
+	
+	
+}
+.image2{
+	grid-column:1/2;
+	grid-row:7/8;
+	margin-top:-20px;
+}
+.image3{
+	grid-column:2/3;
+	grid-row:6/8;
+	
+	
+}
+.image4{
+	grid-column:3/5;
+	grid-row:6/8;
+	margin-top:-15px;
+}
+.footer {
+	grid-column:1/5;
+	grid-row:9/10;
+	position: relative;
+}

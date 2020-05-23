@@ -1,0 +1,12 @@
+/*the address and the timing are not displayed initially*/
+#ambaalMore,
+#silvaMore,
+#grandThaiMore,
+#indianMore,
+#grandIndianMore,
+#salmiyaMore,
+#themparaduMore,
+#teaTrainMore,
+#thajMore{
+  display: none;
+}

@@ -1,0 +1,82 @@
+.advice-grid {
+	display: grid;
+	grid-template-columns: 150px 525px 525px 150px;
+	grid-template-rows: auto;
+}
+.header{
+	grid-column:1/5;
+	grid-row:1/2;
+	
+}
+.topMenu {
+	grid-column:2/4;
+	grid-row:2/3;
+	margin:0 auto;
+	width:38%;
+}
+#changeFont{
+	grid-column:2/4;
+	grid-row:4/10;
+}
+.Pics {
+	padding: 5px;
+	height:250px;
+	width:465px;
+}
+
+#travel1{
+	grid-column:2/3;
+	grid-row:5/6;
+}
+#travel2{
+	grid-column:3/4;
+	grid-row:5/6;
+	float: left;
+}
+#site1{
+	grid-column:2/3;
+	grid-row:7/8;
+}
+#site2{
+	grid-column:3/4;
+	grid-row:7/8;
+	float: left;
+}
+#safari1{
+	grid-column:2/3;
+	grid-row:9/10;
+}
+#safari2{
+	grid-column:3/4;
+	grid-row:9/10;
+	float: left;
+}
+#contentLocation{
+	grid-column:2/4;
+	grid-row:4/5;
+	
+}
+#ContentSiteSeeing{
+	grid-column:2/4;
+	grid-row:6/7;
+	
+}
+#contentSafari{
+	grid-column:2/4;
+	grid-row:8/9;
+	
+}
+
+.subNavigation-content {
+	width: 25%;
+}
+
+
+.footer {
+	grid-column:1/5;
+	grid-row:10/11;
+	position: relative;
+}
+	
+
+

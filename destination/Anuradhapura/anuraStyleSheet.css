@@ -1,0 +1,10 @@
+/*the address and the timing are not displayed initially*/
+#seedeviMore,
+#nelumMore,
+#walkersMore,
+#shaliniMore,
+#palhenaMore,
+#paradiseMore,
+#mangoMangoMore{
+  display:none;
+}

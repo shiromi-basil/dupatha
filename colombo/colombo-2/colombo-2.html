@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title> Colombo | DUPATHA </title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="../../images/logo.png" sizes="16x16">
+		<link rel="stylesheet" type="text/css" href="../../externalstyle.css">
+		<link rel="stylesheet" type="text/css" href="colombo-2.css">
+		
+		<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/9C35820D-8F68-2048-9B31-2286CDA12351/main.js" charset="UTF-8"></script><script>
+			window.onscroll = function () { scrollFunction() };
+		</script>
+	
+	</head>
+	
+	<body>
+		<!--The header div that contains the main image, main heading and the two logos-->
+		<div class="header" role="banner">
+		<img class="headerimage" src="images/colombo1.png" alt="header image">		
+				<div class="headerinner">
+					<h1 class="mainheading"> places and shopping</h1>
+					<a href="../../home.html">
+					<img class="logo" src="../../images/logo.png" alt="logo"/>
+					<img class="brand" src="../../images/brand1.png" alt ="brandname"/>
+					</a>
+				</div>							
+		</div>
+		
+		<!--The mainNavBar div that contains the menu that pops up from the right side of the page-->
+		<div id="mainNav" class="mainNavBar">
+			  <a href="javascript:void(0)" id="cross" class="closebtn" onclick="closeMenu()">&times;</a>
+			  <a href="../../home.html">Home</a>
+			  <a href="../../advice/advice.html">Things to know</a>
+			  <a href="../../destination/destinations.html">Destinations</a>
+			  <a href="../../colombo/colombo.html">Colombo</a>
+			  <a href="../../tours/tours.html">Tours</a>
+			  <a href="../../hotels/hotelmain.html">Accommodation</a>
+			  <a href="../../gallery/gallery.html">Gallery</a>
+			  <a href="../../boutique/product.html">Boutique</a>
+			  <a href="../../comment-form/contact.html">Contact</a>
+			  <a href="../../sitemap/sitemap.html">Sitemap</a>
+		</div>
+		
+		<!--The div for the menu that pops when you scroll down the page-->
+		<div id="scrollingNav">
+			<img id="navlogo" src="../../images/logo.png" style="margin-top:8px; margin-left:40px;"/>
+			<img id="navlogotext" src="../../images/brand1.png"/>
+			
+			<div id="main-1"class="readmore">
+				<span onclick="openMenu()"><b> MENU</b></span>
+			</div>
+				
+			<div id="main-2"class="readmore">
+				<a href="../../comment-form/contact.html"><span><b> CONTACT</b></span></a>
+			</div>
+				
+			<div id="main-3"class="readmore">
+				<a href="../../boutique/product.html"><span><b> BOUTIQUE</b></span></a>
+			</div>
+		</div>
+		
+		<!--The topMenu div that contains all the anchors and navigation within the page-->
+		<div class="topMenu">
+			<div class="subNavigation">
+				<a href="../colombo.html#colombo"><button class="subnavbtn"> colombo <i class=""></i></button></a>	
+			</div> 
+			
+			<div class="subNavigation">
+				<a href="colombo-2.html#places"><button class="subnavbtn"> places <i class=""></i></button></a>	
+			</div> 
+			
+			<div class="subNavigation">
+				<a href="../colombo-1/colombo-1.html#activities"><button  class="subnavbtn"> activities <i class=""></i></button></a>	
+			</div> 
+			
+			<div class="subNavigation">
+				<a href="../colombo.html#hotels"><button class="subnavbtn"> hotels <i class=""></i></button></a>
+			</div>
+			  
+			<div class="subNavigation">
+				<a href="colombo-2.html#shopping"><button class="subnavbtn"> shopping <i class=""></i></button></a>
+			</div> 
+			  
+			<div class="subNavigation">
+				<a href="../colombo-1/colombo-1.html#restaurants"><button class="subnavbtn"> restaurants <i class=""></i></button></a>	
+			</div> 
+			
+			<div class="subNavigation">
+				<a href="../colombo.html#travelling"><button class="subnavbtn"> travelling <i class=""></i></button></a>
+			</div>
+			  
+			<div class="subNavigation">
+				<a href="../colombo.html#map"><button class="subnavbtn"> map <i class=""></i></button></a>
+			</div>
+		</div>
+		
+		<!--The places div contains images and details about the places to visit in colombo-->		
+		<h2 id="places">Places to visit</h2>
+		
+		<div class="description">
+			<!--this paragraph's font size can be changed using fontSizeChanger-->
+            <div id="changeFont" style="font-size: 20px;">
+				<p>Places to visit in Colombo prove that it is deservingly the capital city of Sri Lanka.
+				 Captivating buildings, parks with monuments and prominent religious places are iconic to the character of Colombo as a tourist destination.
+				 In the past, Sri Lanka has been ruled by the British, Portuguese and Dutch, which shows in the architectural range in the monuments and buildings in its capital city,
+				 Colombo. <br/>
+				<span id="connect"></span>
+				<span id="show-more"><br/>Apart from some marvellous historical monuments and buildings,
+				 there are some religious places exhibiting praiseworthy details,
+				 museums storing artifacts and nature escapes that make it a great travel destination.
+				 You can witness a perfect amalgamation of different cultures in Colombo.
+				 Some of the major tourist places in Colombo that you should not skip are Beira Lake
+				 where you can experience adventure, pilgrimage and picnic at a single place; 
+				 National Museum of Colombo where you can check artifacts and manuscripts in a beautiful 
+				 building with Italian Architecture; and Gangaramaya Temple which is the most iconic Buddhist
+				 temple in Sri Lanka. Wildlife tours of Attidiya Bird Sanctuary and Dehiwala Zoo are highly recommended
+				 for adventure and wildlife lovers.<br/>
+				<br/>Confused about places to visit in Colombo,
+				 Sri Lanka? Check out the perfect list of places that you should definitely explore on your trip.
+				 Keep scrolling down!</span></p>
+			</div>
+			
+			<!--expanding the div to show more information about places-->
+			<button onclick="buttonClick()" id="readmorebutton1" class="readmore">READ MORE</button>
+			
+			<!--used to change the font size of the introduction paragraph-->
+            <div id="fontSizeChanger">
+                <div class="fontButtons">
+                    <button class="fontSizeButtonDec" onclick="fontDecrease()">-</button>
+                    <p id="textFontSize1">20</p>
+                    <button class="fontSizeButtonIn" onclick="fontIncrease()">+</button>
+                </div>
+            </div>
+            <!--end of font Size changer-->
+		</div>
+		
+		<!--This function expands the div to the show more text about places on clicking the read more-->
+		<script>
+			function buttonClick() {
+			  var connectText = document.getElementById("connect");
+			  var readText = document.getElementById("show-more");
+			  var buttonText = document.getElementById("readmorebutton1");
+
+			  if (connect.style.display === "none") {
+				connectText.style.display = "inline";
+				buttonText.innerHTML = "READ MORE"; 
+				readText.style.display = "none";
+			  } else {
+				connectText.style.display = "none";
+				buttonText.innerHTML = "READ LESS"; 
+				readText.style.display = "inline";
+			  }
+			}
+		</script>
+		
+		<!--This div contains the image and description of places-->
+		<div class="places">
+			<img src="images/museum.jpg" alt="national museum" align="left"/>
+			<div class="places-right">
+				<h3>National Museum</h3>
+				<p>If you love to learn more about the country or if you are a history lover you won't
+				regret paying a visit to the National Museum in Colombo. Housed in an incredible
+				colonial building, National museum showcases a load of amazing artefacts of the Sri
+				Lankan history. The exhibits of the royal family are one of the main features of the
+				museum, tourists enjoy the most.</p>
+			</div>
+			
+			<img src="images/viharapark.jpg" alt="vihara mahadevi park" align="right"/>
+			<div class="places-left">
+				<h3>Vihara Mahadevi Park</h3>
+				<p>An outdoor park built in British colonial era known earlier as the 'Vitoria Park'
+				is another peaceful getaway in Colombo. Today, Vihara Maha Devi Park is redecorated
+				with beautiful landscape, elegant ponds, small paths shaded with trees and a lot
+				of relaxing seating spots is a true beauty to the Colombo city.</p>
+			</div>
+			
+			<img src="images/nelum.jpg" alt="nelum pokuna theatre" align="left"/>
+			<div class="places-right">
+				<h3>Nelum Pokuna Theatre</h3>
+				<p>If you like to enjoy some unique and modern architecture, make sure to pay a
+				quick visit to the 'Nelum Pokuna'. Lotus pond or 'Nelum Pokuna' is an incredible
+				piece of modern architecture in Colombo, designed in a shape of a lotus for large
+				scale theoretical performance.</p>
+			</div>
+			
+			<img src="images/port.jpg" alt="colombo port" align="right"/>
+			<div class="places-left">
+				<h3>Colombo Port</h3>
+				<p>Keeping its reputation as the largest port in South Asia, Colombo port owns
+				a great history that runs to the early 14 century. Due to its strategic location
+				in the Indian Ocean, the port is also to be known for one of the busiest port in 
+				the region. The lines of cranes stand facing the sea is quiet a scene that adds some 
+				peace to this machinery world when the sun is going down.</p>
+			</div>
+			
+			<img src="images/square.jpg" alt="independence square" align="left"/>
+			<div class="places-right">
+				<h3>Independence Square</h3>
+				<p>Perfect place to escape from the city hustle after touring around Colombo. 
+				The building made with stone is a monument build in 1948 to commemorate the Sri Lankan 
+				independence from British. The peaceful garden with a statue of the first president 
+				of Sri Lanka and its quiet ambience make the place perfect for you to relax for free 
+				in Colombo.</p>
+			</div>
+			
+			<img src="images/galleface.jpg" alt="galle face green" align="right"/>
+			<div class="places-left">
+				<h3>Galle Face Green</h3>
+				<p>Enjoy the colours of the falling sun and rolling waves of the Indian Ocean while 
+				enjoying some delicious local street food. Galle Face green is one of the
+				places in Colombo famous among locals and tourists alike to relax
+				to get your energy levels up. The Beach stretch that had used to place the
+				canons of Dutch is today a great place to enjoy a
+				relaxing evening in Colombo.</p>
+			</div>
+			
+			<img src="images/gangaramaya.jpg" alt="gangaramaya temple" align="left"/>
+			<div class="places-right">
+				<h3>Gangaramaya Temple</h3>
+				<p>Get ready to explore one of the Buddhist temples in Sri Lanka
+				that has become an absolute charm to the city of Colombo with its unique exhibits and Buddhist ambience. Hundreds
+				of Buddha statues, the puffed Elephant and other precious gifts from devotees
+				are some main highlights of the place, travellers fall in love with.</p>
+			</div>
+			
+			<img src="images/arcadesquare.jpg" alt="arcade independence square" align="right"/>
+			<div class="places-left">
+				<h3>Independence Arcade</h3>
+				<p>A luxury shopping complex for you to do some shopping, admire some colonial
+				architecture, enjoy mouthwatering food after a long day exploring the Colombo city. Not like other shopping
+				complexes, Independence arcade is an Oasis of serenity with its surrounded
+				spaces carpeted with green grass and decorated with flower beds full of colours
+				and cool furniture and other decorative pieces.</p>
+			</div>
+		</div>
+		
+		
+		<!--The shopping div contains images and details about the places to shop in colombo-->	
+		<h2 id="shopping">Shopping</h2>
+		
+		<div class="description" style="font-size: 20px;">
+			<p>Shopping in Colombo can be unwieldy for the uninitiated.
+			 There are few grand pedestrian walkways to meander down and no readily identifiable "shopping district" to lose yourself in.
+			 And, if it's your first time in Colombo, you've probably also got a list of monuments to tick off - few of which are near any decent shops where you can find interesting,
+			 contemporary Sri Lankan products.<br/>
+			<span id="spanmore"></span>
+			<span id="textmore"><br/>However, setting some time aside in your itinerary to explore Colombo's better shops is well worth your while 
+			 and one which you won't be able to replicate in another part of your Sri Lankan trip (except possibly for the cosmopolitan Galle Fort).
+			 It's an opportunity to experience the explosion of Sri Lankan creativity following the war years,
+			 one which has resulted in an offering of clothing, accessories, jewellery, homewares, interiors and even books unparalleled in at least the 30-odd years prior.
+			 The hallmarks of this Sri Lankan productivity are goods which are ethically made, environmentally sustainable, chic and uniquely Sri Lankan in style, aesthetic or provenance.
+			 Colombo may not be Paris, but its products are par excellence.<br/>
+			<br/>To help you navigate this, here is our essential Colombo shopping guide.</span></p>
+			
+			<!--expanding the div to show more information about shopping-->
+			<button onclick="readmoreFunction()" class="readmore" id="readmorebutton">READ MORE</button>
+		</div>
+		
+		<!--This div contains the image and name of shopping places-->
+		<div class="shopping" id="shopping-content">
+			<div class="content" id="image-1">
+				<a href="http://www.arcadeindependencesquare.com/">
+				<div class="content-overlay"></div>
+				<div class="text fadeIn-top">
+					<p>Arcade Independence Square</p>
+				</div>
+				</a>
+			</div>
+			<div class="content" id="image-2">
+				<a href="https://www.tripadvisor.com/Attraction_Review-g293962-d8702174-Reviews-Pettah_Floating_Market-Colombo_Western_Province.html">
+				<div class="content-overlay"></div>
+				<div class="text fadeIn-top">
+					<p>Floating Market</p>
+				</div>
+				</a>
+			</div>
+			<div class="content" id="image-3">
+				<a href="https://www.barefootceylon.com/">
+				<div class="content-overlay"></div>
+				<div class="text fadeIn-top">
+					<p>Barefoot</p>
+				</div>
+				</a>
+			</div>
+			<div class="content" id="image-4">
+				<a href="https://www.tripadvisor.com/ShowUserReviews-g293962-d1132764-r126899700-Crescat_Boulevard-Colombo_Western_Province.html">
+				<div class="content-overlay"></div>
+				<div class="text fadeIn-top">
+					<p>Crescat Mall</p>
+				</div>
+				</a>
+			</div>
+			<div class="content" id="image-5">
+				<a href="https://www.tripadvisor.com/Attraction_Review-g293962-d11998753-Reviews-Liberty_Plaza-Colombo_Western_Province.html">
+				<div class="content-overlay"></div>
+				<div class="text fadeIn-top">
+					<p>Liberty Mall</p>
+				</div>
+				</a>
+			</div>
+			<div class="content" id="image-6">
+				<a href="https://www.aviratefashion.com/">
+				<div class="content-overlay"></div>
+				<div class="text fadeIn-top">
+					<p>Avirate</p>
+				</div>
+				</a>
+			</div>
+			<div class="content" id="image-7">
+				<a href="https://www.uptownlibertyplaza.com/">
+				<div class="content-overlay"></div>
+				<div class="text fadeIn-top">
+					<p>Uptown Kandy</p>
+				</div>
+				</a>
+			</div><div class="content" id="image-8">
+				<a href="http://www.laksala.gov.lk/">
+				<div class="content-overlay"></div>
+				<div class="text fadeIn-top">
+					<p>Laksala</p>
+				</div>
+				</a>
+			</div>
+			<div class="content" id="image-9">
+				<a href="https://www.paradiseroad.lk/">
+				<div class="content-overlay"></div>
+				<div class="text fadeIn-top">
+					<p>Paradise Road</p>
+				</div>
+				</a>
+			</div>
+			<div class="content" id="image-10">
+				<a href="http://www.colombocitycentre.lk/">
+				<div class="content-overlay"></div>
+				<div class="text fadeIn-top">
+					<p>Colombo City Centre</p>
+				</div>
+				</a>
+			</div>
+			<div class="content" id="image-11">
+				<a href="https://www.embarkpassion.com/">
+				<div class="content-overlay"></div>
+				<div class="text fadeIn-top">
+					<p>Embark</p>
+				</div>
+				</a>
+			</div>
+			<div class="content" id="image-12">
+				<a href="http://www.majesticcity.lk/">
+				<div class="content-overlay"></div>
+				<div class="text fadeIn-top">
+					<p>Majestic City</p>
+				</div>
+				</a>
+			</div>
+			<div class="content" id="image-13">
+				<a href="https://www.colombo.pt/store/pepe-jeans-2/">
+				<div class="content-overlay"></div>
+				<div class="text fadeIn-top">
+					<p>Pepe Jeans</p>
+				</div>
+				</a>
+			</div>
+			<div class="content" id="image-14">
+				<a href="https://www.marinomall.com/">
+				<div class="content-overlay"></div>
+				<div class="text fadeIn-top">
+					<p>Marino Mall</p>
+				</div>
+				</a>
+			</div>
+			<div class="content" id="image-15">
+				<a href="http://kamsins.lk/">
+				<div class="content-overlay"></div>
+				<div class="text fadeIn-top">
+					<p>Kamsins</p>
+				</div>
+				</a>
+			</div>
+		</div>
+
+		<!--The div for the footer that contains the two logos and links-->
+		<div class="footer">
+			<div class="footerinner">
+				<img class="footerlogo" src="../../images/logo.png" alt="logo"/>
+				<img class="footerbrand" src="../../images/brand1.png" alt ="brandname"/>
+				<div class="footerlinks">
+					<a href="../../home.html" > Home | </a>
+					<a href="../../comment-form/contact.html" > Contact | </a>
+					<a href="../../sitemap/sitemap.html" > Sitemap | </a>
+					<a href="../../cv/shiromi/shiromi-cv.html" > Shiromi Thevarajan </a>
+				</div>
+			</div>
+		</div>
+		
+		<!--the external java script file is linked to the html-->
+		<script src="../../function.js"></script>
+	</body>
+</html>

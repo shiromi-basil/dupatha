@@ -1,0 +1,12 @@
+/*the address and the timing are not displayed initially*/
+#malayanMore,
+#rioMore,
+#mangosMore,
+#nallurMore,
+#linganMore,
+#elevenRMore,
+#greenGrassMore,
+#cosyMore,
+#akshathaiMore{
+    display: none;
+}
